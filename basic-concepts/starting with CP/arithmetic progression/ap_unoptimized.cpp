@@ -17,3 +17,5 @@ int main() {
         cout << getNthTerm(a, n, d) << "\n";
     }
 }
+
+// Inefficient solution: Would cause TLE for large inputs
