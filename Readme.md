@@ -13,3 +13,5 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
 - <b>Builds Coding Efficiency</b> - Encourages writing clean, optimized code.
 - <b>Prepares for Interviews</b> - Sharpens skills for tech interviews and real-world challenges.
 - <b>Improves Debugging</b> - Trains you to fix issues quickly.
+- <b>Encourages Networking</b> - Connect with like-minded coders.
+- <b> Sharpens Mental Agility</b> - Speend and accuracy under pressure.
