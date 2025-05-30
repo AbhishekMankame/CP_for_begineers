@@ -17,5 +17,8 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
 - <b> Sharpens Mental Agility</b> - Speend and accuracy under pressure.
 
 ### Code Judgements
-- AC (Accepted) - The solution is correct, and all test cases passed.
-- WA (Wrong Answer) - The solution produced an incorrect result at least one test case.
+- **AC (Accepted)*** - The solution is correct, and all test cases passed.
+- **WA (Wrong Answer)** - The solution produced an incorrect result at least one test case.
+- **TLE (Time Limited Exceeded)** - The solution exceeded the allowed time limit for at least once test case.
+- **MLE (Memory Limited Exceeded)** - The solution used more memory than allowed for atleast one test case.
+- **RTE (Runtime Error)** - The solution encountered an error during execution (e.g., segmentation fault, division by zero)
