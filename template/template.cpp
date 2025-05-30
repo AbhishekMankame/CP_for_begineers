@@ -1,3 +1,5 @@
+// कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।
+
 #include<bits/stdc++.h> // includes all standard libraries
 using namespace std;
 
