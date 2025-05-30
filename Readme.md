@@ -22,3 +22,7 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
 - **TLE (Time Limited Exceeded)** - The solution exceeded the allowed time limit for at least once test case.
 - **MLE (Memory Limited Exceeded)** - The solution used more memory than allowed for atleast one test case.
 - **RTE (Runtime Error)** - The solution encountered an error during execution (e.g., segmentation fault, division by zero)
+- **CE (Compilation Error)** - The code failed to compile.
+- **IE (Idleness Limit Exceeded)** - The program performed no operations for a prolonged period (often due to infinite loops).
+- **Skipped** - The submission was skipped due to a higher priority submission being judged (common in contests), or sometimes plagged
+- **Running on Test #** - The system is currently evaluating the solution on a specific test case.
