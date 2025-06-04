@@ -27,6 +27,11 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
 - **Skipped** - The submission was skipped due to a higher priority submission being judged (common in contests), or sometimes plagged
 - **Running on Test #** - The system is currently evaluating the solution on a specific test case.
 
+## Popular Platforms to Practice CP
+- Codeforces
+- Codechef
+- Atcoder
+
 ## Contest rating in CodeForces
 - Div 1 <= 2800
 - Div 2 <= 2100
