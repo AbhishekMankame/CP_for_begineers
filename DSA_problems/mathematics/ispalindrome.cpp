@@ -17,5 +17,5 @@ bool isPal(int n){
 int main() {
     int n;
     cin >> n;
-    cout << isPal(n)<<endl;
+    cout << (isPal(n)?"YES":"NO")<<endl;
 }
