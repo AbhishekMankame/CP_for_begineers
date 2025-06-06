@@ -20,3 +20,19 @@ int main() {
 // Space Complexity: O(n) due to recursion stack
 // Recursion depth can go up to n, which can lead to stack overflow for large n.
 // Recursion stack: It stores the state of each recursive call.
+
+/*Example:
+fact(5) 
+/
+/--> fact(4) 
+   /---> fact(3) 
+       /---> fact(2) 
+           /---> fact(1) 
+               /---> fact(0) 
+                   returns 1
+               returns 1
+           returns 2
+       returns 6
+   returns 24
+
+*/
