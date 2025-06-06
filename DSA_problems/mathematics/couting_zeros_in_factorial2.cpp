@@ -22,3 +22,7 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity: O(log n) because we are dividing n by powers of 5.
+// Space Complexity: O(1) as we are using a constant amount of space.
+// Note: This method is efficient and works well for large values of n, as it avoids the need to compute the factorial directly.
