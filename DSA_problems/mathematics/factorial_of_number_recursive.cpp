@@ -24,11 +24,11 @@ int main() {
 /*Example:
 fact(5) 
 /
-/--> fact(4) 
-   /---> fact(3) 
-       /---> fact(2) 
-           /---> fact(1) 
-               /---> fact(0) 
+/--> 5 * fact(4) 
+   /---> 4 * fact(3) 
+       /---> 3 * fact(2) 
+           /---> 2 * fact(1) 
+               /---> 1 * fact(0) 
                    returns 1
                returns 1
            returns 2
