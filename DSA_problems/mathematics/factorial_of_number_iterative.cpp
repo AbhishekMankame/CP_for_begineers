@@ -15,6 +15,10 @@ int factIter(int n){
 int main(){
     int n;
     cin >> n;
-    cout << factIter(n)<<endl;
+    cout << factIter(n) << endl;
     return 0;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// Note: This code does not handle large numbers. For large n, consider using data types like long long or libraries for big integers.
