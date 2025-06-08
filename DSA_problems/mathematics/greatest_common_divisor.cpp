@@ -19,5 +19,11 @@ int gcd(int a, int b) {
 int main() {
     int a,b;
     cin >> a >> b;
-    cout << "GCD of " << a << " and " << b << " is " << gcd(a,b)<<endl;
+    // cout << "GCD of " << a << " and " << b << " is " << gcd(a,b)<<endl;
+    cout << gcd(a,b) << endl;
 }
+
+// Time Complexity: O(max(a, b))
+// Space Complexity: O(1)
+// The naive approach works but is not efficient for larger numbers.
+// The issus with this approach is that it iterates through all number from 1 to max(a, b) to find the GCD, which can be time-consuming for large values of a and b.
