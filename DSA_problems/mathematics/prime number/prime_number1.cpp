@@ -19,3 +19,7 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// Note: This is naive approach and can be improved further by checking only up to sqrt(n) and skipping even number after checking 2.
