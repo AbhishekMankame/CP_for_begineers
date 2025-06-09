@@ -23,3 +23,9 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity: O(sqrt(n))
+// Space Complexity: O(1)
+// Note: This is an optimized approach that checks divisible numbers only up to the square root of n, which reduces the number of iterations significantly for larger values of n. It also skips even numbers after checking 2 and 3, further optimizing the process.
+// The loop starts from 5 and checks only numbers of the form 6k ± 1, which are the only possible prime candidates after 2 and 3.
+// This is because all prime numbers greater than 3 can be expressed in the form of 6k ± 1, where k is a positive integer.
