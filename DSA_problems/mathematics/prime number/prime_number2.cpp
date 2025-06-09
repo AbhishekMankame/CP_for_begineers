@@ -19,3 +19,7 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity: O(sqrt(n))
+// Space Complexity: O(1)
+// Note: This is an optimized approach that checks divisible numbers only up to the square root of n, which reduces the number of iterations significantly for larger values of n.
