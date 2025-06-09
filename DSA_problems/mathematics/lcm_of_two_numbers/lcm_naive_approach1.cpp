@@ -19,3 +19,7 @@ int main() {
     cin >> a >> b;
     cout << lcm(a, b) << endl;
 }
+
+// Time Complexity: O(a*b)
+// Space Complexity: O(1)
+// This code calculates the least common multiple (LCM) of two numbers using a naive approach.
