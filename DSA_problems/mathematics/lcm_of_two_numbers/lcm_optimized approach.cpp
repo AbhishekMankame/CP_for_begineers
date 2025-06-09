@@ -15,7 +15,7 @@ int lcm(int a, int b) {
 int main() {
     int a, b;
     cin >> a >> b;
-    cout << gcd(a,b) << endl;
+    cout << lcm(a,b) << endl;
 
     return 0;
 }
