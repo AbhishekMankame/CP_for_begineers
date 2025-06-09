@@ -22,6 +22,18 @@ const int MOD = 1e9 + 7; // Modulo value for large numbers
 const int INF = 1e9; // Infinity value for comparisons or (can be set to higher values)
 const int MAXN = 2e5 + 5; // Maximum size for arrays or vectors
 
+int gcd(int a, int b){
+    if(b==0) {
+        return a;
+    }
+    else {
+        gcd(b, a%b);
+    }
+}
+int lcm(int a, int b) {
+    return (a*b) / gcd(a,b);
+}
+
 // Solve function (where main logic goes) 
 void solve() {
     int n;
