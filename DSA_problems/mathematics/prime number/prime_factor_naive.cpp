@@ -35,3 +35,7 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity: O(n * sqrt(n))
+// Space Complexity: O(1)
+// Note: This is a naive approach and not efficient for large numbers.
