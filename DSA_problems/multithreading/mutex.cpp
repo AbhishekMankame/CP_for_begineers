@@ -8,11 +8,15 @@
 #include<mutex>
 using namespace std;
 
+mutex carMutex; // Mutex to protect shared resource
+
 void driveCar(string driverName) {
+    unique_lock<mutex> carLock(carMutex); // lock the mutex to ensure exclusive access to the car
     cout << driverName << " is driving the car." << endl;
     // Simulate driving time
     this_thread::sleep_for(chrono::seconds(2));
     cout << driverName << " is done driving" << endl;
+    carLock.unlock(); // Unlock the mutex when done
 }
 
 int main() {
