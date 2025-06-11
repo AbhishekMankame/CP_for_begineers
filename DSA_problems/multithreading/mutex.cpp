@@ -38,3 +38,6 @@ int main() {
 
 // Here instead of using `lock_guard`, we use `unique_lock` which provides more flexibility, such as the ability to unlock and lock the mutex multiple times within the same scope.
 // The `unique_lock` can be used to lock and unlock the mutex multiple times, which is useful in scenarios where you need to perform multiple operations on the shared resource.
+
+// If we forget to unlock the mutex, it can lead to deadlocks, where threads are waiting indefinitely for the mutex to be unlocked.
+// Always ensure that the mutex is unlocked properly to avoid deadlocks. Using `unique_lock` is a good practice as it automatically handles the locking and unlocking of the mutex.
