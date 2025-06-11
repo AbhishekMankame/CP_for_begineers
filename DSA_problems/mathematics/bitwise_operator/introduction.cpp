@@ -16,4 +16,10 @@ int main() {
     int a = 5, b = 3;
     cout << "a & b: " << (a & b) << endl; // Bitwise AND
     cout << "a | b: " << (a | b) << endl; // Bitwise OR
+    cout << "a ^ b: " << (a ^ b) << endl; // Bitwise XOR
+    cout << "~a: " << (~a) << endl; // Bitwise NOT
+    cout << "a << 1: " << (a << 1) << endl; // left shift
+    cout << "a >> 1: " << (a >> 1) << endl; // right shift
+    cout << "a << 2: " << (a << 2) << endl; // left shift by 2
+    cout << "a >> 2: " << (a >> 2) << endl; // right shift by 2
 }
