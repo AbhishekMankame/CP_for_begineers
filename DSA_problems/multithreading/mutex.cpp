@@ -26,3 +26,12 @@ int main() {
     t2.join(); // Wait for t2 to finish before proceeding
 
 }
+
+// The `unique_lock` is used here to automatically manage the mutex lock, ensuring that it is released when the lock goes out of scope.
+// This prevents deadlocks and makes the code cleaner.
+// The `this_thread::sleep_for` function is used to simulate the time taken to drive the car.
+// The `join` method is called on each thread to ensure that the main thread waits for both threads to finish before exiting.
+
+// Time Complexity: O(1) for locking and unlocking the mutex, but the overall complexity depends on the operations performed within the locked section.
+// Space Complexity: O(1) for the mutex itself, but additional space may be used depending on the operations performed within the locked section.
+// Note: Always ensure that the mutex is unlocked properly to avoid deadlocks. Using `unique_lock` is a good practice as it automatically handles the locking and unlocking of the mutex.
