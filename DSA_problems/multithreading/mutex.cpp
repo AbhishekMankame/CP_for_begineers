@@ -35,3 +35,6 @@ int main() {
 // Time Complexity: O(1) for locking and unlocking the mutex, but the overall complexity depends on the operations performed within the locked section.
 // Space Complexity: O(1) for the mutex itself, but additional space may be used depending on the operations performed within the locked section.
 // Note: Always ensure that the mutex is unlocked properly to avoid deadlocks. Using `unique_lock` is a good practice as it automatically handles the locking and unlocking of the mutex.
+
+// Here instead of using `lock_guard`, we use `unique_lock` which provides more flexibility, such as the ability to unlock and lock the mutex multiple times within the same scope.
+// The `unique_lock` can be used to lock and unlock the mutex multiple times, which is useful in scenarios where you need to perform multiple operations on the shared resource.
