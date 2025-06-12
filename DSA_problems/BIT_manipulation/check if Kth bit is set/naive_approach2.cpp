@@ -19,3 +19,6 @@ int main() {
     isSet(n, k); // Call the function to check if the Kth bit is set
     return 0;
 }
+
+// Time Complexity: O(K) where K is the position of the bit we are checking.
+// Space Complexity: O(1) as we are using a constant amount of space.
