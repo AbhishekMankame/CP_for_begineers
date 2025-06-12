@@ -23,3 +23,8 @@ int main() {
 
     return 0; // Returning 0 to indicate successful execution
 }
+
+// Time Complexity: O(K) where K is the position of the bit we are checking.
+// Space Complexity: O(1) as we are using a constant amount of space for the variable x.
+// Note: This is a naive approach and can be optimized using bit manipulation techniques.
+// The above code checks if the Kth bit of a number N is set (i.e., if it is 1) by calculating 2^(k-1) and performing a bitwise AND operation with N.
