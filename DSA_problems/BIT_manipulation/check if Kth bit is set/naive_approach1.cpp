@@ -15,3 +15,11 @@ void isSet(int n, int k) {
         cout << "No" << endl; // If the Kth bit is not set, print "No"
     }
 }
+
+int main() {
+    int n, k;
+    cin >> n >> k; // Input the number and the bit position
+    isSet(n, k); // Call the function to check if the Kth bit is set
+
+    return 0; // Returning 0 to indicate successful execution
+}
