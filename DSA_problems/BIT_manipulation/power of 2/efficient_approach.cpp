@@ -5,7 +5,7 @@ using namespace std;
 
 bool isPow2(int n) {
     if(n == 0) return false;
-    return (n & (n - 1) == 0);
+    return ((n & (n - 1)) == 0);
 }
 
 int main() {
@@ -14,3 +14,6 @@ int main() {
     cout << isPow2(n);
     return 0;
 }
+
+// Time Complexity: O(1)
+// Space Complexity: O(1)
