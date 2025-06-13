@@ -21,3 +21,8 @@ int main() {
     }
     cout << oddCount(arr, n) << endl;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// Explanation: The code uses the XOR operation to find the number that occurs an odd number of times in the array. The property of XOR is that it cancels out numbers that appear an even number of times, leaving only the number that appears an odd number of times.
+// Note: This approach is efficient for large inputs, as it has a linear time complexity and uses constant space. The XOR operation is particularly useful in problems involving finding unique elements pr odd occurrences, as it provides a simple and effective solution without the need for additiional data structures.
