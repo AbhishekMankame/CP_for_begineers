@@ -9,6 +9,7 @@ bool isPow2(int n) {
         if(n%2!=0) {
             return false;
         }
+        n = n/2;
     }
     return true;
 }
@@ -16,5 +17,5 @@ bool isPow2(int n) {
 int main() {
     int n;
     cin >> n;
-    isPow2(n);
+    cout << isPow2(n);
 }
