@@ -19,3 +19,6 @@ int main() {
     cin >> n;
     cout << isPow2(n);
 }
+
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
