@@ -27,3 +27,7 @@ int main() {
     powerSet(s); // Call the function to generate and print the power set
     return 0; // Return 0 to indicate successful execution
 }
+
+// Time Complexity: O(n * 2^n) --> The time complexity is O(n * 2^n) because there are 2^n subsets, and for each subset, we may need to iterate through n characters to check which characters are included in the subset.
+// Space Complexity: O(1) --> The space complexity is O(1) because we are not using any additional data structures that grow with the input size; we are only using a constant amount of space for variables.
+// Note: The power set includes the empty set and the set itself, so the output will contain 2^n subsets.
