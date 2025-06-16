@@ -13,7 +13,7 @@ void powerSet(string s) {
     for(int i = 0; i < psize; i++) {
         for(int j = 0; j < n; j++) {
             // Check if jth bit in i is set
-            if((1 & (1 << j))!=0) {
+            if((i & (1 << j))!=0) {
                 cout << s[j]; // If the jth bit is set, include the jth character of the string in the current subset
             }
         }
