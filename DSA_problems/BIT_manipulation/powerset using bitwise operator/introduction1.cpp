@@ -4,6 +4,7 @@ The power set is the set of all subsets of a given set, including the empty set 
 */
 
 #include<iostream>
+#include<string>
 using namespace std;
 
 void powerSet(string s) {
@@ -18,4 +19,11 @@ void powerSet(string s) {
         }
         cout << endl; // Print the current subset
     }
+}
+
+int main() {
+    string s;
+    cin >> s; // Input the string for which we want to generate the power set
+    powerSet(s); // Call the function to generate and print the power set
+    return 0; // Return 0 to indicate successful execution
 }
