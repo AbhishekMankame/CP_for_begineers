@@ -22,3 +22,13 @@ Only certain digits are valid when rotated 180 degree:
 | 9 | 6 | ✅ |
 
 So only 0, 1, 6, 8, 9 are used in strobogrammatic numbers.
+
+### ✅ Examples
+✔ Vaid Strobogrammatic numbers:
+- 0, 1, 8
+- 69, 88, 96
+- 101, 609, 818, 986
+
+❌ Invalid Ones:
+- 23, 747, 123, 345
+- They contain digits like 2, 3, 4, 5, 7
