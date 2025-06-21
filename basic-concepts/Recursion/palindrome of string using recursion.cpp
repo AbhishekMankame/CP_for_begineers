@@ -6,7 +6,6 @@ using namespace std;
 
 bool isPal(string &s, int start, int end)
 {
-    start = 0, end = s.size() - 1;
     if (start >= end)
     {
         return true;
@@ -19,6 +18,6 @@ int main()
 {
     string s;
     cin >> s;
-    cout << isPal(s, s[0], s[s.size() - 1]) << endl;
+    cout << isPal(s, 0, s.size() - 1) << endl;
     return 0;
 }
