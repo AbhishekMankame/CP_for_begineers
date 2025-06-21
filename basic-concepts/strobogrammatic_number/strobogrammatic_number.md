@@ -32,3 +32,8 @@ So only 0, 1, 6, 8, 9 are used in strobogrammatic numbers.
 ❌ Invalid Ones:
 - 23, 747, 123, 345
 - They contain digits like 2, 3, 4, 5, 7
+
+### 💡Properties:
+1. Symmetry: Strobogrammatic numbers are symmetric across a 180 degree rotation.
+2. Middle Digit: For odd-length numbers, the center must be one of 0, 1, or 8.
+3. No leading zeros (for mulit-digit numbers): 010 is invalid unless n = 3 and zero is explicitly allowed.
