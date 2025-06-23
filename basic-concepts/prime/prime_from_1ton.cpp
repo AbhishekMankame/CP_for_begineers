@@ -24,6 +24,6 @@ int main()
 {
     int n;
     cin >> n;
-    cout << isPrime(n);
+    isPrime(n);
     return 0;
 }
