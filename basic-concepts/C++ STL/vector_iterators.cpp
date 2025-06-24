@@ -13,5 +13,12 @@ int main()
     }
     cout << endl;
 
+    vector<int>::reverse_iterator rt;
+    for (rt = vec.rbegin(); rt != vec.rend(); rt++)
+    {
+        cout << *(rt) << " ";
+    }
+    cout << endl;
+
     return 0;
 }
