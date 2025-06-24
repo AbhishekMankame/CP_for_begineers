@@ -25,5 +25,25 @@ int main()
     }
     cout << endl;
 
+    vec.pop_back();
+    for (int val : vec)
+    {
+        cout << val << " "; // Iterating through the vector and printing each element
+    }
+    cout << endl;
+
+    cout << vec.at(3) << endl;
+
+    vec.erase(vec.begin());
+    vec.erase(vec.begin() + 2);
+
+    cout << vec.front() << endl
+         << vec.back() << endl;
+
+    for (int val : vec)
+    {
+        cout << val << " "; // Iterating through the vector and printing each element
+    }
+
     return 0; // Return statement to indicate successful execution
 }
