@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -22,4 +24,10 @@ int main()
     {x++; cout << x << endl; };
     f();
     cout << x << endl;
+
+    // Using lambda with STL
+    std::vector<int> nums = {1, 2, 3, 4, 5};
+    std::for_each(nums.begin(), nums.end(), [](int n)
+                  {
+    if (n % 2 == 0) std::cout << n << " "; });
 }
