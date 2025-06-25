@@ -21,5 +21,14 @@ int main()
         cout << p.first << " " << p.second << endl;
     }
 
+    // m.erase("tv"); // It will erase all the keys matching with tv
+    m.erase(m.find("tv"));
+    for (auto p : m)
+    {
+        cout << p.first << " " << p.second << endl;
+    }
+
+    // If we need to erase the only one instance of tv, then we can pass the iterator
+
     return 0;
 }
