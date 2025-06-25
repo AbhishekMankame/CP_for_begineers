@@ -13,3 +13,9 @@ The C++ STL `std::sort()` is a hybrid algorithm - usually a variation of:
 - Switches to HeapSort if recursion goes too deep
 - Uses InsertionSort on small ranges <br>
 📌This is why STL sort is both fast and stable (performace-wise).
+
+## 🔧Implementing from Scratch?
+You can build in parts:
+1. Write QuickSort with `partition()`
+2. Add a depth limit - if exceeded, swith to HeapSort
+3. For small arrays (say `n<16`), use InsertionSort
