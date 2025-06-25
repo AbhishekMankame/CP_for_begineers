@@ -14,8 +14,12 @@ int main()
 
     for (auto p : m)
     {
-        cout << p.first << ", " << p.second << endl;
+        cout << p.first << " " << p.second << endl;
     }
+    cout << "count: " << m.count("camera") << endl; // kitne keys hamari map mei exist karti jinki value camera hai
+    // It does not return the value of camera, it returns the number or count of instances jo hamari key ke saath associated hai
+
+    cout << m["camera"] << endl; // camera ki corresponding value print ho jaayegi
 
     return 0;
 }
