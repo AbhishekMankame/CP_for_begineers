@@ -13,4 +13,9 @@ int main()
         cout << p << " ";
     }
     cout << endl;
+    s.erase(20);
+    for (auto p : s)
+    {
+        cout << p << " ";
+    }
 }
