@@ -24,3 +24,17 @@ int getXORSum(vector<int> &arr1, vector<int> &arr2)
 
     return a & b;
 }
+
+int main()
+{
+    vector<int> arr1 = {1, 2, 3, 4}, arr2 = {5, 6, 7, 8};
+    // for (auto i : arr1)
+    // {
+    //     cin >> i;
+    // }
+    // for (auto i : arr2)
+    // {
+    //     cin >> i;
+    // }
+    cout << getXORSum(arr1, arr2) << endl;
+}
