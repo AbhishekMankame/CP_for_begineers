@@ -10,10 +10,17 @@ int powr(int a, int b)
         if (b & 1)
         {
             res = res * a;
-            a = a * a;
-            b >> 1; // or we can write it as b=b/2
         }
+        a = a * a;
+        b = b >> 1; // or we can write it as b=b/2
     }
 
     return res;
+}
+
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    cout << powr(a, b) << endl;
 }
