@@ -18,7 +18,7 @@ public:
 void printList(Node *head)
 {
     Node *temp = head;
-    while (temp != head)
+    while (temp != nullptr)
     {
         cout << temp->data << " -> ";
         temp = temp->next;
@@ -40,4 +40,23 @@ Node *reverseList(Node *head)
         curr = next;             // move curr forward
     }
     return prev; // new head of reversed list
+}
+
+int main()
+{
+    // Creating nodes manually
+    Node *head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
+
+    cout << "Original Linked List:\n";
+    printList(head);
+
+    // Reverse the list
+    Node *newHead = reverseList(head);
+    cout << "Reversed Linked List:\n";
+    printList(newHead);
+
+    return 0;
 }
