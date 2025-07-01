@@ -18,7 +18,7 @@ int xorOfAnd(vector<int> a, vector<int> b)
     {
         for (int j = 0; j < b.size(); j++)
         {
-            xr.push_back(a[i] ^ b[j]);
+            xr.push_back(a[i] & b[j]);
         }
     }
     for (int i = 0; i < xr.size(); i++)
@@ -34,3 +34,6 @@ int main()
     vector<int> arr2 = {3, 4, 5, 6};
     cout << xorOfAnd(arr1, arr2) << endl;
 }
+
+// Time Complexity: O(n^2) as we are using nested loop, one loop inside another loop
+// Space Complexity: O(n) as we have considered new array `xr`
