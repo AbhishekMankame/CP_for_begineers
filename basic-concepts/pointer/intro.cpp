@@ -14,5 +14,9 @@ int main()
     cout << &ptr << endl;
     cout << ptr2 << endl;
     cout << &ptr2 << endl;
+    cout << *ptr2 << endl;
+    cout << *ptr << endl;
+    cout << *(&a) << endl;
+
     return 0;
 }
