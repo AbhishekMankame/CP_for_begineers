@@ -32,3 +32,6 @@ int main()
     printRepeatingCharsOrdered(name);
     return 0;
 }
+
+// Time Complexity - O(n) --> To passes over the string
+// Space Complexity - (n) --> Fixed 256-sized map for ASCII
