@@ -44,3 +44,21 @@ int main()
     printRepeatingCharsCaseInsensitiveOrdered(name);
     return 0;
 }
+
+/* Time Complexity
+1. First loop (count & track order): O(n)
+2. Second loop (print once per character in order): O(n)
+    - Max 26 in only lowercase letters
+
+Total Time = O(n)
+
+Space Complexity
+1. `unordered_map<char, int>
+    - Worst case = all unique lowercase letters = O(1) (bounded by 26)
+2. `vector<char> order
+    - Max 26 entries for ASCII letters --> O(1)
+
+Space: O(1) for ASCII
+(If you include full Unicode -> would be O(n))
+
+*/
