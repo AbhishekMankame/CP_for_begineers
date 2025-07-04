@@ -21,3 +21,6 @@ int main()
     cout << result << endl;
     return 0;
 }
+
+// Time Complexity: O(1)
+// Space Complexity: O(1)
