@@ -36,3 +36,18 @@ int main()
     cout << endl;
     return 0;
 }
+
+/* Time complexity:
+Let n = s.length()
+There are two nested loops:
+1. First inner loop (to check if character was already printed):
+- Runs i times in the worst case
+2. Second inner loop (to check if the character repeats):
+- Runs n - i - 1 time in the worst case
+
+So total Time Complexity = O(n^2)
+
+Space Complexity:
+We are not using any extra data structures (like arrays, maps, sets, etc).
+Space Complexity = O(1) --> constant extra space
+*/
