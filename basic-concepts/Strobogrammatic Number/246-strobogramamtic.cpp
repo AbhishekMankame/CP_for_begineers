@@ -18,12 +18,20 @@ public:
         int left = 0, right = num.size() - 1;
         while (left <= right)
         {
-            if (mapping.find(num[left]) == mapping.end())
+            if (mapping.find(num[left]) == mapping.end() || mapping[num[left]] != num[right])
                 return false;
 
             left++;
             right--;
         }
-        return false;
+        return true;
     }
 };
+
+int main()
+{
+    Solution sol;
+    string num = "926";
+    cout << (sol.isStrobogrammatic(num) ? "True" : "False") << endl;
+    return 0;
+}
