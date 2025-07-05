@@ -36,3 +36,11 @@ You check from both the ends inward:
 <pre> unordred_map< char, char > strobomap = {
     {'0','0'}, {'1','1'}, {'6','9'}, {'8','8'}, {'9','6'}
 }; </pre>
+
+## 🔍Real Use Case
+
+In coding interviews, you might be asked:
+
+- Count all strobogrammatic numbers of lenght `n`
+- Generate all such numbers
+- Check if a given number is strobogrammatic
