@@ -50,3 +50,6 @@ int main()
     cout << endl;
     return 0;
 }
+
+// Time Complexity: O(5^(n/2)) - since 5 choices at each level for outer pair
+// Space Complexity: O(5^(n/2))
