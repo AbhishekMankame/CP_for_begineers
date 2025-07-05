@@ -35,3 +35,6 @@ int main()
     cout << (sol.isStrobogrammatic(num) ? "True" : "False") << endl;
     return 0;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
