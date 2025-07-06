@@ -39,3 +39,11 @@ int main()
     morethan(arr, k);
     return 0;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+/*
+- First, make a frequency map of all the elements in the array
+- Then traverse the map and check the frequency of every element
+- If the frequency is greater than n/k then print the elements
+*/
