@@ -31,3 +31,11 @@ void morethan(vector<int> &arr, int k)
         }
     }
 }
+
+int main()
+{
+    vector<int> arr = {3, 4, 2, 2, 1, 2, 3, 3};
+    int k = 4;
+    morethan(arr, k);
+    return 0;
+}
