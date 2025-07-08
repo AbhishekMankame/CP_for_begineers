@@ -5,7 +5,7 @@ int maximumSum(int arr[], int n)
 {
     int maxx = 0;
     int x = sizeof(arr) / sizeof(arr[0]);
-    for (int i = 0; i < x; i++)
+    for (int i = 0; i < x - n; i++)
     {
         int current = 0;
         for (int j = i; j = i + n - 1; i++)
@@ -22,4 +22,5 @@ int main()
 {
     int arr[] = {3, 4, 5, 1, 2, 3, 4};
     int n = 4;
+    cout << maximumSum(arr, n) << endl;
 }
