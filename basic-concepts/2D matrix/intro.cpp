@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm> // For std::reverse
 using namespace std;
 
 int main()
@@ -29,5 +30,15 @@ int main()
             cout << matrix[i][j] << " ";
         }
         cout << endl;
+    }
+
+    vector<vector<int>> matrix1 = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
+
+    for (int i = 0; i < matrix1.size(); i++)
+    {
+        reverse(matrix1.begin(), matrix1.end());
     }
 }
