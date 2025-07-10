@@ -39,6 +39,15 @@ int main()
 
     for (int i = 0; i < matrix1.size(); i++)
     {
-        reverse(matrix1.begin(), matrix1.end());
+        reverse(matrix1[i].begin(), matrix1[i].end());
+    }
+    cout << endl;
+    for (int i = 0; i < matrix1.size(); i++)
+    {
+        for (int j = 0; j < matrix1[i].size(); j++)
+        {
+            cout << matrix1[i][j] << " ";
+        }
+        cout << endl;
     }
 }
