@@ -19,4 +19,15 @@ int main()
         }
         cout << endl;
     }
+
+    // Reversing a 2D matrix
+    cout << "Reversed matrix:" << endl;
+    for (int i = matrix.size() - 1; i >= 0; i--)
+    {
+        for (int j = matrix[i].size() - 1; j >= 0; j--)
+        {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
