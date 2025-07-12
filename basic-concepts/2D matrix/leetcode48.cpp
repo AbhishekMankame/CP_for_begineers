@@ -35,4 +35,7 @@ public:
             reverse(matrix[i].begin(), matrix[i].end());
         }
     }
-}
+};
+
+// Time Complexity: O(n^2) - where n is the number of rows (or columns) in the matrix.
+// Space Complexity: O(1) - since we are modifying the input matrix in-place.
