@@ -32,3 +32,4 @@ vector<vector<int>> transpose(vector<vector<int>> &matrix)
 
 // Time Complexity: O(n * m) - where n is the number of rows and m is the number of columns in the matrix.
 // Space Complexity: O(n * m) - for the transpose matrix.
+// Transpose of a matrix can also be done in-place for square matrices, but here we return a new matrix for clarity.
