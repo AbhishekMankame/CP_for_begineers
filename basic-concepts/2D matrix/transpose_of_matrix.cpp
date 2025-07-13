@@ -2,7 +2,6 @@
 /* Leetcode 867 - Given a 2D integer array `matrix`, return the transpose of `matrix`.
 The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
 
-
 ----------------              ----------------
 | 2   | 4 | -1 |              | 2 | -10 | 18 |
 ----------------              ----------------
