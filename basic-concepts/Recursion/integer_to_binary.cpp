@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
 void intToBin(int n)
