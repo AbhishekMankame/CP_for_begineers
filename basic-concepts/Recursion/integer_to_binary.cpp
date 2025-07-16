@@ -35,7 +35,5 @@ int main()
 }
 
 // Time Complexity: O(log n) - The function iterates through the number of bits in the binary representation of n, which is log base 2 of n.
-
 // Space Complexity: O(log n) - The space complexity is O(log n) due to the string used to store the binary representation, which can be at most log base 2 of n characters long.
-
 // Note: This function prints the binary representation of the integer n in the correct order, from most significant bit to least significant bit.
