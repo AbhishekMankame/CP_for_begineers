@@ -36,3 +36,7 @@ int main()
 
     return 0;
 }
+
+// Time Complexity: O(log n) --> The time complexity is O(log n) because the function recursively divides the number by 8 until it reaches 0, which takes log base 8 of n steps.
+// Space Complexity: O(log n) --> The space complexity is O(log n) due to the array used to store the octal digits, which can be at most log base 8 of n elements long.
+// Note: This function prints the octal representation of the integer n in the correct order, from most significant digit to least significant digit.
