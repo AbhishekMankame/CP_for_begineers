@@ -25,3 +25,14 @@ void intToOctal(int n)
         cout << octal[j];
     }
 }
+
+int main()
+{
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    cout << "Octal representation: ";
+    intToOctal(n);
+
+    return 0;
+}
