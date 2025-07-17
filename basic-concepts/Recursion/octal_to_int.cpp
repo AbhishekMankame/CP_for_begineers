@@ -25,3 +25,7 @@ int main()
     cout << "Decimal equivalent: " << octalToDecimal(octal) << endl;
     return 0;
 }
+
+// Time Complexity: O(log n) - The function processes each digit of the octal number, which has a logarithmic relationship with the size of the number in base 10.
+// Space Complexity: O(1) - The space complexity is constant as we are using a fixed amount of space for variables regardless of the input size.
+// Note: The function converts an octal number to its decimal equivalent by processing each digit from least significant to most significant.
