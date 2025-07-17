@@ -16,3 +16,12 @@ int octalToDecimal(int octal)
 
     return decimal;
 }
+
+int main()
+{
+    int octal;
+    cout << "Enter an octal number: ";
+    cin >> octal;
+    cout << "Decimal equivalent: " << octalToDecimal(octal) << endl;
+    return 0;
+}
