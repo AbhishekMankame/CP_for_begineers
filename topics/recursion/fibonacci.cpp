@@ -1,6 +1,7 @@
 // Fibonacci Number using Recursion
 // This program calculates the nth Fibonacci number using recursion.
 // The Fibonacci sequence is defined as: F(0) = 0, F(1) = 1, F(n) = F(n - 1) + F(n - 2) for n > 1.
+// This implementation is not efficient for large n due to its exponential time complexity.
 
 #include <iostream>
 using namespace std;
