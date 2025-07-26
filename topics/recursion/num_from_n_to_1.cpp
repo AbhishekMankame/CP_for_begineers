@@ -1,5 +1,7 @@
 // Printing numbers from n to 1 using recursion
 // This program takes an integer n as input and prints the numbers from n down to 1 using recursion.
+// The function prints numbers from n to 1 using recursive approach.
+// The implementation is straightforward and effectively demonstrates the use of recursion.
 
 #include <iostream>
 using namespace std;
@@ -22,7 +24,6 @@ int main()
     printNum(n);
     return 0;
 }
-
 
 // Time Complexity: O(n) --> The time complexity is O(n) because the function makes a single recursive call for each number from n down to 1, leading to n calls in total.
 // Space Complexity: O(n) --> The space complexity is O(n) due to the call stack used for recursion, which can go up to n levels deep in the worst case.
