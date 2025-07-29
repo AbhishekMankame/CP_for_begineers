@@ -40,3 +40,24 @@ void backtrack(vector<int> &nums, int index, vector<int> &current, vector<vector
     // Choice 2: Exclude nums[index]
     backtrack(nums, index + 1, current, result);
 }
+
+int main()
+{
+    vector<int> nums = {1, 2, 3};
+    vector<vector<int>> result;
+    vector<int> current;
+
+    backtrack(nums, 0, current, result);
+
+    // Print results
+    for (const auto &subset : result)
+    {
+        cout << "[";
+        for (int num : subset)
+        {
+            cout << num << " ";
+        }
+        cout << "]" << endl;
+    }
+    return 0;
+}
