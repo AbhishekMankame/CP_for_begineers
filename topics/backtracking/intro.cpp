@@ -28,6 +28,7 @@ void backtrack(vector<int> &nums, int index, vector<int> &current, vector<vector
     if (index == nums.size())
     {
         result.push_back(current); // Save the current subset
+        return;                    // Self Note: Missed to add this
     }
 
     // Choice 1: Include nums[index]
