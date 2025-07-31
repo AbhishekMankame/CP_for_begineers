@@ -19,7 +19,7 @@ using namespace std;
 class Solution
 {
 public:
-    void getAllSubsets(vector<int> &nums, vector<int> &ans, int i, vector<vector<int>> allSubsets)
+    void getAllSubsets(vector<int> &nums, vector<int> &ans, int i, vector<vector<int>> &allSubsets)
     {
         if (i == nums.size())
         {
@@ -40,3 +40,5 @@ public:
         getAllSubsets(nums, ans, 0, allSubsets);
     }
 };
+
+// Time Complexity: O(n*(2^n))
