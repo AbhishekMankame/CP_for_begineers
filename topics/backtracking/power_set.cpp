@@ -38,6 +38,8 @@ public:
         vector<vector<int>> allSubsets;
         vector<int> ans;
         getAllSubsets(nums, ans, 0, allSubsets);
+
+        return allSubsets;
     }
 };
 
