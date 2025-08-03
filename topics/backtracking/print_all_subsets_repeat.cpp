@@ -32,3 +32,5 @@ int main()
     getSubset(arr, ans, 0); // here 0 is index from where we will start
     return 0;
 }
+
+// Time Complexity: O(n * 2^n)
