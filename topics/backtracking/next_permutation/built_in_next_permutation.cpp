@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     vector<int> nums = {1, 2, 3};
-    sort(nums.begin(), nums.end()); // important step
+    // sort(nums.begin(), nums.end()); // important step
 
     do
     {
@@ -21,3 +21,11 @@ int main()
 
     return 0;
 }
+
+/*Behind the scene: How next_permutation() works
+It generates the next permutation in lexicographic order using this logic:
+1. Find the first index `i` from the end such that `nums[i] < nums[i+1]`
+2. Find the smallest element after index `i` that is greater that `nums[i]` (say at index `j`), and swap them.
+3. Reverse the subarray from `i+1` to the end.
+
+*/
