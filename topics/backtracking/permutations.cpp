@@ -31,3 +31,9 @@ public:
         return ans;
     }
 };
+
+// Time Complexity: At the end humare paas n! solutions aayenge, as we know that recursion tree ke last level par n! calls aane waale hai. Par har ek call reach karne keliye jitne humare nums array ka size hai, humne utne spaces keliye choice liye hai, matlab jab hum iss ek call par aaye hai, toh hum `n` choices lekar aaye hai.
+// n! * n choices ==> O(n! * n)
+
+// Space complexity: n! + n levels deep in worst case for call stack
+// SC: O(n!)
