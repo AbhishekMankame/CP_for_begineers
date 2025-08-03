@@ -31,4 +31,14 @@ public:
         }
         getSubset(arr, ans, index, allSubset);
     }
+
+    vector<vector<int>> subsetWithDup(vector<int> &arr)
+    {
+        sort(arr.begin(), arr.end());
+        vector<vector<int>> answerSet;
+        vector<int> ans;
+        getSubset(arr, ans, 0, answerSet);
+
+        return answerSet;
+    }
 };
