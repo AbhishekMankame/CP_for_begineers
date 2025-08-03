@@ -19,7 +19,7 @@ public:
         for (int i = idx; i < nums.size(); i++)
         {
             swap(nums[idx], nums[i]); // idx place => ith element choice
-            getPerms(nums, i + 1, ans);
+            getPerms(nums, idx + 1, ans);
             swap(nums[idx], nums[i]); // backtrack
         }
     }
