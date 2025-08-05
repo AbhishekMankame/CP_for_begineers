@@ -8,7 +8,7 @@ using namespace std;
 class Solution
 {
 public:
-    bool isSafe(vector<string> &board, int row, int col, int n)
+    bool isSafe(vector<string> &board, int row, int col, int n) // O(n)
     {
         // horizontal
         for (int j = 0; j < n; j++)
@@ -27,6 +27,26 @@ public:
                 return false;
             }
         }
+
+        // left diagonal
+        for (int i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        {
+            if (board[i][j] == 'Q')
+            {
+                return false;
+            }
+        }
+
+        // right diagonal
+        for (int i = row, j = col; i >= 0 && j < n; i--, j++)
+        {
+            if (board[i][j] == 'Q')
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     void nQueens(vector<string> &board, int row, int n, vector<vector<string>> &ans)
@@ -50,9 +70,18 @@ public:
 
     vector<vector<string>> solveNQueens(int n)
     {
-        vector<string> board;
+        vector<string> board(n, string(n, '.'));
         vector<vector<string>> ans;
         nQueens(board, 0, n, ans);
         return ans;
     }
 };
+
+// Time Complexity: O(n!)
+/* Hume `n` queens ko place karna hai on `n` different rows.
+So for z1st Queen we have --> n choices
+For 2nd Queen we have --> n-1 choices
+....
+Goes upto 1
+==> O(n!)
+*/
