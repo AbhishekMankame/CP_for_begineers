@@ -8,6 +8,27 @@ using namespace std;
 class Solution
 {
 public:
+    bool isSafe(vector<string> &board, int row, int col, int n)
+    {
+        // horizontal
+        for (int j = 0; j < n; j++)
+        {
+            if (board[row][j] == 'Q')
+            {
+                return false;
+            }
+        }
+
+        // vertical
+        for (int i = 0; i < n; i++)
+        {
+            if (board[i][col] == 'Q')
+            {
+                return false;
+            }
+        }
+    }
+
     void nQueens(vector<string> &board, int row, int n, vector<vector<string>> &ans)
     {
         if (row == n)
@@ -31,5 +52,7 @@ public:
     {
         vector<string> board;
         vector<vector<string>> ans;
+        nQueens(board, 0, n, ans);
+        return ans;
     }
 };
