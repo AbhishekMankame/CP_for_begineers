@@ -57,7 +57,7 @@ public:
             return;
         }
 
-        for (int j = 0; j < board.size(); j++)
+        for (int j = 0; j < n; j++)
         {
             if (isSafe(board, row, j, n))
             {
