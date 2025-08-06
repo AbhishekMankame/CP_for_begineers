@@ -8,6 +8,36 @@ using namespace std;
 class Solution
 {
 public:
+    bool isSafe(vector<vector<char>> &board, int row, int col, char dig)
+    {
+
+        // horizontal
+        for (int j = 0; j < 9; j++)
+        {
+            if (board[row][j] == dig)
+                return false;
+        }
+
+        // vertical
+        for (int i = 0; i < 9; i++)
+        {
+            if (board[i][col] == dig)
+                return false;
+        }
+
+        // check for 3*3 Grid
+        int srow = (row / 3) * 3;
+        int scol = (col / 3) * 3;
+        for (int i = srow; i <= srow + 2; i++) // this is of constant time complexity as it goes upto O(9)
+        {
+            for (int j = scol; j <= scol + 2; j++)
+            {
+                if (board[i][j] == dig)
+                    return false;
+            }
+        }
+        return true;
+    }
     bool helper(vector<vector<char>> &board, int row, int col)
     {
         if (row == 9)
@@ -25,7 +55,7 @@ public:
         }
 
         // Place the digit
-        for (int dig = 1; dig <= 9; dig++)
+        for (char dig = '1'; dig <= '9'; dig++)
         {
             if (isSafe(board, row, col, dig))
             {
