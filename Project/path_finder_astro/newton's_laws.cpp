@@ -13,3 +13,13 @@ const double M_earth = 5.972e24; // mass of the earth (kg)
 const double AU = 1.496e11;      // 1 astronomical unit in meters (distance from Earth to Sun)
 const double dt = 60 * 60;       // 1 hour in seconds
 const int steps = 8760;
+
+// Structure to represent position and velocity
+struct vector2D
+{
+    double x, y;
+    Vector2D operator+(const Vector2D &other) const { return {x + other.x + other.y}; }
+    Vector2D operator-(const Vector2D &other) const { return {x - other.x - other.y}; }
+    Vector2D operator*(double scalar) const { return {x * scalar, y * scalar}; }
+    double magnitude() const { return sqrt(x * x + y * y); }
+};
