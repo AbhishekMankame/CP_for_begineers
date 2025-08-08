@@ -3,5 +3,5 @@
 /*
 Pen object --> Color: Green     --> Properties/Attributes
                thickness: 5px     --> Properties/Attributes
-               setColor("Red")
+               setColor("Red")   --> Nethods
 */
