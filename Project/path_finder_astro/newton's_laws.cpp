@@ -30,4 +30,28 @@ int main()
     vector2D pos{AU, 0};
     vector2D vel = {0, 29.78e3}; // 29.78 km/s = 29780 m/s
     ofstream output("orbit.csv");
+    output << "x,y\n";
+
+    for (int i = 0; i < steps; ++i)
+    {
+        // Step1: Compute distance vector and magnitude
+        vector2D toSum = {0, 0} - pos;
+        double r = toSum.magnitude();
+
+        // Step2: Newton's Law of Gravitation --> acceleration
+        // F = G * M1 * M2 / r^2 -> a = F / M_earth = G * M_sum / r^2
+        double acc_mag = G * M_sun / (r * r);
+        vector2D acc = toSum * (acc_mag / r); // normalize toSun and multiply
+
+        // Step3: Update velocity and position (Euler Integration)
+        vel = vel + acc * dt;
+        pos = pos + vel * dt;
+
+        // Log position for plotting
+        output << pos.x << "," << pos.y << "\n";
+    }
+
+    output.close();
+    cout << "Simulation complete. Orbit data saved to orbit.csv\n";
+    return 0;
 }
