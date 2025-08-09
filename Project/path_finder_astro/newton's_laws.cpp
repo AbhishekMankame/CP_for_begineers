@@ -35,13 +35,13 @@ int main()
     for (int i = 0; i < steps; ++i)
     {
         // Step1: Compute distance vector and magnitude
-        vector2D toSum = {0, 0} - pos;
-        double r = toSum.magnitude();
+        vector2D toSun = {0, 0} - pos;
+        double r = toSun.magnitude();
 
         // Step2: Newton's Law of Gravitation --> acceleration
         // F = G * M1 * M2 / r^2 -> a = F / M_earth = G * M_sum / r^2
         double acc_mag = G * M_sun / (r * r);
-        vector2D acc = toSum * (acc_mag / r); // normalize toSun and multiply
+        vector2D acc = toSun * (acc_mag / r); // normalize toSun and multiply
 
         // Step3: Update velocity and position (Euler Integration)
         vel = vel + acc * dt;
