@@ -18,8 +18,16 @@ const int steps = 8760;
 struct vector2D
 {
     double x, y;
-    Vector2D operator+(const Vector2D &other) const { return {x + other.x + other.y}; }
-    Vector2D operator-(const Vector2D &other) const { return {x - other.x - other.y}; }
-    Vector2D operator*(double scalar) const { return {x * scalar, y * scalar}; }
+    vector2D operator+(const vector2D &other) const { return {x + other.x, y + other.y}; }
+    vector2D operator-(const vector2D &other) const { return {x - other.x, y - other.y}; }
+    vector2D operator*(double scalar) const { return {x * scalar, y * scalar}; }
     double magnitude() const { return sqrt(x * x + y * y); }
 };
+
+int main()
+{
+    // Initial conditions: Earth starts at (1 AU, 0) with orbital speed
+    vector2D pos{AU, 0};
+    vector2D vel = {0, 29.78e3}; // 29.78 km/s = 29780 m/s
+    ofstream output("orbit.csv");
+}
