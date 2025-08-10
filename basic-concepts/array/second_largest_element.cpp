@@ -27,3 +27,6 @@ int main()
 
     return 0;
 }
+
+// Time Complexity: O(n) --> We are traversing the array only once.
+// Space Complexity: O(1) --> We are using only a constant amount of space.
