@@ -19,9 +19,11 @@ int main()
         {
             sec_largest = arr[i];
         }
-        if (sec_largest == INT_MIN)
-            cout << "No second largest element" << endl;
-        else
-            cout << "The second largest element is " << sec_largest << endl;
     }
+    if (sec_largest == INT_MIN)
+        cout << "No second largest element" << endl;
+    else
+        cout << "The second largest element is " << sec_largest << endl;
+
+    return 0;
 }
