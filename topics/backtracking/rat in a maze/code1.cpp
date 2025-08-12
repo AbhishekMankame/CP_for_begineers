@@ -5,6 +5,10 @@ using namespace std;
 
 void helper(vector<vector<int>> &mat, int r, int c, string path, vector<string> &ans)
 {
+    helper(mat, r + 1, c, path + "D", ans); // down
+    helper(mat, r - 1, c, path + "D", ans); // up
+    helper(mat, r, c + 1, path + "R", ans); // right
+    helper(mat, r, c - 1, path + "L", ans); // left
 }
 
 vector<string> findPath(vector<vector<int>> &mat)
