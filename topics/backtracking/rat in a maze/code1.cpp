@@ -3,8 +3,17 @@
 #include <vector>
 using namespace std;
 
+void helper(vector<vector<int>> &mat, int r, int c, string path, vector<string> &ans)
+{
+}
+
 vector<string> findPath(vector<vector<int>> &mat)
 {
+    vector<string> ans;
+    string path = "";
+    helper(mat, 0, 0, path, ans);
+
+    return ans;
 }
 
 int main()
