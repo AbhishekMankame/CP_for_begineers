@@ -53,3 +53,12 @@ int main()
     }
     return 0;
 }
+
+/* Time Complexity: hamare paas total n*n cells hai.
+Agar har cells se hum 4 different calls le sakte hai, then 4^(n^2) total choices hum le sakte hai
+
+TC: O(4^(n^2))
+
+Space Complexity: Here we are not using any extra space, only recursion stack space is used which is O(n^2) in the worst case.
+If we had used visited array to keep track of visited cells, then the space complexity would have been O(n^2) extra space will be added.
+*/
