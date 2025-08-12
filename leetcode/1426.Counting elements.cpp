@@ -6,3 +6,24 @@ Input: arr = [1, 2, 3]
 Output: 2
 Explantion: 1 and 2 are counted because 2 and 3 are in arr.
 */
+
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int countElements(vector<int> &arr)
+{
+    set<int> s(arr.begin(), arr.end());
+
+    int count = 0;
+    for (int i = 0; i < arr.size(); i++)
+    {
+        if (s.count(arr[i] + 1))
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
