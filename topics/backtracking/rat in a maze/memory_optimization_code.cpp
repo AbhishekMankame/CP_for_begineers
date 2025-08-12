@@ -21,7 +21,7 @@ void helper(vector<vector<int>> &mat, int r, int c, string path, vector<string> 
     mat[r][c] = -1; // yaha par isliye place kiya hai ki, jab next waale saare calls lagao toh unko pata rahe ki that particular (r,c) is visited cell
 
     helper(mat, r + 1, c, path + "D", ans); // down
-    helper(mat, r - 1, c, path + "D", ans); // up
+    helper(mat, r - 1, c, path + "U", ans); // up
     helper(mat, r, c + 1, path + "R", ans); // right
     helper(mat, r, c - 1, path + "L", ans); // left
 
