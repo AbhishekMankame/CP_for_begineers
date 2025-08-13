@@ -21,3 +21,23 @@ Constraints:
 - s consists of only English letters and spaces ' '
 - There will be at least one word in s.
 */
+
+#include <iostream>
+using namespace std;
+
+int length(string s)
+{
+    int len = 0;
+    int i = s.size() - 1;
+
+    while (i >= 0 && s[i] == ' ')
+        i--;
+
+    while (i >= 0 && s[i] != ' ')
+    {
+        len++;
+        i--;
+    }
+
+    return len;
+}
