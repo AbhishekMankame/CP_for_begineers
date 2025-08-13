@@ -41,3 +41,10 @@ int length(string s)
 
     return len;
 }
+
+int main()
+{
+    string s = "abcd efgd   ";
+    cout << length(s) << endl;
+    return 0;
+}
