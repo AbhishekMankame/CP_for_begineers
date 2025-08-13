@@ -48,3 +48,6 @@ int main()
     cout << length(s) << endl;
     return 0;
 }
+
+// Time Complexity: O(n) + O(n) == O(2n) ==> O(n)
+// Space Complexity: O(1)
