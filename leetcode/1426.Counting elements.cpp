@@ -27,3 +27,6 @@ int countElements(vector<int> &arr)
 
     return count;
 }
+
+// Time Complexity: O(n) --> We traverse the array once to insert elements into the set and once more to count the elements, resulting in a linear time complexity.
+// Space Complexity: O(n) --> The space complexity is determined by the set, which can store up to n unique elements in the worst case.
