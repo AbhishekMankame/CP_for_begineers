@@ -28,3 +28,36 @@ All elements of `candidates` are distinct
 1 <= target <= 40
 
 */
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
+using namespace std;
+
+class Solution
+{
+
+public:
+    set<vector<int>> s;
+    void combS(vector<int> &arr, int i, vector<int> &comb, vector<vector<int>> &ans, int target)
+    {
+        int n = arr.size();
+        if (i == n || target < 0)
+            return;
+        if (target == 0)
+        {
+            if (s.find(comb) == s.end())
+            {
+                ans.push_back(comb);
+                s.insert(comb);
+            }
+            return;
+        }
+        comb.push_back(arr[i]);
+        combS(arr, i + 1, comb, ans, target - arr[i]); // single inclusion
+        combS(arr, i, comb, ans, target - arr[i]);     // Multiple inclusion
+        comb.pop_back();                               // Backtracking
+        combS(arr, i + 1, comb, ans, target);          // Exclusion
+    }
+};
