@@ -90,3 +90,6 @@ public:
         return 0;
     }
 };
+
+// Time Complexity: O(2^(n + t)), where n is the number of candidates and t is the target value.
+// Space Complexity: O(t), for the recursion stack and the temporary combination vector.
