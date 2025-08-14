@@ -60,4 +60,13 @@ public:
         comb.pop_back();                               // Backtracking
         combS(arr, i + 1, comb, ans, target);          // Exclusion
     }
+
+    vector<vector<int>> combinationSum(vector<int> &arr, int target)
+    {
+        vector<vector<int>> ans;
+        vector<int> comb;
+        combS(arr, 0, comb, ans, target);
+
+        return ans;
+    }
 };
