@@ -69,4 +69,24 @@ public:
 
         return ans;
     }
+
+    int main()
+    {
+        vector<int> candidates = {2, 3, 6, 7};
+        int target = 7;
+        Solution sol;
+        vector<vector<int>> result = sol.combinationSum(candidates, target);
+        for (const auto &comb : result)
+        {
+            cout << "[";
+            for (int i = 0; i < comb.size(); i++)
+            {
+                cout << comb[i];
+                if (i < comb.size() - 1)
+                    cout << ",";
+            }
+            cout << "]" << endl;
+        }
+        return 0;
+    }
 };
