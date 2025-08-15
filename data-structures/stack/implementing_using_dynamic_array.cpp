@@ -90,3 +90,7 @@ int main()
 
     return 0;
 }
+
+// Time Complexity: O(1) for push, pop, top
+// Space Complexity: O(n) for stack storage
+// Stack is implemented using a dynamic array, allowing for flexible sizing.
