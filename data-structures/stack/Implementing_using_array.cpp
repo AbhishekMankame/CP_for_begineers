@@ -60,3 +60,5 @@ int main()
     cout << "Top after pop: " << s.top() << endl;
     return 0;
 }
+// Time Complexity: O(1) for push, pop, top
+// Space Complexity: O(n) for stack storage
