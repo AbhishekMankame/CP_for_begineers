@@ -21,7 +21,7 @@ public:
     // Destructor
     ~Stack()
     {
-        delete[] arr;
+        delete[] arr; // free the memory we allocated using new
     }
 
     // Push operation
@@ -32,7 +32,7 @@ public:
             cout << "Stack Overflow! Cannot push " << x << endl;
             return;
         }
-        arr[++topIndex];
+        arr[++topIndex] = x;
     }
 
     // Pop operation
@@ -69,3 +69,24 @@ public:
         return topIndex + 1;
     }
 };
+
+int main()
+{
+    int n;
+    cout << "Enter stack capacity: ";
+    cin >> n;
+
+    Stack s(n);
+
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout << "Top: " << s.top() << endl; // 30
+    s.pop();
+    cout << "Top after pop: " << s.top() << endl; // 20
+
+    cout << "Current size: " << s.size() << endl; // 2
+
+    return 0;
+}
