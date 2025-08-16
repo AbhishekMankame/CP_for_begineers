@@ -55,3 +55,6 @@ int main()
 {
     return 0;
 }
+
+// Time Complexity: O(n * 2^n) where n is the length of the string
+// Space Complexity: O(n) for the recursion stack
