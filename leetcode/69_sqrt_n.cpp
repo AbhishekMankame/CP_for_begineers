@@ -23,3 +23,25 @@ Topics: Math Binary Search
 
 #include <iostream>
 using namespace std;
+
+int sqrtx(int x)
+{
+    if (x == 0 || x == 1)
+        return x;
+    long int result = 1;
+    long int i = 1;
+
+    while (result <= x)
+    {
+
+        result = i * i;
+    }
+    return i - 1;
+}
+
+int main()
+{
+    int x = 8;
+    cout << sqrtx(x);
+    return 0;
+}
