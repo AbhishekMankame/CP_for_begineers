@@ -44,3 +44,15 @@ string longestCommonPrefix(vector<string> &str)
     }
     return ans;
 }
+
+int main()
+{
+    vector<string> str = {"flower", "flowing", "flow"};
+    cout << longestCommonPrefix(str);
+
+    return 0;
+}
+
+// TC: O(n * log n * m), where n is the number of strings (str.size()), m be the maximum length of a string in the array.
+
+// SC: O(m), where m is the maximum length of a string in the array.
