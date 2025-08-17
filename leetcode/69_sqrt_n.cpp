@@ -33,7 +33,7 @@ int sqrtx(int x)
 
     while (result <= x)
     {
-
+        i++;
         result = i * i;
     }
     return i - 1;
@@ -45,3 +45,6 @@ int main()
     cout << sqrtx(x);
     return 0;
 }
+
+// TC: O(sqrt(x))
+// SC: O(1)
