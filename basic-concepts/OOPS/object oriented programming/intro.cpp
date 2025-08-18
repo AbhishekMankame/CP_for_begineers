@@ -34,13 +34,13 @@ public:
     // salary ko hum directly access nahi kar paa rahe, par indirectly inn public functions ke through access kar paa rahe hai
 }; // Here semicolon is necessary, it will denote the end of the class
 
-class Student
-{
-public:
-    string name;
-    int rollNo;
-    int age;
-};
+// class Student
+// {
+// public:
+//     string name;
+//     int rollNo;
+//     int age;
+// };
 
 int main()
 {
@@ -48,8 +48,9 @@ int main()
     t1.name = "Andrew Ng";
     t1.subject = "Machine Learning";
     t1.dept = "CS";
-    t1.salary = 25000;
+    t1.setSalary(25000);
 
     cout << t1.name << endl;
+    cout << t1.getSalary() << endl;
     return 0;
 }
