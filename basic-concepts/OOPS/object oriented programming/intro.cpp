@@ -19,6 +19,19 @@ public:
     {
         dept = newDept;
     }
+
+    // setter function --> private values ko set karna
+    void setSalary(double s)
+    {
+        salary = s;
+    }
+
+    // getter function --> private values ki value get karne keliye
+    double getSalary()
+    {
+        return salary;
+    }
+    // salary ko hum directly access nahi kar paa rahe, par indirectly inn public functions ke through access kar paa rahe hai
 }; // Here semicolon is necessary, it will denote the end of the class
 
 class Student
