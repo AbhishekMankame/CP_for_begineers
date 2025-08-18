@@ -3,8 +3,9 @@
 #include <string>
 using namespace std;
 
-class Techer
+class Teacher
 {
+public:
     // Properties
     string name;
     string dept;
@@ -20,6 +21,12 @@ class Techer
 
 int main()
 {
+    Teacher t1;
+    t1.name = "Andrew Ng";
+    t1.subject = "Machine Learning";
+    t1.dept = "CS";
+    t1.salary = 25000;
 
+    cout << t1.name << endl;
     return 0;
 }
