@@ -36,3 +36,18 @@ int addDigits(int num)
     }
     return num;
 }
+
+int main()
+{
+    int n;
+    cin >> n;
+    cout << addDigits(n) << endl;
+    return 0;
+}
+
+// Time Complexity: O(log n)
+/*Inner Loop:
+- Sums the digits of `num`
+- Takes O(log n to the base 10) time since it processes each digit of the number
+    - A number like 12345 has 5 digits => 5 iterations
+*/
