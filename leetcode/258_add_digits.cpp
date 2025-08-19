@@ -18,3 +18,21 @@ Constraints:
 
 Follow up: Could you do it without any loop recursion in `O(1)` runtime?
 */
+
+#include <iostream>
+using namespace std;
+
+int addDigits(int num)
+{
+    while (num >= 10)
+    {
+        int sum = 0;
+        while (num > 0)
+        {
+            sum = sum + num % 10;
+            num = num / 10;
+        }
+        num = sum;
+    }
+    return num;
+}
