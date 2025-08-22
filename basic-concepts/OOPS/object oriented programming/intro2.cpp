@@ -34,6 +34,8 @@ int main()
 {
     Teacher t1("Shradha", "Computer Science", "C++", 25000);
     t1.getInfo();
-
+    cout << endl;
+    Teacher t2(t1); // Copy constructor
+    t2.getInfo();
     return 0;
 }
