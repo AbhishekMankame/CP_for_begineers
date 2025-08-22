@@ -21,6 +21,15 @@ public:
         this->salary = salary;
     }
 
+    Teacher(Teacher &orgObj) // pass by refernce
+    {
+        cout << "I am custom copy constructor\n";
+        this->name = orgObj.name;
+        this->dept = orgObj.dept;
+        this->subject = orgObj.subject;
+        this->salary = orgObj.salary;
+    }
+
     void getInfo()
     {
         cout << "name: " << name << endl;
@@ -35,7 +44,7 @@ int main()
     Teacher t1("Shradha", "Computer Science", "C++", 25000);
     t1.getInfo();
     cout << endl;
-    Teacher t2(t1); // Copy constructor
+    Teacher t2(t1); // Default  Copy constructor
     t2.getInfo();
     return 0;
 }
