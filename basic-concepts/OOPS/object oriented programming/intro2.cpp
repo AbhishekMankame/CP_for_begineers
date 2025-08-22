@@ -44,7 +44,7 @@ int main()
     Teacher t1("Shradha", "Computer Science", "C++", 25000);
     t1.getInfo();
     cout << endl;
-    Teacher t2(t1); // Default  Copy constructor
+    Teacher t2(t1); // Custom Copy constructor
     t2.getInfo();
     return 0;
 }
