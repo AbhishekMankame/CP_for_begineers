@@ -9,6 +9,10 @@ private:
     double salary; // Here we have made salary as private and other things as public
 
 public:
+    Teacher()
+    {
+        cout << "Hi, I am constructor\n";
+    }
     // Properties
     string name;
     string dept;
@@ -44,7 +48,8 @@ public:
 
 int main()
 {
-    Teacher t1;
+    Teacher t1; // Yaha par internally constructor ko call laga rahi hai, compiler automatically constructor ko kar deta hai
+    Teacher t2;
     t1.name = "Andrew Ng";
     t1.subject = "Machine Learning";
     t1.dept = "CS";
