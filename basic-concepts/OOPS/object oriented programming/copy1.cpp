@@ -6,33 +6,34 @@ class Student
 {
 public:
     string name;
-    double cgpa;
+    double *cgpaPtr;
 
     Student(string name, double cgpa)
     {
         this->name = name;
-        this->cgpa = cgpa;
+        cgpaPtr = new double;
+        *cgpaPtr = cgpa;
     }
 
     Student(Student &obj)
     {
         this->name = obj.name;
-        this->cgpa = obj.cgpa;
+        this->cgpaPtr = obj.cgpaPtr;
     }
 
     void getInfo()
     {
         cout << "name: " << name << endl;
-        cout << "cgpa: " << cgpa << endl;
+        cout << "cgpa: " << *cgpaPtr << endl;
     }
 };
 
 int main()
 {
     Student s1("Rahul Kumar", 8.9);
-    s1.getInfo();
-
     Student s2(s1);
-    s2.getInfo();
+    s1.getInfo();
+    *(s2.cgpaPtr) = 9.2;
+    s1.getInfo();
     return 0;
 }
