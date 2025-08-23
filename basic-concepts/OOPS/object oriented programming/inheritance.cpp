@@ -10,16 +10,16 @@ public:
     string name;
     int age;
 
-    // Person(string name, int age)
-    // {
-    //     this->name = name;
-    //     this->age = age;
-    // }
-
-    Person()
+    Person(string name, int age)
     {
-        cout << "Parent constructor.. \n";
+        this->name = name;
+        this->age = age;
     }
+
+    // Person()
+    // {
+    //     cout << "Parent constructor.. \n";
+    // }
 };
 
 class Student : public Person
@@ -28,9 +28,9 @@ public:
     // name, age, rollno
     int rollno;
 
-    Student()
+    Student(string name, int age, int rollno) : Person(name, age)
     {
-        cout << "Child constructor..\n";
+        this->rollno = rollno;
     }
 
     void getInfo()
@@ -43,9 +43,11 @@ public:
 
 int main()
 {
-    Student s1;
-    s1.name = "rahul";
-    s1.age = 21;
-    s1.rollno = 1234;
+    // Student s1;
+    // s1.name = "rahul";
+    // s1.age = 21;
+    // s1.rollno = 1234;
+
+    Student s1("Rahul Kumar", 21, 1234);
     s1.getInfo();
 }
