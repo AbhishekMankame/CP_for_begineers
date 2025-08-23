@@ -41,6 +41,7 @@ public:
 
 int main()
 {
+    int x = 5; // Iskeliye memory stack mei allocate ho jaayega --> Compile time mei hi allocate ho jaayegi
     Teacher t1("Shradha", "Computer Science", "C++", 25000);
     t1.getInfo();
     cout << endl;
