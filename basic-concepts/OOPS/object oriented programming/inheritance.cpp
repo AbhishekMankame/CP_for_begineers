@@ -18,6 +18,7 @@ public:
 
     Person()
     {
+        cout << "Parent constructor.. \n";
     }
 };
 
@@ -26,6 +27,11 @@ class Student : public Person
 public:
     // name, age, rollno
     int rollno;
+
+    Student()
+    {
+        cout << "Child constructor..\n";
+    }
 
     void getInfo()
     {
