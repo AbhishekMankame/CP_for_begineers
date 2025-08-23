@@ -18,7 +18,8 @@ public:
     Student(Student &obj)
     {
         this->name = obj.name;
-        this->cgpaPtr = obj.cgpaPtr;
+        cgpaPtr = new double;
+        *cgpaPtr = *obj.cgpaPtr;
     }
 
     void getInfo()
@@ -35,5 +36,7 @@ int main()
     s1.getInfo();
     *(s2.cgpaPtr) = 9.2;
     s1.getInfo();
+    s2.name = "Neha";
+    s2.getInfo();
     return 0;
 }
