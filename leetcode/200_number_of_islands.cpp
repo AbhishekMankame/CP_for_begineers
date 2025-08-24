@@ -47,11 +47,11 @@ void dfs(vector<vector<char>> &mat, int i, int j)
     if (i < 0 || j < 0 || i >= mat.size() || j >= mat[0].size() || mat[i][j] != '1')
         return;
 
-    mat[i][j] = '0'; // is visited
-    dfs(mat, i, j + 1);
-    dfs(mat, i, j - 1);
-    dfs(mat, i - 1, j);
-    dfs(mat, i + 1, j);
+    mat[i][j] = '0';    // is visited
+    dfs(mat, i, j + 1); // check right
+    dfs(mat, i, j - 1); // check left
+    dfs(mat, i - 1, j); // check up
+    dfs(mat, i + 1, j); // check down
 }
 
 int numIslands(vector<vector<char>> &mat)
@@ -70,3 +70,6 @@ int numIslands(vector<vector<char>> &mat)
     }
     return count;
 }
+
+// Time Complexity: O(m*n) --> We traverse each cell once
+// Space Complexity: O(m*n) --> In the worst case, the recursion stack can go as deep as the number of cells in the grid
