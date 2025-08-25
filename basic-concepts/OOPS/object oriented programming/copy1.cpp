@@ -48,3 +48,4 @@ int main()
     s1.getInfo();
     return 0;
 }
+// Destructor is used to free the dynamically allocated memory, preventing memory leaks.
