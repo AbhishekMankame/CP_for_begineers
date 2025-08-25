@@ -35,5 +35,6 @@ int main()
     s1.getInfo();
     *(s2.cgpaPtr) = 9.2;
     s2.getInfo();
+    s1.getInfo();
     return 0;
 }
