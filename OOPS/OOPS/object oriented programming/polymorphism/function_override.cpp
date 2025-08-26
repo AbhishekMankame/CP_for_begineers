@@ -10,6 +10,11 @@ public:
     {
         cout << "Parent class\n";
     }
+
+    virtual void hello()
+    {
+        cout << "Hello from Parent\n";
+    }
 };
 
 class Child : public Parent
@@ -20,11 +25,17 @@ public:
     {
         cout << "Child class\n";
     }
+
+    void hello()
+    {
+        cout << "Hello from Child\n";
+    }
 };
 
 int main()
 {
     Child c1;
     c1.show();
+    c1.hello();
     return 0;
 }
