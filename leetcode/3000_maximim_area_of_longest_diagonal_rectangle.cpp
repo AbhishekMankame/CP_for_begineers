@@ -38,3 +38,29 @@ Key Idea:
 - At the end, return the area of that chosen rectangle
 
 */
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution
+{
+public:
+    int areaOfMaxDiagonal(const vector<vector<int>> &dimensions)
+    {
+
+        int bestDiag = -1;
+        int bestArea = 0;
+        for (auto &dim : dimensions)
+        {
+            int l = dim[0], w = dim[1];
+            int area = l * w, diag = l * l + w * w;
+            if (diag > bestDiag || (diag == bestDiag && area > bestArea))
+            {
+                bestDiag = diag;
+                bestArea = area;
+            }
+        }
+        return bestArea;
+    }
+};
