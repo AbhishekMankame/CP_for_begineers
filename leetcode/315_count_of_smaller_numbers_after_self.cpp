@@ -61,3 +61,7 @@ public:
         return result;
     }
 };
+
+// Time Complexity: O(n^2), where n is the number of elements in the input array
+// Space Complexity: O(n), as we are using an additional array to store the results
+// This is a brute-force solution
