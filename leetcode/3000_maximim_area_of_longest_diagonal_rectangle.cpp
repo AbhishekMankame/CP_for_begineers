@@ -64,3 +64,7 @@ public:
         return bestArea;
     }
 };
+
+// Time Complexity: O(n), where n is the number of rectangles
+// Space Complexity: O(1), as we are using only a constant amount of extra space
+// This is an optimal solution
