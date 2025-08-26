@@ -15,3 +15,11 @@ public:
         cout << "Char: " << ch << endl;
     }
 };
+
+int main()
+{
+    Print p1;
+    p1.show('a');
+
+    return 0;
+}
