@@ -51,3 +51,5 @@ int main()
     Student s1("Rahul Kumar", 21, 1234);
     s1.getInfo();
 }
+
+// Inheritance is a way to derive a new class from an existing class, allowing the new class to inherit properties and behaviors (methods) from the existing class.
