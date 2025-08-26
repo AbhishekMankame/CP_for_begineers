@@ -17,3 +17,13 @@ public:
         cout << "Parameterized Constructor\n";
     }
 };
+
+int main()
+{
+    Student s1; // Automatically non parameterized constructor call ho jaayega
+
+    Student s2("Andrew Ng"); // Parameterized constructor call ho jaayega
+    return 0;
+}
+
+// Constructor overloading is an example of compile time polymorphism
