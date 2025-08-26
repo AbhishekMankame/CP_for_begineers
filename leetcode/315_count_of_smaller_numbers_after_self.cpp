@@ -34,3 +34,30 @@ Merge Sort
 Ordered Set
 
 */
+
+// My code --> Not optimized one O(n^2)
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<int> countSmaller(vector<int> &nums)
+    {
+        int n = nums.size();
+        vector<int> result(n, 0);
+        for (int i = 0; i < n; i++)
+        {
+            int count = 0;
+            for (int j = i + 1; j < n; j++)
+            {
+                if (nums[i] > nums[j])
+                    count++;
+            }
+            result[i] = count;
+        }
+        return result;
+    }
+};
