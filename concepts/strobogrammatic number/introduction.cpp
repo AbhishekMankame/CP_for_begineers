@@ -39,3 +39,13 @@ bool isStrobogrammatic(string num)
 
     return true;
 }
+
+int main()
+{
+    cout << isStrobogrammatic("69") << endl;
+    cout << isStrobogrammatic("976") << endl;
+    return 0;
+}
+
+// Time Complexity: O(n) --> Time Complexity is linear because we traverse half of the string.
+// Space Complexity: O(1) --> We are using a constant amount of space.
