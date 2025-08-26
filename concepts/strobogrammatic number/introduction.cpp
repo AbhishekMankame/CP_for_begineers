@@ -17,3 +17,25 @@ Variations of Strobogrammatic Problems
 3. Count strobogrammtic numbers within a range `[low, high]`
 
 */
+
+// Check if a number is strobogrammatic
+#include <iostream>
+#include <map>
+#include <unordered_map>
+using namespace std;
+
+bool isStrobogrammatic(string num)
+{
+    unordered_map<char, char> mp = {{'0', '0'}, {'1', '1'}, {'6', '9'}, {'9', '6'}, {'8', '8'}};
+    int l = 0, r = num.size() - 1;
+
+    while (l <= r)
+    {
+        if (mp.find(num[l]) == mp.end() || mp[num[l]] != num[r])
+            return false;
+        l++;
+        r--;
+    }
+
+    return true;
+}
