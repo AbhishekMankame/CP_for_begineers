@@ -54,3 +54,7 @@ bool findRotation(vector<vector<int>> &mat, vector<vector<int>> &target)
     }
     return false;
 }
+
+// Time Complexity: O(n^2), where n is the number of elements in the matrix
+// Space Complexity: O(1), as we are using only a constant amount of extra space
+// This is an optimal solution
