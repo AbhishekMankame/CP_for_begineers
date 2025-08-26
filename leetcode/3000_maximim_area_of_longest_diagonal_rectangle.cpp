@@ -28,3 +28,13 @@ dimensions[i].length == 2
 Topics: Array
 
 */
+
+/*Note: Sol
+The longest diagonal ==> maximize sqrt(l^2 + w^2) and if multiple have the same diagonal, choose the one with maximum area (l*w)
+
+Key Idea:
+- Compute the diagonal length via l^2 + w^2
+- Iterate once to track the rectangle with the maximum diagonal; incase of a tie, pick the larger area.
+- At the end, return the area of that chosen rectangle
+
+*/
