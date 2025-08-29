@@ -29,10 +29,26 @@ public:
     {
         head = tail = NULL;
     }
+    void push_front(int val)
+    {
+        Node *newNode = new Node(val); // New node create ho jaaygegi
+        // Node newNode(val);             // Alternate syntax --> Static object create karega
+        if (head == NULL)
+        {
+            head = tail = newNode;
+            return;
+        }
+        else
+        {
+            newNode->next = head;
+            head = newNode;
+        }
+    }
 };
 
 int main()
 {
+    List ll;
 
     return 0;
 }
