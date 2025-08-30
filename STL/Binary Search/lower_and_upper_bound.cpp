@@ -23,6 +23,29 @@ int lower_bound(vector<int> &v, int element)
     return -1;
 }
 
+// Upper bound
+int upper_bound(vector<int> &v, int element)
+{
+    int lo = 0, hi = v.size() - 1;
+    while (hi - lo > 1)
+    {
+        int mid = (hi + lo) / 2;
+        if (v[mid] <= element)
+        {
+            lo = mid + 1;
+        }
+        else
+        {
+            hi = mid;
+        }
+    }
+    if (v[lo] > element)
+        return lo;
+    if (v[hi] > element)
+        return hi;
+    return -1;
+}
+
 int main()
 {
     int n;
@@ -35,6 +58,7 @@ int main()
     int to_find;
     cin >> to_find;
     cout << lower_bound(v, to_find) << endl;
+    cout << upper_bound(v, to_find) << endl;
 }
 
 /*Note: If the array is not sorted, sort it before using*/
