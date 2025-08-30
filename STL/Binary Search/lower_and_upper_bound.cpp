@@ -34,6 +34,7 @@ int main()
     }
     int to_find;
     cin >> to_find;
+    cout << lower_bound(v, to_find) << endl;
 }
 
 /*Note: If the array is not sorted, sort it before using*/
