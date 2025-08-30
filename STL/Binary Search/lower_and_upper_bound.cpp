@@ -62,3 +62,5 @@ int main()
 }
 
 /*Note: If the array is not sorted, sort it before using*/
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
