@@ -45,3 +45,5 @@ int main()
         cout << "Not found!!!" << endl;
     }
 }
+
+// Time Complexity: log(n)
