@@ -43,3 +43,7 @@ public:
         return (int)rev;
     }
 };
+
+// Time Complexity: O(log10(n)), where n is the input number
+// Space Complexity: O(1), as we are using only a constant amount of space
+// Note: we are not using any different data structures that grow with input size
