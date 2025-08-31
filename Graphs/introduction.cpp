@@ -7,3 +7,8 @@
 - Edge List
 - 2D Matrix (Implicit Graph)
 */
+
+/*Disadvantages of Adjacency Matrix
+- Too much memory is required
+- Just to check the neighbours we need O(v) time to check entire row
+*/
