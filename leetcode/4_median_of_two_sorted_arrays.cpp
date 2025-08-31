@@ -46,3 +46,16 @@ public:
             return (nums1[n / 2 - 1] + nums2[n / 2]) / 2.0;
     }
 };
+
+int main()
+{
+    vector<int> nums1;
+    vector<int> nums2;
+    nums1.push_back(1);
+    nums1.push_back(3);
+    nums2.push_back(2);
+    Solution sol;
+    double median = sol.findMedianSortedArray(nums1, nums2);
+    cout << "Median: " << median << endl;
+    return 0;
+}
