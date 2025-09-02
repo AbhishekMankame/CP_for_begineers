@@ -4,7 +4,7 @@ Imagine a window of size `k` sliding over an array or string - instead of recalc
 ### Basic Template for Sliding Window (Fixed Size)
 
 <pre>
-for(int i=0;i<n;i++){
+for(int i=0;i less than n;i++){
     // Add new element (right end of window)
     // Remove old element (left end of window, when window size greater than k)
     // Process current window
