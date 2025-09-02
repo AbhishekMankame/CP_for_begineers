@@ -6,7 +6,7 @@ Imagine a window of size `k` sliding over an array or string - instead of recalc
 <pre>
 for(int i=0;i<n;i++){
     // Add new element (right end of window)
-    // Remove old element (left end of window, when window size > k)
+    // Remove old element (left end of window, when window size greater than k)
     // Process current window
 }
 
