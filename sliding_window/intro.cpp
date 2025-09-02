@@ -42,3 +42,12 @@ int main() {
     cout << "Maximum sum of subarray of size "<< k << " is "<<maxSumSubarray(arr, k) << endl;
     return 0;
 }
+
+/*Explanation:
+- Calculate the sum of first `k` elements.
+- Then, slide the window forward by 1 element at a time:
+    - Add the new element at the right end.
+    - Subtract the element that goes out of the window from the left.
+- Track the maximum sum seen so far.
+
+*/
