@@ -27,3 +27,22 @@ Constraints:
 Topics: Array DP
 
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int maxProfit(vector<int>& prices){
+    int minPrice = prices[0]; // Buy at the lowest price seen so far
+    int maxProfit = 0; // Track max profit
+
+    for(int i=1;i<prices.size();i++){
+        // Check if selling today gives better profit
+        int profit = prices[i]-minPrice;
+        maxProfit = max(maxProfit, profit);
+
+        // Update minPrice if a lower price is found
+        if(prices[i]<minPrice) minPrice = prices[i];
+    }
+    return maxProfit;
+}
