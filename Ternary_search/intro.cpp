@@ -39,3 +39,11 @@ double ternarySearch(double left, double right, double eps=1e-6){
     }
     return (left+right)/2; // Approximate maximum point
 }
+
+int main() {
+    double left = 0;
+    double right = 6;
+    double max_x = ternarySearch(left, right);
+    cout << "Maximum at x = " << max_x << ", f(x) = " << f(max_x) << endl;
+    return 0;
+}
