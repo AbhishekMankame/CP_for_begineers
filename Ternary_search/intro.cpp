@@ -15,3 +15,27 @@ For a given search range (e.g., in an array or for a continuous function), we:
 - When you are dealing with a unimodal function, which increases then decreases (or vice versa).
 - Not ideal for sorted arrays - binary search is better.
 */
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+// Example function: a parabola with a maximum at x=3
+double f(double x){
+    return -(x-3)*(x+3) + 9; // peak at x=3
+}
+
+double ternarySearch(double left, double right, double eps=1e-6){
+    while(right-left>eps){
+        double mid1 = left + (right-left)/3;
+        double mid2 = right - (right-left)/3;
+
+        if(f(mid1)<f(mid2)){
+            left = mid1;
+        }
+        else {
+            right = mid2;
+        }
+    }
+    return (left+right)/2; // Approximate maximum point
+}
