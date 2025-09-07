@@ -62,3 +62,22 @@ vector<Point> convexHull(Vector<Point>& points){
     lower.insert(lower.end(), upper.begin(), upper.end());
     return lower;
 }
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<Point> points(n);
+    for (auto& p : points) {
+        cin >> p.x >> p.y;
+    }
+
+    vector<Point> hull = convexHull(points);
+
+    cout << "Convex Hull:\n";
+    for (const auto& p : hull) {
+        cout << p.x << " " << p.y << "\n";
+    }
+
+    return 0;
+}
