@@ -83,3 +83,9 @@ int main() {
 - upper_bound runs in O(log k) time where k is number of occurences of the character.
 - makes the whole subsequence check much faster for may queires.
 */
+
+// Time complexity --> Preprocessing: O(n), where n = length of t &&& Each query: O(mlogn), where m = length of s
+// Overall time complexity --> O(n + Q*m log n)
+
+// Space Complexity: charIndices vector stores all indices once --> O(n)
+// Variables use constant space --> O(1)
