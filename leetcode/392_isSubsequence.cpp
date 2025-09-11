@@ -44,3 +44,6 @@ class Solution {
 - Else, only move j (keep searching in t)
 - If i reaches s.size(), that means all characters of s were found in order in t.
 */
+
+// Time Complexity: O(n), where n is the length of t
+// Space Complexity: O(1) - constant extra space
