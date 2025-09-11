@@ -35,3 +35,12 @@ class Solution {
         return i==s.size();
     }
 };
+
+/*Explanation:
+- Use two pointers:
+    - i for iterating over string s.
+    - j for iterating over string t.
+- If characters match (s[i]==t[j]), move both pointers forward.
+- Else, only move j (keep searching in t)
+- If i reaches s.size(), that means all characters of s were found in order in t.
+*/
