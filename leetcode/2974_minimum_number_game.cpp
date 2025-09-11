@@ -41,6 +41,13 @@ class Solution {
     }
 };
 
+/*Working of above code
+- After sorting, `nums[0] <= nums[1] <= nums[2] <= nums[3] <= ...
+- In the first round: Alice picks `nums[0]`, Bob picks `nums[1]`. Output should be `nums[1], nums[0]` --> Achieved by swap.
+- Then next round: Alice picks now minimal of remaining --> which will be `nums[2]`, Bob picks `nums[3]`. Again result appended as `nums[3], nums[2]`.
+
+*/
+
 // Time Complexity: O(n log n) due to sorting. Then linear pass O(n)
 // Space Complexity: O(1) extra (modifying in place) or O(n) if you build a new output array
 /* Edge Cases: 
