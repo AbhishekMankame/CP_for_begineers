@@ -60,3 +60,20 @@ int main() {
 
     return 0;
 }
+
+/*Step by step explantion:
+1. Preprocessing:
+    - For each character a to z, store the sorted list of indices where it appears in it.
+    - For example, if t=abcde,
+        - charIndices[0] (for 'a') = [0]
+        - charIndices[1] (for 'b') = [1]
+2. Checking subequence:
+    - Initialize prevIndex = -1, meaning no character matched yet
+    - For each character c in s:
+        - Look up the list of positions for c in t.
+        - Use binary search (upper_bound) to find the smallest position greater than prevIndex.
+            - This tells us where c can appear after the previou matched character.
+        - If no such position exists (iterator at end), s is not a subsequence of t.
+        - Otherwise, update prevIndex to the found position and continue.
+3. If all characters in s are found in order, return true.
+*/
