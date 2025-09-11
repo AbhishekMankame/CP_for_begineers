@@ -45,4 +45,18 @@ class Solution {
         }
         return true; // all characters matched in order
     }
+};
+
+int main() {
+    Solution sol;
+    string t = "abdce";
+
+    sol.preprocess(t);
+
+    vector<string> queries = {"ace", "aec", "abc", "abcdef"};
+    for(auto &s: queries){
+        cout << s << ": " << (sol.isSubsequence(s)?"true":"false") << endl;
+    }
+
+    return 0;
 }
