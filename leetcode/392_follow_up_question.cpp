@@ -77,3 +77,9 @@ int main() {
         - Otherwise, update prevIndex to the found position and continue.
 3. If all characters in s are found in order, return true.
 */
+
+/*Why binary search?
+- Because positions is sorted, binary search quickly finds the next valid index.
+- upper_bound runs in O(log k) time where k is number of occurences of the character.
+- makes the whole subsequence check much faster for may queires.
+*/
