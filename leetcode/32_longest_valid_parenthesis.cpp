@@ -44,3 +44,6 @@ int longestValidParentheses(string s){
     }
     return maxLen;
 }
+
+// TC: O(n)
+// SC: O(n) for stack
