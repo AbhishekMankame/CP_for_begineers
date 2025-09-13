@@ -33,3 +33,30 @@ Constraints:
 Topics: Hash Table, String, Counting
 
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+bool isVowel(char c){
+    return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+}
+
+int maxFreqSum(string s){
+    vector<int> freq(26,0);
+    for(char c:s){
+        freq[c-'a']++;
+    }
+    int maxVowel=0, maxConsonant=0;
+    for(int i=0;i<s.length();i++){
+        char ch = 'a' + i;
+        int count = freq[i];
+
+        if(isVowel(ch)){
+            maxVowel = max(count, maxVowel);
+        }
+        else maxConsonant = max(count, maxConsonant);
+
+        return maxConsonant + maxVowel;
+    }
+}
