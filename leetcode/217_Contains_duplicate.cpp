@@ -24,3 +24,17 @@ Constraints:
 Topics: Array, Hash table, Sorting
 
 */
+
+#include<iostream>
+#include<set>
+#include<vector>
+using namespace std;
+
+bool containsDuplicate(vector<int>& nums){
+    set<int> s;
+    for(int i:nums){
+        s.insert(i);
+    }
+    if(s.size()!=nums.size()) return true;
+    else return false;
+}
