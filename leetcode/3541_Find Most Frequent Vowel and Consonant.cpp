@@ -12,4 +12,24 @@ Note: If mutliple vowels or consonants have the same maximum frequency, you may 
 
 The frequency of a letter `x` is the number of times it occurs in the string.
 
+Example 1:
+Input s = "successes"
+Output: 6
+Explanation:
+- The vowels are: `u` (frequency 1), `e` (frequency 2). The maximum frequency is 2.
+- The consonants are: `s` (frequency 4), `c` (frequency 2). The maximum frequency is 4.
+- The output is `2 + 4 = 6`
+
+Output: 3
+Explanation:
+- The vowels are: 'a' (frequency 3), 'e' ( frequency 2), 'i' (frequency 2). The maximum frequency is 3.
+- There are no consonants in s. Hence, maximum consonant frequency = 0.
+- The output is 3 + 0 = 3.
+
+Constraints:
+- 1 <= s.length <= 100
+- s consists of lowercase Enlish letters only
+
+Topics: Hash Table, String, Counting
+
 */
