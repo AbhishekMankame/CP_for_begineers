@@ -22,3 +22,18 @@ Constraints:
 
 Topics: Array, Two Pointers, Greedy
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int maxArea(vector<int>& height){
+    int lp=0,rp=height.size()-1,mw=0;
+    while(lp<rp){
+        int w = rp-lp;
+        int h = min(height[lp],height[rp]);
+        mw = max(mw,w*h);
+        height[lp]<height[rp]?lp++:rp--;
+    }
+    return mw;
+}
