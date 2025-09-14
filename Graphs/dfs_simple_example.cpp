@@ -39,3 +39,14 @@ int main() {
     cout << endl;
     return 0;
 }
+
+/*
+
+| Aspect                  | Complexity |
+| ----------------------- | ---------- |
+| Time                    | O(V + E)   |
+| Space (visited)         | O(V)       |
+| Space (recursion stack) | O(V)       |
+| Space (adjacency list)  | O(V + E)   |
+
+*/
