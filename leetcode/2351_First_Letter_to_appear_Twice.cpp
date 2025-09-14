@@ -27,3 +27,17 @@ Constraints:
 
 Topics: Hash table, string, bit manipulation, counting
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+char repeatedCharacter(string s){
+    vector<char> freq(26,0);
+    for(char c:s){
+        freq[c-'a']++;
+        if(freq[c-'a']==2) return c;
+    }
+
+    return '1';
+}
