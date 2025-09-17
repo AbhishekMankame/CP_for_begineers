@@ -28,3 +28,28 @@ Constraints:
 
 Topics --> Array, Sliding Window, Sorting, Bucket Sort, Ordered Set
 */
+
+#include<iostream>
+#include<vector>
+#include<set>
+using namespace std;
+
+bool containsNearbyAlmostDuplicate(vector<int>& nums, int indexDiff, int valueDiff) {
+    set<long long> window; // stores the last indexDiff elements
+    for(int i=0;i<nums.size();i++){
+        long long num = nums[i];
+
+        // Find the smallest number >= num - valueDiff
+        auto it = window.lower_bound(num-valueDiff);
+
+        // Check if it's within valueDiff
+        if(it!=window.end() && abs(*it-num)<=valueDiff) return true;
+
+        // Insert current number
+        window.insert(num);
+
+        // Keep window size <= indexDiff
+        if(i>=indexDiff) window.erase(nums[i-indexDiff]);
+    }
+    return false;
+}
