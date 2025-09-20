@@ -38,5 +38,13 @@ int diagonalSum(vector<vector<int>>& mat){
     return n%==0?sum:sum-mat[n/2][n/2];
 }
 
+/*Approach update
+- Traverse the matrix once from i = 0 to n-1
+- Add both diagonal elements:
+    - Primary: mat[i][i]
+    - Secondary: mat[n-1-i]
+- If n is odd, subtract the center element mat[n/2][n/2] once (to avoid double-counting).
+*/
+
 // Time Complexity: O(n) because we are iterating through each row once to collect the diagonal elements.
 // Space Complexity: O(1) regardless of the size of the matrix, here no additional data structures (like arrays, vectors, or maps) are used.
