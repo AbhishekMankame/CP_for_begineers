@@ -17,3 +17,20 @@ Constraints:
 
 Topics: Hash Table, String, Sorting
 */
+
+/* Let's solve it using sorting approach
+ - Here we will sort both the given input strings s and t.
+ - Once the strings are sort, we will just compare both the strings.
+ - If both matches, then we return true, otherwise we will return false.
+ */
+
+ #include<iostream>
+ #include<algoritm>
+ using namespace std;
+
+ bool isAnagram(string s, string t){
+    sort(s.begin(),s.end());
+    sort(t.begin(),t.end());
+
+    return s==t;
+ }
