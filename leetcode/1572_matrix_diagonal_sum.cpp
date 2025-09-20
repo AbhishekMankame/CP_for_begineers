@@ -37,3 +37,6 @@ int diagonalSum(vector<vector<int>>& mat){
 
     return n%==0?sum:sum-mat[n/2][n/2];
 }
+
+// Time Complexity: O(n) because we are iterating through each row once to collect the diagonal elements.
+// Space Complexity: O(1) regardless of the size of the matrix, here no additional data structures (like arrays, vectors, or maps) are used.
