@@ -27,3 +27,10 @@ bool isAnagram(string s, string t){
 
     return true;
 }
+
+// Time Complexity: O(n) --> We loop through each string once (o(n)), where n is the length of the string.
+// --> Then loop through a fixed array of size 26 - which is O(1)
+// --> So the total complexity is O(n)
+
+// Space Complexity: O(1) --> Here we used a fixed-size integer array of 26 elements to represent charachter counts.
+// --> No extra space grows with input size - so space complexity is constant.
