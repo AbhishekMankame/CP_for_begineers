@@ -34,3 +34,6 @@ Topics: Hash Table, String, Sorting
 
     return s==t;
  }
+
+ // Time complexity: O(n logn) --> as we are using inbuilt sort to sort the given both strings
+ // Space complexxity: O(1) --> as we are not using any extra space
