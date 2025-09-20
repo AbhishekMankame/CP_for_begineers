@@ -9,3 +9,21 @@
 - If count is not equal to 0 then we can return false (means given two strings are not anagram), else return false (means given two strings are anagram)
 
 */
+
+#include<iostream>
+using namespace std;
+
+bool isAnagram(string s, string t){
+    int n=s.size();
+    if(n!=t.size()) return false;
+
+    int arr[26]={0};
+    for(char c:s) arr[c-'a']++;
+    for(char c:t) arr[c-'a']--;
+    
+    for(int i=0;i<26;i++){
+        if(arr[i]!=0) return false;
+    }
+
+    return true;
+}
