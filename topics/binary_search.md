@@ -11,4 +11,11 @@ Now assume that we know two indices L < R such that such that A(L) <= k <= A(R).
 When it is impossible to pick M, that is, when R=L+1, we directly compare k with A(L) and A(R). Otherwise we would want to pick M in such manner that it reduces the active segment to a single element as quickly as possible in the worst case.<br>
 Since in the worst case we will always reduce to larger segment of [L,M]. Thus, in the worst case scenario the reduction would be from R-L to max(M-L, R-M). To minimize this value, we should pick M = (L+R)/2, then 
 <pre>M-L=(R-L)/2=R-M</pre>
-In other words, from the worst-case scenario perspective it is optimal to always pick M in the middle of [L,R] and split it in half. Thus, the active segment halves on each step until it becomes of size 1. So, if the process needs h steps, in the end it reduces the difference between R and L from R-L to (R-L)/2^h = 1 giving us the equation 2^h = R-L.
+In other words, from the worst-case scenario perspective it is optimal to always pick M in the middle of [L,R] and split it in half. Thus, the active segment halves on each step until it becomes of size 1. So, if the process needs h steps, in the end it reduces the difference between R and L from R-L to (R-L)/2^h = 1 giving us the equation 2^h = R-L. <br>
+Taking log2 on both sides, we get h=log2(R-L) belongs to "∈" O(log n).<br>
+Logarithmic number of steps is drastically better than that of linear search. For example, for n=2^20=10^6 you would need to make approximately a million operations for linear search, but only 20 operations with the binary search.
+<br>
+
+### Lower bound and upper bound
+It is often convenient to find the position of the first element that is greater or equal than k (called the lower bound of k in the array) or the position of the first element that is greater than k (called the upper bound of k) rather than the exact position of the element.
+<br> Together, lower and upper bounds produce a possibly empty half-interval of the array elements that are equal to k. To check whether k is present in the array it's enough to find its lower bound and check if the corresponding element equates to k.
