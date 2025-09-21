@@ -19,3 +19,25 @@ Logarithmic number of steps is drastically better than that of linear search. Fo
 ### Lower bound and upper bound
 It is often convenient to find the position of the first element that is greater or equal than k (called the lower bound of k in the array) or the position of the first element that is greater than k (called the upper bound of k) rather than the exact position of the element.
 <br> Together, lower and upper bounds produce a possibly empty half-interval of the array elements that are equal to k. To check whether k is present in the array it's enough to find its lower bound and check if the corresponding element equates to k.
+
+### Implementation:
+The explanation above provides a rough description of the algorithm. For the implementation details, we'd need to be more precise.<br>
+We will maintain a pair L < R such that A(l) <= k <= A(R). Meaning that the active search interval is [L,R). We use half-interval here here instead of a segment [L,R] as it turns out of require less corner case work.<br>
+When R=L+1, we can deduce from definitions above that R is the upper bound of k. It is convenient to initialize R with past-the-end index, that is R=n and L with before-the-beginning index, that is L=-1. It is fine as long as we never evaluate A(L) and A(R) in our algorithm directly, formally treating it as A(L)=-Infinity and A(R)=+Infinity.<br>
+Finally, to be specific about the value of M we pick, we will stick with M=lower_bound((L+R)/2)<br>
+Then the implementation could be like:
+<pre>
+...// a sorted array is stored as a[0], a[1], ..., a[n-1]
+int l = -1, r = n;
+while(r - l > 1) {
+    int m = (l + r) / 2;
+    if(k < a[m]){
+        r = m; // a[l] <= k < a[m] <= a[r]
+    }
+    else {
+        l = m; // a[l] <= a[m] <= k < a[r]
+    }
+}
+
+</pre>
+During the execution of the algorithm, we never evaluate neither A(L) nor A(R), as L < M < R. In the end, L will be the index of the last element that is not greater than k (or -1 if there is no such element) and R will be the index of the first element larger than k (or n if there is no such element).
