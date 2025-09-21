@@ -40,4 +40,6 @@ while(r - l > 1) {
 }
 
 </pre>
-During the execution of the algorithm, we never evaluate neither A(L) nor A(R), as L < M < R. In the end, L will be the index of the last element that is not greater than k (or -1 if there is no such element) and R will be the index of the first element larger than k (or n if there is no such element).
+During the execution of the algorithm, we never evaluate neither A(L) nor A(R), as L < M < R. In the end, L will be the index of the last element that is not greater than k (or -1 if there is no such element) and R will be the index of the first element larger than k (or n if there is no such element).<br>
+
+Note: Calculating `m` as `m=(r+l)/2` can lead to overflow if `l` and `r` are two positive integers, and this error lived about 9 years in JDK. Some alternative approaches include e.g., writing `m = l + (r - l) / 2` which always works for positive integer `l` and `r`, but might still overflow if `l` is a negative number. If you use C++20, it offers an alternative solution in the form of `m = std::midpoint(l, r)` which always works correctly.
