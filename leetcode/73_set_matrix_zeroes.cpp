@@ -3,6 +3,8 @@
 /*Given an m*n integer matrix 'matrix', if an element is 0, set its entire row and column to 0's.
 You must do it 'in place'.
 
+Note: In-place algorithm operates directly on the input data structure without requiring extra space proportional to the input size.
+
 Example 1:
 Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
 Output: [[1,0,1],[0,0,0],[1,0,1]]
@@ -51,3 +53,6 @@ void setZeroes(vector<vector<int>>& matrix){
         }
     }
 }
+
+// Time Complexity: O(m*n)
+// Space Complexity: O(m*n) extra space, this is not in place
