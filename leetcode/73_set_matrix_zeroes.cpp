@@ -25,6 +25,14 @@ Topics: Array, Hash Table, Matrix
 #include<algorithm>
 using namespace std;
 
+void helper(vector<vector<int>>& matrix, int i, int j){
+    for(int i=0;i<matrix.size();i++){
+        matrix[i][b]=0;
+    }
+    for(int j=0;j<matrix[0].size(),j++){
+        matrix[a][j]=0;
+    }
+}
 void setZeroes(vector<vector<int>>& matrix){
     int m=matrix.size();
     int n=matrix[0].size();
