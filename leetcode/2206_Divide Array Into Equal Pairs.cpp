@@ -27,3 +27,11 @@ Topics: Array, Hashtable, Bit manipulation, counting
 #include<iostream>
 #include<vector>
 using namespace std;
+
+bool divideArray(vector<int>& nums){
+    bitset<501> sol;
+    for(int i:nums){
+        sol.flip(i);
+    }
+    return sol.none();
+}
