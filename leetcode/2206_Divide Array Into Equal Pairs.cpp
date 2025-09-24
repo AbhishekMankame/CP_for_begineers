@@ -23,3 +23,7 @@ Constraints:
 
 Topics: Array, Hashtable, Bit manipulation, counting
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
