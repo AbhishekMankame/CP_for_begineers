@@ -58,3 +58,15 @@ bool isPalindrome(string s){
 
     return true;
 }
+
+int main() {
+    string s = "A man, a plan, a canal: Panama";
+    if(isPalindrome(s)){
+        cout << "True" << endl; // Palindrome
+    }
+    else {
+        cout << "False" << endl; // Not a palindrome
+    }
+
+    return 0;
+}
