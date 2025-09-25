@@ -30,3 +30,24 @@ Topics: Array, Two pointers, binary search, bit manipulation
 */
 
 // Let's solve it using brute force approach (O(n^2))
+
+// Idea: Compare eveery element with every other element to find the duplicate.
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int findDuplicate(vector<int>& nums){
+    int n=nums.size();
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(nums[i]==nums[j]){
+                return nums[i];
+            }
+        }
+    }
+    return -1;
+}
+
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
