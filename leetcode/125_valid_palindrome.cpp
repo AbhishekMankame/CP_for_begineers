@@ -26,3 +26,35 @@ Constraints:
 
 Topics: Two pointers, string
 */
+
+#include<iostream>
+#include<string>
+#include<cctype>
+using namespace std;
+
+bool isPalindrome(string s){
+    int left=0;
+    int right=s.size()-1;
+    while(left<right){
+        // Skip non-alphanumeric characters from the left
+        if(!std::isalnum(s[left])) {
+            left++;
+        }
+
+        // Skip non-alphanumeric characters from the right
+        else if(!std::isalnum(s[right])){
+            right--;
+        }
+
+        // If the characters are equal (ignoring the case), move inward
+        else if(std::tolower(s[left])==std::tolower(s[right])){
+            left++;
+            right--;
+        }
+        else {
+            return false; // Not a palindrome
+        }
+    }
+
+    return true;
+}
