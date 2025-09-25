@@ -70,3 +70,15 @@ int main() {
 
     return 0;
 }
+
+/*
+Explanation:
+1. Two Pointers: We use two pointers, left and right, starting at the beginning and end of the string, respectively.
+2. Skip Non-alphanumeric characters: The 'std::alnum()' function checks if a character is alphanumeric. We increment the left pointer if the current character is not alphanumeric, and we decrement the right pointer if the character is not alphanumeric.
+3. Character Comparison (ignoring case): We use 'std::tolower()' to compare the characters in a case-insensitive manner.
+4. Return Result: If we find a mismatch, the function returns 'false'. If the pointers meet or cross, the string is a palindrome, and we return 'true'.
+
+Time Complexity: O(n) where 'n' is the length of the string. We only iterate through the string once.
+Space Complexity: O(1) because we only use a few integer variables and no extra space proportional to the input size.
+
+*/
