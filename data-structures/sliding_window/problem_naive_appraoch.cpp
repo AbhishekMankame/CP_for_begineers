@@ -11,3 +11,37 @@ Output : 39
 Explanation : We get maximum sum by adding subarray [4, 2, 10, 23] of size 4.
 
 */
+
+#include<iostream>
+#include<vector>
+#include<climits>
+
+using namespace std;
+
+int maxSum(vector<int>& arr, int k){
+    int n = arr.size();
+    int max_num=INT_MIN;
+
+    // Consider all blocks starting with i
+    for(int i=0;i<=n-k;i++){
+        int current_sum=0;
+
+        // Calculate sum of current subarray of size k
+        for(int j=0;j<k;j++){
+            current_sum+=arr[i+j];
+        }
+
+        // Update result if required
+        max_sum=max(current_sum, max_sum);
+    }
+
+    return max_sum;
+}
+
+int main() {
+    vector<int> arr = {5, 2, -1, 0, 3};
+    int k = 3;
+
+    cout << maxSum(arr, k) << endl;
+    return 0;
+}
