@@ -12,6 +12,8 @@ Explanation : We get maximum sum by adding subarray [4, 2, 10, 23] of size 4.
 
 */
 
+// Naive approach --> O(n*k) Time and O(1) Space
+
 #include<iostream>
 #include<vector>
 #include<climits>
