@@ -56,3 +56,13 @@ vector<int> findIntersectionValues(vector<int>& nums1, vector<int>& nums2){
 
     return {answer1, answer2};
 }
+
+/*
+Time Complexity: O(m+n)
+- O(n) for building the hash set from nums1.
+- O(m) for building the hash set from nums2.
+- O(n) for iterating through nums1 and checking if the elements are in set2.
+- O(m) for iterating through nums2 and checking if the elements are in set1.
+
+Space Complexity: O(n+m) for storing the hash sets (set1 and set2)
+*/
