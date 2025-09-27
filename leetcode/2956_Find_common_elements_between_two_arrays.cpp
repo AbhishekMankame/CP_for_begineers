@@ -32,3 +32,27 @@ Constraints:
 Topics: Array, Hash Table
 
 */
+
+#include<iostream>
+#include<vector>
+#include<set>
+using namespace std;
+
+vector<int> findIntersectionValues(vector<int>& nums1, vector<int>& nums2){
+    set<int> s1(nums1.begin(), nums1.end()); // Store elements of nums1 in a set
+    set<int> s2(nums2.begin(), nums2.end()); // Store elements of nums2 in a set
+
+    int answer1 = 0, answer2 = 0;
+    
+    // Count elements in nums1 that exist in nums2 (answer1)
+    for(int num: nums1){
+        if(set2.count(num)>0) answer1++;
+    }
+
+    // Count elements in nums2 that exist in nums1 (answer2)
+    for(int num: nums2){
+        if(set1.count(num)>0) answer2++;
+    }
+
+    return {answer1, answer2};
+}
