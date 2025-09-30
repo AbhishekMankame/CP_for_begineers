@@ -11,4 +11,14 @@ The triangular sum of nums is the value of the only element present in nums afte
 
 Return the triangular sum of nums.
 
+Example 1:
+Input: nums = [1,2,3,4,5]
+Output: 8
+
+Example 2:
+Input: nums = [5]
+Output: 5
+Explanation:
+Since there is only one element in nums, the triangular sum is the value of that element itself.
+
 */
