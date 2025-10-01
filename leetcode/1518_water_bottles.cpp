@@ -23,3 +23,21 @@ Constraints:
 
 Topics: Math, Simulation
 */
+
+#include<iostream>
+using namespace std;
+
+int numBottles(int numBottles, int numExchange){
+    int count=numBottles; // Start by counting the initial bottles
+    while(numBottles>=numExchange){
+        int rem=numBottles%numExchange; // Remainder bottles that can't be exchanged
+        int newBottles=numBottles/numExchange; // How many new bottles you get
+        
+        // Add new bottles to the total count
+        count+=newBottles;
+
+        // Now, you consume the new bottles, plus the remainder, to get the more bottles
+        numBottles=newBottles+rem;
+    }   
+    return count;
+}
