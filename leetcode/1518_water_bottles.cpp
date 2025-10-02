@@ -41,3 +41,14 @@ int numBottles(int numBottles, int numExchange){
     }   
     return count;
 }
+
+/*
+Time Complexity Analysis:
+1. Initial Bottles: You start with numBottles bottles.
+2. While loop iteration: On each iteration of the loop, numBottles is reduced by a factor of numExchange because numBottles is updated to newBottles+rem, where newBottles is numBottles/numExchange.
+
+Each time you update numBottles, it gets smaller as numBottles/numExchange is always less than numBottles. Therefore, the number of iterations of the while loop depends on how many times you can divide numBottles by numExchange before numBottles become less than numExchange.
+The number of iterations can be approximated by:
+Iterations = log numBottles to the base numExchange.
+
+*/
