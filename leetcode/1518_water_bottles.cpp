@@ -51,4 +51,10 @@ Each time you update numBottles, it gets smaller as numBottles/numExchange is al
 The number of iterations can be approximated by:
 Iterations = log numBottles to the base numExchange.
 
+Overall Time Complexity:
+The time complexity of this code is dominated by the while loop, which runs approximately log (numExchange) numBottles time.
+Where numBottles is the number of bottles you start with, and numExchange is the number of empty bottles required for a new one.
+
+Space Complexity:
+The space complexity is O(1) because the algorithm uses only a fixed amount of extra space (just few integer variables).
 */
