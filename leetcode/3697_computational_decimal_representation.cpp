@@ -27,3 +27,23 @@ Explanation: 6 is a base-10 component.
 Constraints:
 1 <= n <= 10^9
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<int> decimalRepresentation(int n){
+    vector<int> ans;
+    long long int power=1;
+    while(n>0){
+        int digit=n%10;
+        if(digit!=0){
+            ans.push_back(digit*power);
+        }
+        power*=10;
+    }
+    reverse(ans.begin(),ans.end());
+
+    return ans;
+}
