@@ -63,4 +63,21 @@ Complexity analysis
 3. Reversing the vector (reverse(ans.begin(), ans.end())):
     - The reverse operation on the vector takes O(m), where m is the size of the vector. Since the size of the vector is at most the number of digits in n, which is O(log n), this operation will take O(log n) time.
 
+
+Total Time Complexity:
+- The while loop runs O(log n) times.
+- Inside the loop, each operation is constant time O(1), and the reverse operation after the loop takes O(log n) time.
+
+Thus, the total time complexity is:
+O(log n) + O(log n) = O(log n)
+
+Space Complexity:
+- The space complexity is dominated by the space required to store the vector ans. The number of elements in ans will be atmost the number of digits in n, which is O(log n).
+
+Thus the space complexity is: O(log n)
+
+Conclusion:
+Time Complexity: O(log n)
+Space Complexity: O(log n)
+
 */
