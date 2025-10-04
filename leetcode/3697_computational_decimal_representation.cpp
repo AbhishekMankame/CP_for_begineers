@@ -47,3 +47,20 @@ vector<int> decimalRepresentation(int n){
 
     return ans;
 }
+
+/*
+Complexity analysis
+1. While loop (while n>0): 
+    - This loop runs while n is greater than zero. In each iteration, the number of n is reduced by a factor of 10 (since we 'n%10' and then divide by 10), so the loop runs for 'O(log n)' iterations, where n is the input
+    number.
+
+2. Inside the loop:
+    - 'int digit=n%10;': This is a simple modulus operation, which is constant time i.e., O(1).
+    - if(digit!=0): This is a constant time check, i.e., O(1).
+    - ans.push_back(digit*power);: The push_back operation on the vector is typicaly O(1) amortized, though in worst case (if the vector grow in size), it can occasionally take O(k) time where k is the number of elements in the vector. However, for simpliclty, we can assume that push_back is O(1) most of the time.
+    - power *= 10; : This is a simple multiplication, which takes constant time O(1).
+
+3. Reversing the vector (reverse(ans.begin(), ans.end())):
+    - The reverse operation on the vector takes O(m), where m is the size of the vector. Since the size of the vector is at most the number of digits in n, which is O(log n), this operation will take O(log n) time.
+
+*/
