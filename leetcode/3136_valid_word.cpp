@@ -46,4 +46,15 @@ bool isValid(string word){
     string vowel="aeiouAEIOU";
     string consonant="qwrtyopdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM";
     string valid=vowel+consonant+"1234567890";
+
+    if(word.size()<3) return false;
+    bool has_vowel=false;
+    bool has_consonant=false;
+    for(char c:word){
+        if(!alnum(c)) return false;
+        if(vowel.find(c)!=string::npos) has_vowel=true;
+        else if(consonant.find(c)!=string::npos) has_consonant=true;
+    }
+
+    return has_vowel&&has_consonant;
 }
