@@ -39,3 +39,55 @@ Output
 Problem tags: constructive algorithms, greedy, sortings, *1000
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    int n;
+    cin >> n;
+    vector<int> field(n);
+    for(int i=0;i<n;i++){
+        cin >> fields[i];
+    }
+
+    vector<int> evenFields, oddFields;
+
+    // Separate even and odd fields
+    for(int dandelions:fields){
+        if(dandelions%2==0) evenFields.push_back(dandelions);
+        else oddFields.push_back(dandelions);
+    }
+
+    long long int total=0;
+
+    // If we have at least one odd field, we can plan to turn mower ON
+    if(!oddFields.empty()){
+        // All even fields can be cut when mower is ON
+        for(int x:evenFields) total += x;
+    }
+
+    // Sort odd field in descending order
+    sort(oddFields.rbegin(), oddFields.rend());
+
+    // We can only cut rougly half of them (the onew when mower is ON)
+    int count = (oddFields.size()+1)/2;
+    for(int i=0;i<count;i++){
+        total+=oddFields[i];
+    }
+    cout << total << endl;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
