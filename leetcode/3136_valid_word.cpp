@@ -36,3 +36,14 @@ Constraints:
 
 Topics: string
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+bool isValid(string word){
+    string vowel="aeiouAEIOU";
+    string consonant="qwrtyopdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM";
+    string valid=vowel+consonant+"1234567890";
+}
