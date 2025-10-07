@@ -36,3 +36,6 @@ int main() {
     cout<<ans<<endl;
     return 0;
 }
+
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
