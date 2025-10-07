@@ -1,4 +1,5 @@
 // Codeforces 579-A Raising Bacteria
+// Codeforces Round 320 (Div. 2) [Bayab Thanks-Round]
 // time limit per test: 1 second
 // memory limit per test: 256 megabytes
 
@@ -16,4 +17,6 @@ Output: The only line containing one integer: the answer
 Example:
 Input: 5
 Output: 2
+
+Problem tags: bitmasks, *1000
 */
