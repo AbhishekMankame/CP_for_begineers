@@ -34,3 +34,29 @@ Constraints:
 
 Topics: Array, Two Pointers, Binary Search, Sorting
 */
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
+    vector<int> ans;
+
+    // Sort the potions array to perform binary search later
+    sort(potions.begin(), potions.end());
+
+    // Iterate over each spell
+    for(int spell:spells){
+        // Calculate the minimum required potion value that can create a successful pair
+        long long target = (success+spell-1)/spell; // This is equivalent to ceiling(success/spell)
+
+        // Binary search to find the first valid potion
+        auto it = lower_bound(potions.begin(), potions.end(),target);
+        int index = it - potions.begin();
+
+        // The number of valid potions is the remaining ones from the index onward
+        ans.push_back(potions.size()-index);
+    }
+    return ans;
+}
