@@ -60,3 +60,15 @@ vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long
     }
     return ans;
 }
+
+/* Time Complexity
+- Sorting potions: O(m log m)
+- Binary Search for each spell: O(n log m)
+Thus overall time complexity is O(m log m + n log m)
+Where n is the number of spells, m is the number of potions
+
+Space Complexity:
+Auxiliary Space Complexity (excluding input and output): O(1)
+Total Space Complexity (including output): O(n)
+
+*/
