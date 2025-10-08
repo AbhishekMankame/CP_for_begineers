@@ -16,4 +16,21 @@ Explanation:
 - 1st spell: 1 * [1,2,3,4,5] = [1,2,3,4,5]. 0 pairs are successful.
 - 2nd spell: 3 * [1,2,3,4,5] = [3,6,9,12,15]. 3 pairs are succesul.
 Thus, [4,0,3] is returned.
+
+Input: spells = [3,1,2], potions = [8,5,8], success = 16
+Output: [2,0,2]
+Explanation:
+- 0th spell: 3 * [8,5,8] = [24,15,24]. 2 pairs are successful.
+- 1st spell: 1 * [8,5,8] = [8,5,8]. 0 pairs are successful. 
+- 2nd spell: 2 * [8,5,8] = [16,10,16]. 2 pairs are successful. 
+Thus, [2,0,2] is returned.
+
+Constraints:
+- n == spells.length
+- m == potions.length
+- 1 <= n, m <= 10^5
+- 1 <= spells[i], potions[j] <= 10^5
+- 1 <= success <= 10^10
+
+Topics: Array, Two Pointers, Binary Search, Sorting
 */
