@@ -19,3 +19,19 @@ Constraints:
 
 Topics: string
 */
+
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+int maxPower(string s){
+    int count=1;
+    int maxCount=1;
+    for(int i=0;i<s.size();i++){
+        if(s[i]==s[i+1]) count++;
+        maxCount=max(maxCount,count);
+        if(s[i]!=s[i+1]) count=1;
+    }
+    return maxCount;
+}
