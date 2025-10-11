@@ -35,3 +35,6 @@ int maxPower(string s){
     }
     return maxCount;
 }
+
+// Time Complexity: O(n), where n is the size of the string
+// Space Complexity: O(1)
