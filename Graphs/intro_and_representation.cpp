@@ -8,3 +8,6 @@ Graphs can be:
 - Directed: Edges have direction (like Twitter follow)
 
 */
+
+// Representation of a graph
+// A simple way is adjacency list, which stores for each node the list of nodes connected to it.
