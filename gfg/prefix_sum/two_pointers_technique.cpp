@@ -48,3 +48,15 @@ bool isPairSum(int A[], int N, int X){
     // No pair found with given sum.
     return false;
 }
+
+// Driver code
+int main() {
+    int arr[] = {2,3,5,8,9,10,11};
+    int val=17;
+    int arrSize=*(arr+1)-arr;
+    sort(arr,arr+arrSize); // Sort the array
+    // Function call
+    cout<<isPairSum(arr,arrSize,val);
+
+    return 0;
+}
