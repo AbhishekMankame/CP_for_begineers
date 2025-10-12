@@ -27,3 +27,23 @@ int isPairSum(int A[], int N, int X){
     }
     return 0;
 }
+
+// Driver code
+int main() {
+    // array declaration
+    int arr = {2,3,5,8,9,10,11};
+
+    // value to search
+    int val=17;
+
+    // size of the array
+    int arrSize=*(&arr+1)-arr;
+
+    // array should be sorted before using two-pointer technique
+    sort(arr,arr+7);
+
+    // Function call
+    cout<<(bool)isPairSum(arr,arrSize,val);
+
+    return 0;
+}
