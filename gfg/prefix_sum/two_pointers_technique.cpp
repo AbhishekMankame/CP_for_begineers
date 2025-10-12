@@ -25,3 +25,26 @@ j=3
 A[i] + A[j] = 20 + 50 = 70
 thus this signifies that pair is found.
 */
+
+// Naive Approach
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isPairSum(int A[], int N, int X){
+    for(int i=0;i<N;i++){
+        for(int j=0;j<N;j++){
+            // as equal i and j means same element
+            if(i==j) continue;
+
+            // pair exists
+            if(A[i]+A[j]==X) return true;
+
+            // as the array is sorted
+            if(A[i]+A[j]>X) break;
+        }
+    }
+
+    // No pair found with given sum.
+    return false;
+}
