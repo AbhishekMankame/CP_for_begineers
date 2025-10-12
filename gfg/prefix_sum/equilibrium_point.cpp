@@ -43,3 +43,13 @@ int equilibrium(int a[], int n){
     // If you want all the points of equilibrium create vector and push all equilibrium points in it and return the vector
 
 }
+
+// Driver code
+int main() {
+    int arr[] = {-7,1,5,2,-4,3,0};
+    int n=sizeof(arr)/sizeof(arr[0]);
+
+    // Function call
+    cout<<"First point of equilibrium is at index "<<equilibrium(arr,n)<<endl;
+    return 0;
+}
