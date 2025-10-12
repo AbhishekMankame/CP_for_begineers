@@ -60,3 +60,6 @@ int main() {
 
     return 0;
 }
+
+// Output: 1
+// Time Complexity: O(n^2)
