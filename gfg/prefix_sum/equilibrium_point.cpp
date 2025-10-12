@@ -53,3 +53,7 @@ int main() {
     cout<<"First point of equilibrium is at index "<<equilibrium(arr,n)<<endl;
     return 0;
 }
+
+// Output: First Point of equilibrium is at index 3
+// Time Complexity: O(N)
+// Space Complexity: O(N)
