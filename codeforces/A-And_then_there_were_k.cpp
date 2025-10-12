@@ -33,4 +33,34 @@ In the second testcase, the maximum value for which the continuous & operation g
 - 5&4&3=0
 Here, 3 is the answer
 
+Problems tag: *800, bitmasks
+
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+
+        // If n is a power of 2 (like 1, 2, 4, 8, 16 ...), then k = n - 1
+        if((n&(n-1))==0) cout<<n-1<<endl;
+        else {
+            // Otherwise, find the highest power of 2 less than n
+            int hightestPower=1;
+            while(highestPower*2<=n){
+                highestPower*=2;
+            }
+            cout<<highestPower-1<<endl;
+        }
+    }
+
+    return 0;
+}
