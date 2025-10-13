@@ -28,3 +28,18 @@ int sumation(int n){
 
 // Time Complexity: O(n)
 // Space Complexity: O(1), since no extra space has been taken
+
+
+/*Efficient Approach
+There exists a formula for finding the sum of squares of first n numbers.
+
+1 + 2 + ... + n = n(n+1)/2
+1^2 + 2^2 + 3^2 + .... + n^2 = n(n+1)(2n+1)/6
+
+Example: n = 3
+    = 3 * (3 + 1) + (2*3 + 1) / 6
+    = (3 * 4 * 7) / 6
+    = 84 / 6
+    = 14
+
+*/
