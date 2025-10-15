@@ -87,3 +87,16 @@ vector< vector < int > > rotate90Clockwise(vector< vector < int> >& mat){
     return rotated;
 }
 </pre>
+
+## 🔒 Constraints to Remember
+| Constraint | Details |
+| --------- | --------- |
+| In-place rotation | Only possible for square matrices |
+| Time Complexity | O(N^2) for N*N matrices |
+| Space Complexity | O(1) if in-place, else O(N^2) |
+
+## 🧠 Interview Tips
+- Always clarify if the matrix is square
+- Ask if you're allowed to use extra space
+- Know how transpoes and reversals work
+- Practice with edge cases like 1*1, empty matrix, and 2*2 matrices
