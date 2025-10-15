@@ -67,3 +67,23 @@ for(int i=0;i< n;i++){
 }
 reverse(matrix.begin(),matrix.end()); // Reverse the entire matrix
 </pre>
+
+### 🔁 For Rectangular Matrices (M*N)
+- In-place rotation is not possible unless M=N
+- Use an extra matrix to store the rotated version.
+
+Example: 90° Clockwise
+<pre>
+vector< vector < int > > rotate90Clockwise(vector< vector < int> >& mat){
+    int M = mat.size();
+    int N = mat[0].size();
+    vector< vector < int> > rotated(N, vector< int>(M));
+
+    for(int i=0;i < M;i++){
+        for(int j=0;j < N;j++){
+            rotated[j][M - 1 - i] = mat[i][j];
+        }
+    }
+    return rotated;
+}
+</pre>
