@@ -100,3 +100,10 @@ vector< vector < int > > rotate90Clockwise(vector< vector < int> >& mat){
 - Ask if you're allowed to use extra space
 - Know how transpoes and reversals work
 - Practice with edge cases like 1*1, empty matrix, and 2*2 matrices
+
+## 📘 Summary Table
+| Rotation |	Transpose |	Reverse Rows |	Reverse Columns |
+| ------ | --------- | ------- | -------- |
+| 90° CW |	✅ |	✅ | ❌ |
+90° ACW |	✅ |	❌ |	✅ |
+180°	| ❌ |	✅ |	✅ |
