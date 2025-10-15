@@ -56,3 +56,14 @@ for(int j=0;j< n;j++){
     }
 }
 </pre>
+
+✅ 180° Rotation
+You can do either:
+- Two 90° clockwise or two 90° anti-clockwise rotations
+- Reverse both rows and columns
+<pre>
+for(int i=0;i< n;i++){
+    reverse(matrix[i].begin(),matrix[i].end()); // Reverse each 
+}
+reverse(matrix.begin(),matrix.end()); // Reverse the entire matrix
+</pre>
