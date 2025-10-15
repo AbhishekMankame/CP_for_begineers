@@ -10,9 +10,9 @@ Matrix rotation involves rearranging elements of a matrix to represent a rotatio
 We usually deal with square matrices (N*N), but rectangular (M*N) matrices can also be rotated using extra space.
 
 ### 🔁 Types of Rotations
-| ----------- | ------- | --------- |
+
 | Rotation | Direction | Description |
-| ++++++++ | ++++++++ | +++++++++ |
+| ----------- | ------- | --------- |
 | 90° Clockwise	| ↷ Right | Turn right 90° |
 | 90° Anti-Clockwise	| ↶ Left	| Turn left 90° |
 | 180° Rotation	| ↻ Upside down	| Turn twice |
