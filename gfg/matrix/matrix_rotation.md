@@ -34,3 +34,25 @@ for(int i=0;i< n;i++){
 for(int i=0;i< n;i++){
     reverse(matrix[i].begin(),matrix[i].end());
 } </pre>
+
+✅ 90° Anti-Clockwise Rotation
+Steps:
+1. Transpose the matrix
+2. Reverse each column
+
+<pre>
+for(int i=0;i< n;i++){
+    for(int j=i;j< n;j++){
+        swap(matrix[i][j],matrix[j][i]);
+    }
+}
+
+for(int j=0;j< n;j++){
+    int top=0,bottom=n-1;
+    while(top < bottom){
+        swap(matrix[top][i], matrix[bottom][i]);
+        top++;
+        bottom--;
+    }
+}
+</pre>
