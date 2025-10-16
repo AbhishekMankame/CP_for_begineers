@@ -58,3 +58,6 @@ vector<int> rearrangeArray(vector<int>& nums){
     }
     return ans;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
