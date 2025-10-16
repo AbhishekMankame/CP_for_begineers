@@ -27,3 +27,6 @@ vector<int> rearrangeArray(vector<int>& nums){
     }
     return nums;
 }
+
+// Time Complexity: O(n), because each pointer moves at most n/2 steps.
+// Space Complexity: O(1), done in-place
