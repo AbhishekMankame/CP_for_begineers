@@ -42,3 +42,5 @@ bool searchMatrix(vector<vector<int>>& matrix, int target){
     return false;
 }
 
+// Time Complexity: O(m+n), where m = number of rows, n = number of columns
+// Space Complexity: O(1) constant space
