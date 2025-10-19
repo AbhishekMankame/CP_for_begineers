@@ -24,3 +24,27 @@ Constraints:
 Topics: Array, Binary Search, Dynamic Programming
 
 */
+
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        if (nums.empty()) return 0;
+
+        // DP array to store the length of the longest increasing subsequence up to each index
+        vector<int> dp(nums.size(), 1);
+
+        for (int i = 1; i < nums.size(); ++i) {
+            for (int j = 0; j < i; ++j) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = max(dp[i], dp[j] + 1);  // Update dp[i] with the max subsequence length ending at i
+                }
+            }
+        }
+
+        return *max_element(dp.begin(), dp.end());  // The answer is the max value in dp
+    }
+};
