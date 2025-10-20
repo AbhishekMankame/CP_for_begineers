@@ -44,3 +44,5 @@ bool isStrobogrammatic(string num){
     return true;
     
 }
+
+// Time Complexity: O(n) --> The algorithm runs in linear time, where n is the length of the number(string). The check for each pair is constant time due to the map lookups.
