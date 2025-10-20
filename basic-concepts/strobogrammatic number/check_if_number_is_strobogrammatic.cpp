@@ -18,5 +18,29 @@ Move the left pointer forward and right pointer backward until they cross each o
 A single digit number can be strobogrammatic if it's 0, 1 or 8
 An empty string or a string with invalid characters should return false
 
-
 */
+
+#include<iostream>
+#include<unordered_map>
+#include<string>
+using namespace std;
+
+bool isStrobogrammatic(string num){
+    unordered_map<char, char> rotateMap = {
+        {'0','0'}, {'1','1'}, {'6','9'}, {'8','8'}, {'9','6'}
+    };
+    int left=0, right=num.size()-1;
+
+    while(left<=right){
+        char l=num[left], r=num[right];
+
+        // Check if characters exist in map and match their rotated counterpart
+        if(rotateMap.find(l)==rotateMap.end() || rotateMap[l]!=r){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+    
+}
