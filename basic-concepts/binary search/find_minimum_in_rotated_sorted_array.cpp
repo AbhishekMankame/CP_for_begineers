@@ -13,3 +13,21 @@ Time Complexity:
 -> Worst Case: O(log N)
 
 */
+
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int findMin(const vector<int>& nums, int target){
+    int left=0,right=nums.size()-1;
+    while(left<right){
+        if(arr[mid]>arr[right]){
+            left=mid+1; // minimum is in the left half
+        }
+        else {
+            right = mid; // minimum is in the right half (or at mid)
+        }
+    }
+    return arr[left]; // left is the minimum element
+}
