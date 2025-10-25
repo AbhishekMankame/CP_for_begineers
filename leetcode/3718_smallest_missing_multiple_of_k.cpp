@@ -23,3 +23,17 @@ Constraints:
 Topics: Array, Hash Table
 
 */
+
+#include<iostream>
+#include<vector>
+#include<unordered_set>
+using namespace std;
+
+int missingMultiple(vector<int>& nums, int k){
+    unordered_set<int> s(nums.begin(), nums.end());
+    long long multiple = k; // To avoid the overflow
+    while(true){
+        if(s.find(multiple)==s.end()) return multiple;
+        multiple+=k;
+    }
+}
