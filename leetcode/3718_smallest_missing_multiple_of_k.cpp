@@ -37,3 +37,6 @@ int missingMultiple(vector<int>& nums, int k){
         multiple+=k;
     }
 }
+
+// Time Complexity: O(n) (average, due to hash lookups)
+// Space Complexity: O(n)
