@@ -35,4 +35,43 @@ Digital root = 2
 
 So digital root(9875) = 2
 
+2. Naive Approach (Using Loops):
+You can find the digital root by iteratively summing digits until it becomes a single digit.
+- Time Complexity: O(log n) - because number of digits decreases roughly by a factor of 10 each iteration.
+- Space Complexity: O(1)
+
+3. Mathematical Insight (Modulo 9)
+Here's the interesting part:
+The digital root of a number is related to modulo 9.
+
+Step 1: Why modulo 9?
+Let num = d0 + 10*d1 + 100*d2 + ... (decimal expansion)
+Since 10 = 1 (mod 9), 100 = 1 (mod 9) etc, 
+
+This means sum of digits modulo 9 = num modulo 9
+
+Step 2: Digital root formula
+To get the digital root in O(1):
+
+int digitalRoot(int num){
+    if(num==0) return 0;
+    return 1 + (num-1)%9;
+}
+
+Explanation:
+    Numbers divisible 9 -> digital root = 9 (not 0)
+    Other numbers -> digital root = num%9
+
+4. Why This Formula Works
+
+    1. num%9 gives the remainder after dividing by 9
+    2. Repeatedly adding digits reduces num modulo 9
+    3. Subtracting 1 and adding 1 handles the 9 -> 9 instead of 0 issue
+    This is the essence of the digital root concept.
+
+5. Summary:
+- Naive method: Iteratively sum digits (O(log n))
+- O(1) method: Use digital root formula 1 + (num - 1)%9
+- Works for any non-negative integer
+
 */
