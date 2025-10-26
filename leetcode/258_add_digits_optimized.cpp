@@ -75,3 +75,22 @@ Explanation:
 - Works for any non-negative integer
 
 */
+
+/*
+Observing a pattern
+If we compute the digital root manually, we notice:
+- Number 1 - 9 --> themselves
+- Number 10 - 18 --> digital root = 1-9 again
+- Number 19 - 27 --> digital root = 1-9 again
+So the digital root repeats every 9 numbers.
+This suggest a connection with modulo 9.
+
+Mathematically:
+num = sum of digits of num (modulo 9)
+
+Trick: (num-1)%9+1
+1. Subtract 1: num-1 --> This shifts number so that multiple of 9 no longer map to 0
+2. Take modulo 9: (num-1)%9
+3. Add 1 back: 1+(num-1)%9
+
+*/
