@@ -55,3 +55,25 @@ vector<int> twoSum1(vector<int>& nums, int target){
 
 // Time Complexity: O(N^2)
 // Space Complexity: O(1)
+
+// Bit more optimized approach: Sorting + Two Pointers --> O(n log n) Time Complexity
+
+// Optimized approach using hash table --> unordered map
+
+vector<int> twoSum2(vector<int> &nums, int target){
+    unordered_map<int,int> mp;
+    for(int i=0;i<nums.size();i++){
+        int complement = target - nums[i];
+
+        // Check if complement exists in map
+        if(mp.find(complement)!=mp.end()){
+            return {mp[complement],i};
+        }
+        // Store the current number with its index
+        mp[nums[i]]=i;
+    }
+    return {};
+}
+
+// Time Complexity: O(n) --> Because of single pass through array
+// Space Complexity: O(n) --> Storing up to n elements in the map
