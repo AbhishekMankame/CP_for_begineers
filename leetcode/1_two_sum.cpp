@@ -31,3 +31,27 @@ Follow up: Can you come up with an algorithm that is less than O(n^2) time compl
 
 Topics: Array, Hash Table
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<unordered_map>
+using namespace std;
+
+// Brute Force Approach
+vector<int> twoSum1(vector<int>& nums, int target){
+    vector<int> ans;
+    for(int i=0;i<nums.size();i++){
+        for(int j=i+1;j<nums.size();j++){
+            if(nums[i]+nums[j]==target){
+                ans.push_back(i);
+                ans.push_back(j);
+                return ans;
+            }
+        }
+    }
+    return ans;
+}
+
+// Time Complexity: O(N^2)
+// Space Complexity: O(1)
