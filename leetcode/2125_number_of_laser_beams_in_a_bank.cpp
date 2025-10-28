@@ -42,3 +42,39 @@ Explanation: Between each of the following devices pairs, there are 8 beams:
  Topics: Array, Math, String, Matrix
 
 */
+
+/*
+Explanation:
+A laser beam can be formed between two rows if both rows have atleast one security device.
+
+The number of beams between two rows = (number of devices in row1)*(number of devices in row2)
+
+*/
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+class Solution {
+public:
+    int numberOfBeams(vector<string>& bank){
+        int prev=0; // devices in the previous non-empty row
+        int ans=0; // total number of beams
+
+        for(string &row:bank){
+            int count=countDevices(row);
+            if(count>0){
+                ans += prev * count; // add beams between prev and current
+                prev = count;
+            }
+        }
+        return ans;
+    }
+
+    private:
+    // Helper function to count '1's in a row
+    int countDevices(const string &row){
+        return count(row.begin(), row.end(), '1');
+    }
+};
