@@ -45,3 +45,50 @@ In the second example, the four ways are:
 Problem tags: combinatorics, math, sortings, *900
 
 */
+
+/*
+Explanation:
+
+The maximum absolute difference is between the minimum and maximum elements.
+
+a = [1, 3, 5, 5, 1]
+min = 1
+max = 5
+max |ai - aj| = 5 - 1 =4
+
+So no other pair gives a difference greater than 4.
+That means we only care about pairs where:
+|ai - aj| = 4 ==> (ai, aj) = (1, 5) or (5, 1)
+
+
+*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        vector<long long> a(n);
+        for(auto &x:a) cin >> x;
+
+        long long mn = *min_element(a.begin(), a,end());
+        long long mx = *max_element(a.begin(), a.end());
+
+        if(mn == mx){
+            cout << 1LL * n * (n-1) << "\n";
+        }
+        else {
+            long long cnt_min = count(a.begin(), a.end(), mn);
+            long long cnt_max = count(a.begin(), a.end(), mx);
+        }
+    }
+    return 0;
+}
