@@ -78,3 +78,6 @@ public:
         return count(row.begin(), row.end(), '1');
     }
 };
+
+// Time Complexity: O(n * m) --> where n = number of rows, m = number of colums
+// Space Complexity: O(1) --> no need for 2D operations
