@@ -81,3 +81,38 @@ public:
 
 // Time Complexity: O(n * m) --> where n = number of rows, m = number of colums
 // Space Complexity: O(1) --> no need for 2D operations
+
+/*
+Key Takeaways:
+- Skip rows with 0 devices.
+- Multiply consecutive non-empty row device counts.
+- Use simple integer tracking - no need for 2D operations.
+
+*/
+
+// One more code
+
+int numberOfBeams1(vector<string>& bank){
+    int prev=0,ans=0;
+    for(string &row:bank){
+        int count=0;
+        for(char c:row){
+            if(c=='1') count++;
+        }
+        if(count>0){
+            ans += prev*count;
+            prev=count
+        }
+    }
+
+    return ans;
+}
+
+/*Verdict
+Time Complexity: O(n*m) --> Can't be improved
+Space Complexity: O(1) --> Minimal
+Readability: High --> Simple and clean
+Performance: Optimal --> As fast as possible in C++
+
+
+*/
