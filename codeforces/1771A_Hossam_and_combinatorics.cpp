@@ -31,7 +31,17 @@ Output:
 2
 4
 
+Note:
+In the first example, the two ways are:
+    - Hossam chooses the fourth number 8 and Hazem chooses the fifth number 1.
+    - Hossam chooses the fifth number 1 and Hazem chooses the fourth number 8.
 
+In the second example, the four ways are:
+    - Hossam chooses the second number 2 and Hazem chooses the sixth number 10
+    - Hossam chooses the sixth number 10 and Hazem chooses the second number 2
+    - Hossam chooses the fifth number 2 and Hazem chooses the sixth number 10
+    - Hossam chooses the sixth number 10 and Hazem chooses the fifth number 2
 
+Problem tags: combinatorics, math, sortings, *900
 
 */
