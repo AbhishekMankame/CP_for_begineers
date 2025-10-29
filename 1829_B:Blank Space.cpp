@@ -16,4 +16,25 @@ The second line of each test case contains n space-seperated integers ai (0 <= a
 Output:
 For each test case, output a single integer - the length of the longest blank space.
 
+
+Input:
+5
+5
+1 0 0 1 0
+4
+0 1 1 1
+1
+0
+3
+1 1 1
+9
+1 0 0 0 1 0 0 0 1
+
+Output:
+2
+1
+1
+0
+3
+
 */
