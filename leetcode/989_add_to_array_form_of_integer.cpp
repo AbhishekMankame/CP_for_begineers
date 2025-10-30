@@ -29,3 +29,24 @@ num does not contain any leading zeros except for the zero itself.
 Topics: Array, Math
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<int> addToArrayForm(vector<int>& num, int k){
+    int n = num.size();
+    int i = n - 1; // start from the last (least significant) digit
+    vector<int> res; // to store the resulting digits
+
+    // Loop until we've processed all digits of num and k
+    while(i>=0 || k>0){
+        if(i>=0) k += num[i--]; // add num[i] to k, then move left
+        res.push_back(k%10); // store the current last digit of k
+        k /= 10; // remove the last digit (carry for the next step)
+    }
+
+    reverse(res.begin(), res.end()); // because we added digits from right to left
+    return res;
+}
