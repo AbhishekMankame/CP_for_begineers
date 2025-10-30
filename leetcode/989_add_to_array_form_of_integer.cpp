@@ -50,3 +50,6 @@ vector<int> addToArrayForm(vector<int>& num, int k){
     reverse(res.begin(), res.end()); // because we added digits from right to left
     return res;
 }
+
+// Time Complexity: O(n) --> We loop once through all digits
+// Space Complexity: O(n) --> for the output vector
