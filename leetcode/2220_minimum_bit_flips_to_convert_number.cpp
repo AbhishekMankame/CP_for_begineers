@@ -34,3 +34,19 @@ Constraints:
 Topics: Bit Manipulation
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int minBitFlips(int start, int goal){
+    int x = start ^ goal; // XOR gives bits that are different
+    int count=0;
+
+    while(x) {
+        count += x&1; // Count the set bits
+        x >>= 1;
+    }
+    return count;
+}
