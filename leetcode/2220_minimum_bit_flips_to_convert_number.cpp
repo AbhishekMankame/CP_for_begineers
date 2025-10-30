@@ -40,7 +40,9 @@ Topics: Bit Manipulation
 #include<algorithm>
 using namespace std;
 
-int minBitFlips(int start, int goal){
+class Solution {
+public:
+    int minBitFlips(int start, int goal){
     int x = start ^ goal; // XOR gives bits that are different
     int count=0;
 
@@ -50,3 +52,36 @@ int minBitFlips(int start, int goal){
     }
     return count;
 }
+};
+
+int main() {
+    Solution sol;
+    int start = 10, goad = 7;
+    cout << sol.minBitFlips(start,goal)<< endl; // Output: 3
+    return 0;
+}
+
+/*
+Explanation:
+- Start ^ goal computes the XOR - bits that differ will be 1
+- Then, count how many bits are set to 1 in that result.
+
+
+
+Example:
+start = 10 (1010)
+goal = 7 (1110)
+XOR = 13 (1101)
+--> 3 bits differ -> output = 3
+
+Time Complexity:
+- The loop runs once for each bit in the binary representation of x.
+- For a 32-bit integer, that's at most 32 iterations (constant).
+    Time Complexity: O(number of bits) = O(1)
+More generally, if integers can have up to b bits, complexity = O(b)
+
+Space Complexity:
+- We only use a few integer variables (x, count), no extra data structures.
+    Space Complexity: O(1)
+
+*/
