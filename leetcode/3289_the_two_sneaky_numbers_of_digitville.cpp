@@ -30,3 +30,22 @@ The input is generated such that nums contains exactly two repeated elements
 Topics: Array, Hash Table, Math
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<unordered_map>
+using namespace std;
+
+vector<int> getSneakyNumbers(vector<int>& nums){
+    unordered_map<int, int> ans;
+    vector<int> arr;
+    for(int i=0;i<nums.size();i++){
+        ans[nums[i]]++;
+    }
+    for(pair<int,int> i:ans){
+        if(i.second==2) arr.push_back(i.first);
+    }
+
+    return arr;
+}
