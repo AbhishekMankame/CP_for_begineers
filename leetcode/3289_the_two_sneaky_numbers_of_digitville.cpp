@@ -49,3 +49,6 @@ vector<int> getSneakyNumbers(vector<int>& nums){
 
     return arr;
 }
+
+// Time Complexity: O(n) --> As we are accessing/iterating through all the elements once
+// Space Complexity: O(n) --> For using vector and unordered map
