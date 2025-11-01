@@ -45,3 +45,25 @@ bool uniqueOccurrences(vector<int>& arr){
     }
     return true;
 }
+
+/*
+Explanation:
+1. Count each number's frequency
+2. Store each frequency in a set
+3. If a frequency repeats (already in the set), occurrences aren't unique --> return false
+4. Otherwise, return true
+
+Time Complexity:
+Step 1: Count frequencies
+- arr has n elements
+- Each freq[num]++ is O(1) average for an unordered_map
+- So this loop is O(n)
+
+Step 2:
+- The size of freq is at most n (if all numbers are unique), but usually <= n
+- unordered_set operations count() and insert() are O(1) average
+- So this loop is O(k), where k=freq.size() <= n
+
+Total Time Complexity
+O(n) + O(k) = O(n) --> Linear time complexity
+*/
