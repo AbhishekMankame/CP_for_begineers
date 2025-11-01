@@ -78,4 +78,12 @@ Step 2:
 - At most n frequencies -> O(n) space.
 
 Total Space Complexity: O(n) + O(n) = O(n)
+
+
+Summary Table:
+Couting frequencies --> O(n)
+Checking unique frequencies --> O(n)
+Total time --> O(n)
+Space used --> O(n)
+
 */
