@@ -66,4 +66,16 @@ Step 2:
 
 Total Time Complexity
 O(n) + O(k) = O(n) --> Linear time complexity
+
+
+Space Complexity:
+Step 1: Frequency map
+- unordered_map<int,int> freq stores all unique numbers.
+- At most n keys -> O(n) space
+
+Step 2:
+- unordered_set<int> seen stores all unique frequencies.
+- At most n frequencies -> O(n) space.
+
+Total Space Complexity: O(n) + O(n) = O(n)
 */
