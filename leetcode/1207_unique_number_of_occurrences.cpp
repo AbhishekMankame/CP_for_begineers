@@ -22,3 +22,26 @@ Constraints:
 -1000 <= arr[i] <= 1000
 
 */
+
+#include<iostream>
+#include<unordered_map>
+#include<unordered_set>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+bool uniqueOccurrences(vector<int>& arr){
+    unordered_map<int,int> freq;
+    for(int num:arr){
+        freq[num]++;
+    }
+
+    unordered_set<int> seen;
+    for(auto& [num,count]:freq){
+        if(seen.count(count)){
+            return false; // duplicate frequency
+        }
+        seen.insert(count);
+    }
+    return true;
+}
