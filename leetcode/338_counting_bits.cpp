@@ -48,3 +48,19 @@ vector<int> countBits(int n){
 
     return ans;
 }
+
+/*
+Time Complexity:
+- The loop runs exactly n times (from 1 to n)
+- Inside the loop
+    - i >> 1 (right shift) -> O(1) operation
+    - i & 1 (bitwise AND) -> O(1) operation
+    - Array assignment ans[i] = ... -> O(1) operation
+
+    Since each iteration does only constant-time work, the total time across all iterations is:
+    O(1) + O(1) + ... + O(1) = O(n)
+
+    Final Time Complexity: O(n)
+
+
+*/
