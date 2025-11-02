@@ -33,3 +33,18 @@ Follow up:
 Topics: DP, Bit Manipulation
 
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+vector<int> countBits(int n){
+    vector<int> ans(n+1,0); // Create an array to store the number of 1s for each number
+
+    // For each number from 1 to n, calculate the number of 1 bits
+    for(int i=1;i<=n;i++){
+        ans[i] = ans[i>>1] + (i&1); // Use right shift to divide by 2, and check if current number is odd or even
+    }
+
+    return ans;
+}
