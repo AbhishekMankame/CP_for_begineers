@@ -62,5 +62,11 @@ Time Complexity:
 
     Final Time Complexity: O(n)
 
+Space Complexity:
+- We allocate a vector ans of size n + 1 to store the result
+- Aside from that, only a few integer variables (i, etc) are used, which is O(1) additional space
+
+Final Space Complexity: O(n)
+
 
 */
