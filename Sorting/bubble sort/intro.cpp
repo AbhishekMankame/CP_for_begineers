@@ -22,7 +22,7 @@ Observation: In order to swap n elements, simply put n-1 elements to the right (
 #include<iostream>
 using namespace std;
 
-int bubble_sort(int arr[], int n){
+void bubble_sort(int arr[], int n){
     // we will have 2 loops, the first loop will repeat some process, that process will go on n-1 times
     // In every such iteration, we will pick the element at the front and push it to the end of the array (or to the suitable position where it can fit).
 
@@ -48,3 +48,6 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
