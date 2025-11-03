@@ -14,4 +14,7 @@ a = {12, 10, 5, 4, 3, 2, 1}
 
 Bubble Sort
 Key Idea: Take larger element to the end by repeatedly swapping the adjacent elements.
+It is inspired by forming of bubbles when we heat the water.
+
+Observation: In order to swap n elements, simply put n-1 elements to the right (top), then the one element will be left here, which will be automatically the smallest
 */
