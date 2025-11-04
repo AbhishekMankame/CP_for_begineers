@@ -25,3 +25,53 @@ For the last example, we can chose numbers 7,6,5 and the LCM of them is 7.6.5 = 
 Problem tags: greedy, number theory, *1600
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+ll gcd(ll a, ll b){
+    while(b) {
+        ll temp = a%b;
+        a=b;
+        b=temp;
+    }
+    return a;
+}
+
+ll lcm(ll a, ll b){
+    return (a/gcd(a,b))*b;
+}
+
+ll lcm3(ll a, ll b, ll c){
+    return lcm(lcm(a,b),c);
+}
+
+int main() {
+    ll n;
+    cin >> n;
+    if(n<=2){
+        cout << n << endl;
+        return 0;
+    }
+
+    if(n==3) {
+        cout << 6 << endl;
+        return 0;
+    }
+
+    ll ans = 0;
+
+    // For small n, just try top 3 numbers (n, n-1, n-2) and (n-1, n-2, n-3)
+
+    for(ll i=n;i>=max(1LL,n-4);--i){
+        for(ll j=i;j>=max(1LL,n-4);--j){
+            for(ll k=j;k>=max(1LL,n-4);--k){
+                ans = max(ans,lcm(i,j,k));
+            }
+        }
+    }
+
+    cout << ans << endl;
+    return 0;
+}
