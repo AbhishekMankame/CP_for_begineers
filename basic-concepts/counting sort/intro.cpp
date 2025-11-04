@@ -49,3 +49,12 @@ int main() {
 
     return 0;
 }
+
+/*
+Time Complexity: O(n + k), where
+    - n = number of elements
+    - k = range of input values (max - min + 1)
+
+Space Complexity: O(k)
+
+*/
