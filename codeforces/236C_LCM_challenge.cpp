@@ -75,3 +75,24 @@ int main() {
     cout << ans << endl;
     return 0;
 }
+
+/*
+Time Complexity:
+
+Step 1: How many iterations?
+- i runs from n down to max(1,n-4). That's at most 5 values.
+- j runs from i down to max(1,n-4). That's at most 5 values.
+- k runs from j down to max(1,n-4). That's at most 5 values.
+
+So the total numbers of triplets checked:
+    Total iterations <= 5*5*5 = 125
+That's extremely small, independent of n. Even for n = 10^6, we only do 125 iterations.
+
+Step 2: Complexity of lcm and gcd
+- gcd(a,b) uses Euclid's algorithm, which takes O(log(min(a,b))) time.
+- lcm(a,b) just does (a/gcd(a,b))*b --> dominated by the gcd call.
+- lcm(a,b,c) calls lcm(a,b) and then lcm(result,c) -> 2 gcd computations.
+Since the numbers are <= 10^6, each gcd call is at most:
+    O(log 10^6) = O(20)
+
+*/
