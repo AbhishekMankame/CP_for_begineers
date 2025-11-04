@@ -95,4 +95,21 @@ Step 2: Complexity of lcm and gcd
 Since the numbers are <= 10^6, each gcd call is at most:
     O(log 10^6) = O(20)
 
+Step 3: Total Time Complexity
+- Number of iterations: <= 125
+- Work per iteration: 2 gcd calls -> 2 * O(log n)
+- Total complexity: O(125*2*log n) = O(log n)
+In practical terms, the code runs in constant time for all n <= 10^6 because 125 is tiny.
+
+Step 4: Space Complexity:
+- We only store a few integers (n,i,j,k,ans)
+- No arrays or dynamic memory.
+    Space complexity = O(1)
+Constant space
+
+Step 5: Why we don't check all triplets
+- A naive approach would check all triplets (a,b,c) from 1 to n --> O(n^3), impossible for n = 10^6
+- Our observation: the maximum LCM always involves numbers very close to n, so we only need top 5 numbers.
+- This reduces complexity from O(n^3) --> effectively O(1)
+
 */
