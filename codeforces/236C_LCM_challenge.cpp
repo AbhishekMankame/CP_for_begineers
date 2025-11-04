@@ -17,5 +17,11 @@ Example:
 Input: 9    Output: 504
 Input: 7    Output: 210
 
+Note:
+The least common multiple of some positive integers is the least positive integer which is multiple of each of them.
+The result may become very large, 32-bit integers won't be enough. So using 64-bit integers is recommended.
+For the last example, we can chose numbers 7,6,5 and the LCM of them is 7.6.5 = 210. It is the maximum value we can get.
+
+Problem tags: greedy, number theory, *1600
 
 */
