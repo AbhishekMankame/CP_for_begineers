@@ -22,3 +22,19 @@ int solve(int n, vector<vector<int>>& cost){
 
     return dp[(1<<n)-1]; // Answer for the full set
 }
+
+int main() {
+    int n;
+    cin >> n;
+    vector<vector<int>> cost(n, vector<int>(n));
+    
+    // Input: cost matrix
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> cost[i][j];
+        }
+    }
+
+    cout << solve(n, cost) << endl;
+    return 0;
+}
