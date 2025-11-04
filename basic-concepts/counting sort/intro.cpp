@@ -7,6 +7,32 @@ Counting sort is a non-comparison-based sorting algorithm that works well when:
 - The range of input values (max - min) is not too large compared to the number of elements.
 It counts the number of occurrences of each element and then reconstructs the sorted array.
 
-
-
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void countingSort(vector<int>& arr){
+    if(arr.empty()) return;
+
+    // Find the minimum and maximum elements
+    int minVal = *min_element(arr.begin(),arr.end());
+    int maxVal = *max_element(arr.begin(),arr.end());
+    int range = maxVal - minVal + 1;
+
+    // Create a count array
+    vector<int> count(range,0);
+
+    // Count occurrences of each value
+    for(int num:arr){
+        count[num-minVal]++;
+    }
+
+    // Overwrite arr with sorted values
+    int index=0;
+    for(int i=0;i<range;i++){
+        while(count[i]-- > 0) {
+            arr[index++] = i + minVal;
+        }
+    }
+}
