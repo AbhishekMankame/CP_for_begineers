@@ -23,4 +23,28 @@ public:
     List() {    // this will be non parameterized constructor: isme koi parameter nahi aayegi
         head = tail = NULL;
     }
+
+    void push_front(int val) {
+        Node* newNode = new Node(val); // dynamic
+        // Node newNode(val); // static  --> yeh bhi ek alternate method hai
+        // Static implementation, function call se jaise hi function se hum bahar aayenge toh data delete ho jaayega
+
+        if(head==NULL){
+            head = tail = newNode;
+            return;
+        }
+        else {
+            newNode->next = head; // this is same as (*newNode).next = head
+            head = newNode;
+        }
+    }
 };
+
+int main() {
+    List ll;
+
+    ll.push_front(1);
+    ll.push_front(2);
+    ll.push_front(3);
+}
+
