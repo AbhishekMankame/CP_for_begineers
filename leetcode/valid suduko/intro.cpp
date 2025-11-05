@@ -57,4 +57,29 @@ bool isValidSudoku(vector<vector<char>>& board){
             }
         }
     }
+    return true;    // No violations found
+}
+
+int main() {
+    // Example Sudoku board, '.' represents empty cells
+    vector<vector<char>> board = {
+        {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+        {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+        {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+        {'8', '.', '.', '8', '.', '6', '.', '.', '3'},
+        {'4', '.', '9', '8', '.', '3', '.', '.', '1'},
+        {'7', '.', '.', '.', '2', '.', '.', '5', '.'},
+        {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+        {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+        {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
+    };
+
+    if(isValidSudoku(board)){
+        cout << "The Sudoku is valid." << endl;
+    }
+    else {
+        cout << "The Sudoku is not valid." << endl;
+    }
+
+    return 0;
 }
