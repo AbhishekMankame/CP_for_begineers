@@ -43,4 +43,18 @@ bool isValidSudoku(vector<vector<char>>& board){
             }
         }
     }
+
+    // Check 3x3 subgrids
+    for(int i=0;i<9;i+=3){
+        for(int j=0;j<9;j+=3){
+            unordered_set<char> subgridSet;
+            for(int r=i;r<i+3;++r){
+                for(int c=j;c<j+3;++c){
+                    if(board[r][c]!='.' && !subgridSet.insert(board[r][c]).second){
+                        return false; // Duplicates found in subgrid
+                    }
+                }
+            }
+        }
+    }
 }
