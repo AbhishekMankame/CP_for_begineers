@@ -36,12 +36,20 @@ int main() {
     int num = 1;
 
     while(top<=bottom && left <= right){
+
+        // Fill top row
         for(int i=left;i<=right;i++) a[top][i]=num++;
         top++;
+
+        // Fill right column
         for(int i=top;i<=bottom;i++) a[i][right]=num++;
         right--;
+
+        // Fill bottom row
         for(int i=right;i>=left;i--) a[bottom][i]=num++;
         bottom--;
+
+        // Fill left column
         for(int i=bottom;i>=top;i--) a[i][left]=num++;
         left++;
 
