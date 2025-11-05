@@ -113,4 +113,16 @@ so the overall time complexity is O(1) (constant time)
 If you generalize it for an NxN Sudoku (where N=9), then the complexity becomes O(N^2) - because you check every cell once.
 
 
+Space Complexity:
+Let's analyze auxiliary (extra) memory usage.
+- For each row and column iteration, you create two unordered_set<char> containers:
+    - Each can store upto 9 elements (digits 1-9)
+    - Memory per set is O(9) = O(1) (constant)
+
+- For subgrid validation, you again create one unordered_set<char> per subgrid (also upto 9 elements)
+    - This is also O(1) per subgrid.
+
+At any point, only a few set exist simulataneously (rowSet, colSet, subgridSet), so the total auxiliary space used in O(1) constant.
+
+
 */
