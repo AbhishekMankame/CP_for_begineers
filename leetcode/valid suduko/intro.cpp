@@ -19,3 +19,28 @@ Plan:
 3. For subgrids, we will need to determine the boundaries of each 3x3 box. A 3x3 box starts at indices (1*3, j*3) and contains elements from rows 3*i to 3*i+2 and columns 3*j to 3*j+2.
 
 */
+
+#include<iostream>
+#include<vector>
+#include<unordered_set>
+using namespace std;
+
+// Function to validate the Sudoku
+bool isValidSudoku(vector<vector<char>>& board){
+    // Check rows and columns
+    for(int i=0;i<9;i++){
+        unordered_set<char> rowSet;
+        unordered_set<char> colSet;
+        for(int j=0;j<9;j++){
+            //Check row
+            if(board[i][j]!='.' && !rowSet.insert(board[i][j]).second){
+                return false; // Duplicates found in row
+            }
+
+            // Check column
+            if(board[j][i]!='.'&&!colSet.insert(board[j][i]).second){
+                return false;   // Duplicates found in column
+            }
+        }
+    }
+}
