@@ -83,3 +83,34 @@ int main() {
 
     return 0;
 }
+
+/*
+Time Complexity:
+The code performs three main validation steps:
+
+a. Row and Colum Checks
+--> Outer loop runs 9 times (for each row)
+--> Inner loop also runs 9 times (for each colums)
+--> So, toatl operations = 9x9 = 81
+Each insertion and lookup in an unordered_set takes O(1) on average (amortized constant time).
+Thus, this entire part runs in O(81x1) = O(81) === O(1) (since Sudoku is fixed-size).
+
+b. Subgrid (3x3) Checks
+--> The outer two loop iterate over the 9 subgrids (each 3x3 block)
+--> The inner two loop iterate over 9 elements per subgrid
+--> So, total operations = 9*9 = 81
+
+Again, each set insertion/check is O(1) on average
+Therefore, subgrid checking also runs in O(81*1) = O(81) === O(1)
+
+Total Time Complexity:
+Combine all three parts:
+O(81) [rows + colums] + O(81) [subgrids] = O(162) === O(1)
+
+Since Sudoku is always 9x9, the total number of cells is constant (81),
+so the overall time complexity is O(1) (constant time)
+
+If you generalize it for an NxN Sudoku (where N=9), then the complexity becomes O(N^2) - because you check every cell once.
+
+
+*/
