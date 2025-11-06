@@ -42,4 +42,8 @@ Constraints:
 0 <= sy <= ty <= 10^9
 
 Topics: Math
+
+Hint 1: Work backwards from (tx, ty) to (sx, sy), undoing one move at each step.
+Hint 2: If the larger coordinate >= 2 * (the smaller), undo by halving the larger; otherwise undo by subtracting the smaller from larger
+Hint 3: Count these undo-steps until you hit (sx, sy) (return the count), or return -1 if you drop below or get stuck.
 */
