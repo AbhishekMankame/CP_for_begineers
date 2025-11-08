@@ -41,3 +41,12 @@ long long fibonacci(int n){
     }
     return b;
 }
+
+// Sum of Odd and Even Numbers
+long long sumOdd(int n){    // 1 + 3 + 5 ... + (2*n - 1)
+    return 1LL * n * n;
+}
+
+long long sumEven(int n){
+    return 1LL * n * (n+1);
+}
