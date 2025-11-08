@@ -20,3 +20,24 @@ long long powerOfTwoSum(int n){
     return (1LL << (n+1))-1; // 2^(n+1)-1
 }
 
+// Factorial (Iterative)
+long long factorial(int n){
+    long long fact = 1;
+    for(int i=1;i<=n;i++){
+        fact*=i;
+    }
+    return fact;
+}
+
+// Fibonacci (Iterative for efficiency)
+long long fibonacci(int n){
+    if(n==0) return 0;
+    if(n==1) return 1;
+    long long a=0,b=1,c;
+    for(int i=2;i<=n;i++){
+        c=a+b;
+        a=b;
+        b=a;
+    }
+    return b;
+}
