@@ -34,6 +34,15 @@ long long sumOfCubes_loop(long long n){
     return um;
 }
 
+/*
+
+Not optimized - computes each cube individually
+- Time Complexity - O(n)
+- Space Complexity - O(1)
+- Works fine for small n, bit inefficient for large n (e.g.: n=10^6)
+
+*/
+
 int main() {
     long long n;
     cout << "Enter n: ";
