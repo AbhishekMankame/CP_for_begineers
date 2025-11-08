@@ -15,6 +15,16 @@ long long sumOfCubes_formula(long long n){
     return sum*sum; // (n*(n-1)/2)^2
 }
 
+/*
+Optimized approach uses a direct mathematical formula: (n*(n+1)/2)^2
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+- Fastest possible (constant-time computation)
+- No loops, no recursion
+- Optimized
+
+*/
+
 long long sumOfCubes_loop(long long n){
     // Brute force approach
     long long sum=0;
@@ -22,4 +32,15 @@ long long sumOfCubes_loop(long long n){
         sum += i*i*i;
     }
     return um;
+}
+
+int main() {
+    long long n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    cout << "Sum of cubes (formaula): " << sumOfCubes_formula(n) << endl;
+    cout << "Sum of cubes (loop): " << sumOfCubes_loop(n) << endl;
+
+    return 0;
 }
