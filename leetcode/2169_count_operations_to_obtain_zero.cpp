@@ -19,4 +19,17 @@ Explanation:
 Not num1=0 and num2=1. Since num1==0, we do not need to perform any further operations.
 So the total number of operations required is 3.
 
+Example 2:
+Input: num1 = 10, num2 = 10
+Output: 1
+Explanation: 
+- Operation 1: num1 = 10, num2 = 10. Since num1 == num2, we subtract num2 from num1 and get num1 = 10 - 10 = 0.
+Now num1 = 0 and num2 = 10. Since num1 == 0, we are done.
+So the total number of operations required is 1.
+
+Constraints:
+0 <= num1, num2 <= 105
+
+Topics: Math, Simulation
+
 */
