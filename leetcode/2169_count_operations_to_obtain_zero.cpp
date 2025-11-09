@@ -47,3 +47,6 @@ int countOperations(int num1,int num2){
 
     return count;
 }
+
+// Time Complexity: O(max(num1, num2))
+// Space Complexity: O(1)
