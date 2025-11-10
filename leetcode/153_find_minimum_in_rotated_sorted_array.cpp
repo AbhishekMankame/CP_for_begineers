@@ -35,4 +35,18 @@ Constraints:
 
 Topics: Array, Binary Search
 
+
+Intuition:
+Original sorted: [1,2,3,4,5,6,7]
+Rotated: [4,5,6,7,1,2,3]
+
+Notice that: 
+- The smallest element is the point of rotation.
+- On the left of it -> numbers are greater
+- On the right of it -> numbers are smaller (means the numbers after the pivot (rotation point) are smaller than the numbers before the pivot).
+The numbers after the pivot (rotation point) are smaller than the numbers before the pivot.
+Note: It doesn't mean they are "smaller than the minimum" - that would be impossible 😅
+It means: when the sorted array is rotated, everything after the rotation point (the minimum) becomes the smaller section of the array.
+
+We can use binary search to find the minimum efficiently.
 */
