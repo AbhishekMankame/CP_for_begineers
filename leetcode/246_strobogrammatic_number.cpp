@@ -41,3 +41,18 @@ bool isStrobogrammatic(const string& num) {
 
     return true;
 }
+
+int main() {
+    string num;
+    cout<<"Enter a number: ";
+    cin>>num;
+
+    if(isStrobogrammatic(num)){
+        cout << num << " is a strobogrammatic number.\n";
+    }
+    else {
+        cout << num << " is not a strobogrammatic number.\n";
+    }
+
+    return 0;
+}
