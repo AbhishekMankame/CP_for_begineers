@@ -65,4 +65,23 @@ The function isStrobogrammatic checks the digits of the number from both ends to
 - In the worst case, the function will compare all the digits once, which means it will iterate through the string half the length. If the number has n digits, the loop will run n/2 times.
 - Therefore, the time complexity is O(n), where n is the length of the string.
 
+2. Map Lookups:
+- For each digit comparison, the function checks if the character is present in the strobogrammaticPairs map.
+- The lookup in an unordered map takes O(1) on average due to the hash table implementation. So, the complexity us O(1)
+
+Thus, the total time complexity is:
+O(n) where n is the length of the number.
+
+Space Complexity: 
+1. Auxiliary Space:
+- The function uses a map strobogrammaticPairs to store valid strobogrammatic digit pairs. This map contains a constant number of entries (5 pairs), regardless of the input size.
+- Therefore, the space used by the map is O(1) since the size of the map is constant.
+
+2. Input Storage:
+- The function takes the number as string input. If we consider the string num as an input, its space complexity is O(n), where n is the length of the number (the number of digits).
+
+Thus the total space complexity is:
+O(n), due to the space required to store the input string.
+
+
 */
