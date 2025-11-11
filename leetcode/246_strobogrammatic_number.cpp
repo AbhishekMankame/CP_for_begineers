@@ -15,5 +15,29 @@ To check if a number is strobogrammatic in C++, you can follow these steps:
 - 8 <-> 8
 - 9 <-> 6
 
-
 */
+
+#include<iostream>
+#include<string>
+#include<unordered_map>
+using namespace std;
+
+bool isStrobogrammatic(const string& num) {
+    // Map to store valid strobogrammatic pairs
+    unordered_map<char,char> strobogrammaticPairs = {
+        {'0','0'}, {'1','1'}, {'6','9'}, {'8','8'}, {'9','6'}
+    };
+
+    int left=0,right=num.size()-1;
+
+    while(left<=right){
+        // If the current pair of digits doesn't match strobogrammatically, return false
+        if(strobogrammaticPairs.find(num[left])==strobogrammaticPairs.end() || strobogrammaticPairs[num[left]]!=num[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
+}
