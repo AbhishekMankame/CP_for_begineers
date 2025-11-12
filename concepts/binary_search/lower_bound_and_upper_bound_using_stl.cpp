@@ -6,6 +6,11 @@ In other words, it returns an iterator pointing to the smallest element in the r
 If all elements in the range are smaller than the target, it returns an iterator pointing to the end of the range. This function is commonly used to find the insertion position of an element in a sorted array while maintaing order, or to locate the starting index of a specific value.
 Internally, it uses binary search, so its time complexity is O(log n) and space complexity is O(1).
 
+Upper Bound - The std::upper_bound() function in C++ returns an iterator pointing to the first element in a sorted range that is strictly greater than a given value.
+This means it identifies the position where the next greater element appears after all occurrences of the target value.
+If all elements in the range are less than or equal to the target, it returns an iterator pointing to the end of the range.
+The function is ofter used along with lower_bound() to determine the range of indices where a particular value occur or to count the frequency of a given element in a sorted array. Like lower_bound(), it performs a binary search achieving a time complexity of O(log n) and space complexity of O(1).
+
 
 lower_bound: Finds the first position where value could be inserted without violating order. (First element >= target)
 upper_bound: Find the first element strictly greater than target.
