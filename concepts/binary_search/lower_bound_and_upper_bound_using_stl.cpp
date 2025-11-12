@@ -39,7 +39,7 @@ int main() {
     int target=4;
 
     // lower_bound returns the first element >= target
-    auto lb = lower_bound(v.begin(), v.end(), target);
+    auto lb = lower_bound(v.begin(), v.end(), target);  // auto --> std::vector<int>::iterator ub
 
     // upper_bound returns the first element > target
     auto ub = upper_bound(v.begin(), v.end(), target);
