@@ -28,3 +28,29 @@ Think of a bookshelf sorted alphabetically:
 - upper_bound("Harry") --> first book that starts after all the "Harry" titles.
 That's exactly what these functions do - they find boundaries around a value.
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm> // for lower_bound, upper_bound
+using namespace std;
+
+int main() {
+    vector<int> v = {1,2,4,4,5,7,8,10};
+    int target=4;
+
+    // lower_bound returns the first element >= target
+    auto lb = lower_bound(v.begin(), v.end(), target);
+
+    // upper_bound returns the first element > target
+    auto ub = upper_bound(v.begin(), v.end(), target);
+
+    cout<< "Array: ";
+    for(int x:v) cout << x << " ";
+    cout << endl;
+
+    std::cout << "Target: " << target << "\n";
+    std::cout << "Lower bound index: " << (lb - v.begin()) << "\n";
+    std::cout << "Upper bound index: " << (ub - v.begin()) << "\n";
+
+    return 0;
+}
