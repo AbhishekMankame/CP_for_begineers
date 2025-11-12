@@ -45,4 +45,7 @@ int main() {
         v.push_back(x); // joh bhi value push back ko provide kar rahe hai, usko vector ke end mei add kar dega
         // push_back ka complexity: O(1)
     }
+
+    v.pop_back(); // pops the last element of the vector --> O(1)
+    vector<int> v2 = v; // Here we can directly copy one vector to another --> O(n)
 }
