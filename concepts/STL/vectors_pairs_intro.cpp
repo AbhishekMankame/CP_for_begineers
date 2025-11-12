@@ -1,6 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void printVect(vector<int> v){
+        cout << "size: "<< v.size()<<endl; // v.size() --> O(1)
+        for(int i=0;i<v.size();i++){
+            cout << v[i] << " ";
+        }
+        cout << endl;
+    }
+
 int main() {
     pair<int,string> p;  // this is the pair of integer and string
     pair<int,string> p2;
@@ -24,13 +32,7 @@ int main() {
         cout << p_array[i].first << " " << p_array[i].second;
     }
 
-    void printVect(vector<int> v){
-        cout << "size: "<< v.size()<<endl;
-        for(int i=0;i<v.size();i++){
-            cout << v[i] << " ";
-        }
-        cout << endl;
-    }
+    
     // vectors are continuous memory block
     vector<int> v;
     int n;
