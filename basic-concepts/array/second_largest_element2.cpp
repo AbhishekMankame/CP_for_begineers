@@ -27,3 +27,13 @@ int secondLargestBruteForce(int arr[], int n){
     }
     return secondLargest;
 }
+
+/*
+Note: Works, but two passes through the array
+- For each element, check if it is the largest
+- Then find the largest element less than the maximum (i.e., second largest)
+
+Time Complexity: O(n^2)
+Space Complexity: O(1)
+
+*/
