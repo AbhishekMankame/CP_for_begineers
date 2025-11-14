@@ -70,4 +70,13 @@ Why this Works:
 - The loop iterates through the attack times and checks if the next attack occurs before the previous attack ends.
 - If they overlap, we add the remaining time between attacks. If no overlap occurs, we add the full duration.
 
+Time Complexity: O(n)
+- You iterate through the vector t exactly once.
+- Each iteration performs O(1) work.
+- Therefore, total time = linear in the number of attacks.
+
+Space Complexity: O(1)
+- You use only a few integer variables (totalTime, loop index)
+- No extra data structures are used.
+- Space remains constant regardless of input size.
 */
