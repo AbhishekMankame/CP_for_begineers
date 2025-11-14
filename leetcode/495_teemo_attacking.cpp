@@ -33,3 +33,29 @@ Constraints:
 Topics: Array, Simulation
 
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int findPoisonedDuration(vector<int>& t, int duration){
+    int totalTime = 0;
+
+    // Traverse through all attack times
+    for(int i=1;i<t.size();i++){
+        // Check if the next attack is before the previous one ends
+        if(t[i]<t[i+1]+duration) {
+            // If overlap occurs, add only the non-overlapping part
+            totalTime += t[i] - t[i-1];
+        }
+        else {
+            // If no overlap, simply add the full duration
+            totalTime += duration;
+        }
+    }
+
+    // Add the duration for the first attack
+    totalTime += duration;
+
+    return totalTime;
+}
