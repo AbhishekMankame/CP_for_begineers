@@ -59,3 +59,15 @@ int findPoisonedDuration(vector<int>& t, int duration){
 
     return totalTime;
 }
+
+/*
+Explanation notes:
+1. First Attack: The first attack always contributes the full duration, so we add it at the end of the loop after checking the overlaps.
+2. Overlapping Attack Duration: When checking if t[i] is before t[i-1] + duration, you calculate the overlap (t[i] - [i-1]), which is non-overlapping duration.
+3. Non-overlapping Attack: If the attacks don't overlap, you simply add the full duration.
+
+Why this Works:
+- The loop iterates through the attack times and checks if the next attack occurs before the previous attack ends.
+- If they overlap, we add the remaining time between attacks. If no overlap occurs, we add the full duration.
+
+*/
