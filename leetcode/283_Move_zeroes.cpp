@@ -50,3 +50,6 @@ void moveZeroesOptimized(vector<int> &nums){
         }
     }
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
