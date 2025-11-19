@@ -20,3 +20,20 @@ Constraints:
 
 Follow up: Could you minimize the total number of operations done?
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void moveZeroesBruteForce(vector<int> &nums){
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]==0){
+            for(int j=i+1;j<nums.size();j++){
+                if(nums[j]!=0){
+                    swap(nums[i],nums[j]);
+                    break;
+                }
+            }
+        }
+    }
+}
