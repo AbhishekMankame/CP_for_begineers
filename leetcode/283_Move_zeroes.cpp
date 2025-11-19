@@ -40,3 +40,13 @@ void moveZeroesBruteForce(vector<int> &nums){
 
 // Time Complexity: O(n^2)
 // Space Complexity: O(1)
+
+void moveZeroesOptimized(vector<int> &nums){
+    int count=0;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]!=0){
+            swap(nums[i],nums[count]);
+            count++;
+        }
+    }
+}
