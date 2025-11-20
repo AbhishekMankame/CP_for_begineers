@@ -30,3 +30,22 @@ Constraints:
 1 <= nums[i], original <= 1000
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int findFinalValue(vector<int>& nums,int original){
+    while(true){
+        bool found=false;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==original){
+                found=true;
+                break;
+            }
+        }
+        if(!found) return original;
+        original*=2;
+    }
+}
