@@ -7,6 +7,8 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
     - Write the code that gets executed fastest
     - Write the code that uses minimum resources
     - Do this faster than others
+ 
+Competitive Programming involves solving algorithmic problems under constraints, requiring mastery of various techinques, algorithms, and data structures.
 
 ## How is Competitive Programming Useful?
 - <b>Enhances Problem-Solving</b> - Boosts logical and analytical thinking.
