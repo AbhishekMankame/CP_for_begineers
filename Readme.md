@@ -1,4 +1,5 @@
 # 📚Competitive Programming for Begineers
+
 Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begineer friendly guide to help you dive into the exciting world of competitive programming. I created this to share what I learn along the way, and hopefully help others who are also just starting out!
 
 ## What is Competitive Programming?
@@ -6,6 +7,8 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
     - Write the code that gets executed fastest
     - Write the code that uses minimum resources
     - Do this faster than others
+ 
+Competitive Programming involves solving algorithmic problems under constraints, requiring mastery of various techinques, algorithms, and data structures.
 
 ## How is Competitive Programming Useful?
 - <b>Enhances Problem-Solving</b> - Boosts logical and analytical thinking.
@@ -38,3 +41,6 @@ Welcome to Competitive Programming for Begineers!🚀 This reopsitory is a begin
 - Div 2 <= 2100
 - Div 3 <= 1600 
 - Div 4 <= 1400
+
+## Some important/essential topics required for CP
+Bit Manipulation, Number Theory, Combinatorics, Advanced Mathematics, Greedy Algorithms, Searching Techniques, Must know Data Structures, Pre-Computation, Graph Algorithms, Tree Algorithms, DP, Range Queries, String Algorithms, Game Theory
