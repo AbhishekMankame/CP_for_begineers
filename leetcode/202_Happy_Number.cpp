@@ -43,3 +43,12 @@ int getSum(int n){
         n=n/10;
     }
 }
+
+bool isHappy(int n){
+    unordered_set<int> seen;
+    while(n!=1 && !seen.count(n)) {
+        see.insert(n);
+        n=getSum(n);
+    }
+    return n==1;
+}
