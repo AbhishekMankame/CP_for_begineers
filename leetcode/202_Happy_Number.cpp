@@ -78,3 +78,12 @@ bool isHappy2(int n){
 
     return fast==1;
 }
+
+/*
+Floyd's cycle detection approach (Tortoise and Hare)
+This approach avoids extra memory.
+- slow moves one step (sum of squares once)
+- fast moves two steps (sum of squares twice)
+- If slow==fast --> cycle
+- If value becomes 1 --> happy
+*/
