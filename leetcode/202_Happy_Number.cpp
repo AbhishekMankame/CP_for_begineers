@@ -52,3 +52,14 @@ bool isHappy(int n){
     }
     return n==1;
 }
+
+/*
+Time Complexity:
+- At most ~10 unique numbers before repeating
+- O(log n) per iteration (digit extraction)
+- Overall O(log n)
+
+Space Complexity:
+- Hash set storin previously seen numbers
+- O(log n)
+*/
