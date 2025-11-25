@@ -28,3 +28,18 @@ Constraints: 1<=n<=2^31-1
 
 Topics: Hash Table, Math, Two Pointers
 */
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<unordered_set>
+using namespace std;
+
+int getSum(int n){
+    int sum=0;
+    while(n>0){
+        int d=n%10;
+        sum+=d*d;
+        n=n/10;
+    }
+}
