@@ -63,3 +63,18 @@ Space Complexity:
 - Hash set storin previously seen numbers
 - O(log n)
 */
+
+// Second Approach using Floyd's cycle detection
+// We will use the same getSum for finding the value of square
+
+bool isHappy2(int n){
+    int slow=n;
+    int fast=getSum(n);
+
+    while(fast!=1 and slow!=fast){
+        slow=getSum(slow);
+        fast=getSum(getSum(fast));
+    }
+
+    return fast==1;
+}
