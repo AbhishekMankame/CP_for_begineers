@@ -16,3 +16,6 @@ public:
         return {-1, -1}; // If no valid pair is found
     }
 };
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
