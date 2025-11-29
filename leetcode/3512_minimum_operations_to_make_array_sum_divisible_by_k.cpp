@@ -46,3 +46,6 @@ int minOperations(vector<int>& nums, int k){
 
     return sum%k;
 }
+
+// Time Complexity: O(n) --> As we are traversing the array/vector once.
+// Space Complexity: O(1) --> No extra space is used
