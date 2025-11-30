@@ -74,3 +74,6 @@ int findMin(vector<int>& nums){
     }
     return ans;
 }
+
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
