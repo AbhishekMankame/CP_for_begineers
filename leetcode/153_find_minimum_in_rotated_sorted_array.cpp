@@ -50,3 +50,27 @@ It means: when the sorted array is rotated, everything after the rotation point 
 
 We can use binary search to find the minimum efficiently.
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int findMin(vector<int>& nums){
+    int left=0,right=nums.size()-1,ans=INT_MAX;
+    while(left<=right){
+        int mid = left + (right-left)/2;
+        if(nums[left]<nums[right]){
+            ans=min(ans,nums[left]);
+            break;
+        }
+        if(nums[mid]<=nums[right]){
+            ans=min(ans,nums[mid]);
+            right=mid-1;
+        }
+        else {
+            ans=min(ans,nums[left]);
+            left=mid+1;
+        }
+    }
+    return ans;
+}
