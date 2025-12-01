@@ -22,4 +22,7 @@ Constraints:
 - 1 <= nums[i] <= 10^5
 - 0 <= k < n
 
+Hint 1: Sort nums, build distinct values and count.
+Hint 2: For each val: find upper_bound, compute greater = n - upper_bound_idx; if greater >= k add count[val] to ans.
+
 */
