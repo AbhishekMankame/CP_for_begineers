@@ -1,0 +1,9 @@
+// Leetcode 3759 - Count Elements with at least K greater values
+// Medium
+
+/*
+You are given an integer array nums of length n and an integer k.
+An element in nums is said to be qualified if there exist at least k elements in the array that are strictly greater than it.
+Return an integer denoting the total number of qualified elements in nums.
+
+*/
