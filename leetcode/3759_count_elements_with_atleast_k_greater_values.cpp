@@ -26,3 +26,33 @@ Hint 1: Sort nums, build distinct values and count.
 Hint 2: For each val: find upper_bound, compute greater = n - upper_bound_idx; if greater >= k add count[val] to ans.
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int upperBound(vector<int>& nums, int target){
+    int low=0,high=nums.size();
+    while(low<high){
+        int mid = low + (high - low)/2;
+        if(nums[mid]<=target){
+            low=mid+1;
+        }
+        else high=mid;
+    }
+    return low;
+}
+
+int countElements(vector<int>& nums, int k){
+    int n=nums.size();
+    int count=0;
+    sort(nums.begin(),nums.end());
+    for(int i=0;i<n;i++){
+        int idx=upperBound(nums,nums[i]);
+        int greater=n-idx;
+
+        if(graeter>=k) count++;
+    }
+    return count;
+}
