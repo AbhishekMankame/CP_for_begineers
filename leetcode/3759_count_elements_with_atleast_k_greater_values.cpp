@@ -56,3 +56,6 @@ int countElements(vector<int>& nums, int k){
     }
     return count;
 }
+
+// Time Complexity: O(n log n)
+// Space Complexity: O(1)
