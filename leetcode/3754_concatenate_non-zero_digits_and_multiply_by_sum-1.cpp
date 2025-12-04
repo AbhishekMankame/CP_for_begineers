@@ -55,3 +55,6 @@ long long sumAndMultiply(int n){
 
     return sum*num2;
 }
+
+// TIme Complexity: O(log n)
+// Space Complexity: O(1)
