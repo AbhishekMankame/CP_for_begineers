@@ -28,3 +28,30 @@ Constraints:
 Topics: Math
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+long long sumAndMultiply(int n){
+    long long int sum=0;
+    long long int num=0;
+
+    while(n!=0){
+        long long int dig=n%10;
+        if(dig!=0){
+            sum+=dig;
+            num=num*10+dig;
+        }
+        n=n/10;
+    }
+
+    int num2=0;
+    while(num!=0){
+        num2=num2*10+(num%10);
+        num=num/10;
+    }
+
+    return sum*num2;
+}
