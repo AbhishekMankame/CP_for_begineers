@@ -49,3 +49,6 @@ int countPartitions(vector<int>& nums){
     }
     return sum%2==0?nums.size()-1:0;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
