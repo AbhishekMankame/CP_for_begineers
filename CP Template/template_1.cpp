@@ -37,3 +37,33 @@ ll binpow(ll a, ll b, ll mod){
 
     return res;
 }
+
+// --------------------------------------------------------------
+// solve() - where the actual logic of each test case goes
+// --------------------------------------------------------------
+
+void solve() {
+    // Write your problem code here
+    // This function runs once per test case
+
+    // Example:
+    // int n; cin>>n;
+    // vector<int> a(n);
+    // for(int &x: a) cin>>x;
+    // cout << "Answer:"<<...<<"\n";
+}
+
+// -------------------------------------------
+// Main - handles test case and calls solve()
+// -------------------------------------------
+
+int main() {
+    fastio; // turn or fast I/O
+    int t=1;
+    cin >> t; // number of test cases (you can comment if not needed)
+    while(t--){
+        solve();
+    }
+
+    return 0;
+}
