@@ -23,3 +23,17 @@ ll gcd(ll a, ll b){
 ll lcm(ll a, ll b){
     return a/gcd(a,b)*b;
 }
+
+// Fast exponentiation with modulo: a^b%mod
+// O(log b) time - used often in number theory, combinatorics
+ll binpow(ll a, ll b, ll mod){
+    ll res=1%mod;   // handle mod==1 case
+    while(b>0){
+        if(b&1)     // if current bit is 1
+            res = (res*a)%mod;
+        a=(a*a)%mod; //square the base
+        b>>=1;  // divide exponent by 2
+    }
+
+    return res;
+}
