@@ -20,4 +20,17 @@ int main() {
     if(r+1<n){
         d[r+1] -= val; // Subtract after end of range
     }
+
+    // Step 3: Rebuild the original array after updates
+    a[0]=d[0];
+    for(int i=1;i<n;i++){
+        a[i]=a[i-1]+d[i];
+    }
+
+    // Step 4: Print updated array
+    cout << "Updated array: ";
+    for(int x:a) cout << x << " ";
+    cout << "\n";
+
+    return 0;
 }
