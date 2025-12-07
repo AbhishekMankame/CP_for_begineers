@@ -38,3 +38,9 @@ int binarySearchRec(const vector<int>& arr, int left, int right, int target){
     if(arr[mid]<target) return binarySearchRec(arr,mid+1,right,target);
     else binarySearchRec(arr,left,mid-1,target);
 }
+
+/*
+Time Space: O(log n)
+Space Complexity: O(1) iterative, O(log n) recursive (stack)
+
+*/
