@@ -10,3 +10,14 @@ The upper bound is the smallest index at which a given element could be inserted
 - This is the position of the first element that is greater the target value. If the element is present, it's the position just after the last occurrence of that value;
 - In C++, you can use std::upper_bound to find this.
 */
+
+/*
+Summary of Difference:
+- Lower bound(std::lower_bound): The first position where the element is not less than the target.
+- If the element is present, it points to the first occurrence.
+- If the element is not present, it points to the position where the element can be inserted.
+
+- Upper bound(std::lower_bound): The first position where the element is greater than the target.
+- If the element is present, it points to the position after the last occurrence.
+- If the element is not present, it points to the position where the element can be inserted.
+*/
