@@ -21,3 +21,28 @@ Summary of Difference:
 - If the element is present, it points to the position after the last occurrence.
 - If the element is not present, it points to the position where the element can be inserted.
 */
+
+// Complexity: Both lower bound and upper bound operations have a time complexity of O(log n) because they are based on binary search.
+
+/*
+Applications of Lower and Upper Bound:
+- Counting occurrences: By using lower_bound and upper_bound, you can easily count the number of times an element appears in a sorted array by calculating the difference between the two bounds.
+Example: The number of occurrences of 5 in the array [1,3,3,5,5,7,9] can be found by calculating the difference between upper_bound(5) and lower_bound(5).
+
+*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+    vector<int> arr = {1,3,3,5,5,7,9};
+
+    // Count occurrences of 5
+    auto lower = lower_bound(arr.begin(),arr.end(),5);
+    auto upper = upper_bound(arr.begin(),arr.end(),5);
+    int count = upper - lower;
+
+    cout << "The element 5 appears "<<count<<" times in the array."<<endl;
+    return 0;
+}
