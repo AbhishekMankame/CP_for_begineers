@@ -5,9 +5,7 @@ Binary Search is an efficient algorithm used to find the position of a target el
 If the target matches the middle element, the search ends. If the target is smaller, the search continues in the left half; if larger, it continues in the right half. This having process continues until the target is found or the search space is exhausted.
 Binary Search runs in O(log n) time and requires O(1) extra space in its iterative form. It is widely used in search problems, optimization problems, and as a foundation for advanced techinques like binary search on answer, first/last occurrence search, and searching in rotated arays.
 
-
 */
-
 
 
 #include<iostrean>
