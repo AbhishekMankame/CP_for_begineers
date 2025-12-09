@@ -53,3 +53,25 @@ Constraint:
 Topics: Array, Hash Table, Counting
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int specialTripletsBruteForce(vector<int>& nums){
+    int count=0;
+    int mod = 1e9+7;
+    for(int i=0;i<nums.size();i++){
+        for(int j=i+1;j<nums.size();j++){
+            for(int k=j+1;j<nums.size();k++){
+                if((nums[i]==nums[j]*2)&&(nums[k]==nums[j]*2)) count++;
+            }
+        }
+    }
+
+    return count%mod;
+}
+
+// Time Complexity: O(n^3)
+// Space Complexity: O(1)
