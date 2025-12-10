@@ -41,3 +41,25 @@ Constraints:
 Topics: Array, Math, Brainteaser, Combinatorics
 
 */
+
+/*
+Intuition and Approach
+
+The first index is the root computer using which we can unlock any computer greater than its complexity.
+Let's consider that using this root computer we unlock all computers -- for that to be possible, no computer should have complexity less than or equal to root -> If that's the case then return 0 since not possible to unlock all computers.
+If all computers satisfy the condition -> We have (n-1) computers to be rearranged and to get number of permutation of this. The ans for this is simply (n-1)!.
+So we get factorial of n-1 and apply mod and return the ans.
+
+Why using Computer 0 to unlock all?
+The first step to unlock any first computer j has to be using the root computer and it will be such that
+complexity[j]>complexity[root]
+
+Now instead of root computer, even if you want to use computer j to unlock some other computer k, the equation will have to satisfy
+computer[k]>computer[j] which in turn should satisfy computer[j]>computer[root].
+That's why for any computer to be unlocked, it had to satisfy the minimum most condition that it's complexity should be greater than root.
+
+Complexity:
+Time Complexity: O(N)
+Aux Space: O(1) --> Overall space complexity: O(N)
+
+*/
