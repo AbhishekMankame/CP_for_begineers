@@ -63,3 +63,25 @@ Time Complexity: O(N)
 Aux Space: O(1) --> Overall space complexity: O(N)
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int countPermutations(vector<int>& complexity){
+    int n=complexity.size();
+    int root=complexity[0];
+    long long mod = 1e9+7;
+
+    for(int i=1;i<n;i++){
+        if(complexity[i]<=root) return 0;
+    }
+    long long ans=1;
+    for(int i=1;i<n;i++){
+        ans*=i;
+        if(ans%mod) ans%=mod;
+    }
+
+    return ans;
+}
