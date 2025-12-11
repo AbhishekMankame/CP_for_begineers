@@ -62,3 +62,17 @@ int upperbound1(vector<int>& nums,int target){
 
     return ans;
 }
+
+vector<int> targetIndices(vector<int>& nums, int target){
+    sort(nums.begin(),nums.end());
+    int low=lowerbound1(nums,target);
+    int upp=upperbound1(nums,target);
+    vector<int> res;
+    if(low==upp) return res;
+
+    for(int i=low;i<upp;i++){
+        res.push_back(i);
+    }
+
+    return res;
+}
