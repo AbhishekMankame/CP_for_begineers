@@ -27,4 +27,38 @@ The index where nums[i] == 5 is 4.
 Constraints:
 - 1<=nums.length<=100
 - 1<=nums[i],target<=100
+
+Topics: Array, Binary Search, Sorting
 */
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int lowerbound1(vector<int>& nums, int target){
+    int left=0,right=nums.size()-1,ans=-1;
+    while(left<=right){
+        int mid = left + (right-left)/2;
+        if(nums[mid]==target){
+            ans=mid;
+            right=mid-1;
+        }
+        else left=mid+1;
+    }
+
+    return ans;
+}
+
+int upperbound1(vector<int>& nums,int target){
+    int left=0,right=nums.size()-1;
+    while(left<=right){
+        int mid=left+(right-left)/2;
+        if(nums[mid]>target){
+            ans=mid;
+            right=mid-1;
+        }
+        else left=mid+1;
+    }
+
+    return ans;
+}
