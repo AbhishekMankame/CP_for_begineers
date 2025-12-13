@@ -22,3 +22,25 @@ Constraints:
 Topics: Array, Backtracking
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<int> path;
+vector<vector<int>>res;
+
+void dfs(vector<int> &a, int target, int start){
+    if(target==0){
+        res.push_back(path);
+        return;
+    }
+    for(int i=start;i<a.size();i++){
+        if(i>start and a[i]==a[i-1]) continue;
+        if(a[i]>target) break;
+        path.push_back(a[i]);
+        dfs(a,target-a[i],i+1);
+        path.pop_back();
+    }
+}
