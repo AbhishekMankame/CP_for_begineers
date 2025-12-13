@@ -44,3 +44,9 @@ void dfs(vector<int> &a, int target, int start){
         path.pop_back();
     }
 }
+
+vector<vector<int>> combinationSum2(vector<int>& candidates, int target){
+    sort(candidates.begin(),candidates.end());
+    dfs(candidates,target,0);
+    return dfs;
+}
