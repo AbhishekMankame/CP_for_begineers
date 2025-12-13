@@ -50,3 +50,27 @@ vector<vector<int>> combinationSum2(vector<int>& candidates, int target){
     dfs(candidates,target,0);
     return dfs;
 }
+
+/*
+Complexity in detail:
+
+Time Complexity:
+1. Sorting
+sort(candidates.begin(),candidates.end());
+O(n log n), where n is the number of candidates
+
+2. DFS/Backtracking
+This is the dominant part.
+- In the worst case, DFS explores all subsets of the array
+- Number of subsets of n elements = 2^n
+- For each recursive call:
+    - We iterate from start to n
+    - Push and pop elements (O(1))
+
+Worst-case time complexity: O(2^n)
+
+The pruning conditions (a[i]>target, skipping duplicates) reduce the actual runtime, but worst-case remains exponential.
+
+Total Time Complexity: O(n log n + 2^n) == O(2^n)
+
+*/
