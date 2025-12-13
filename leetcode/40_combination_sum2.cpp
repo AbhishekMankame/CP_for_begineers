@@ -48,7 +48,7 @@ void dfs(vector<int> &a, int target, int start){
 vector<vector<int>> combinationSum2(vector<int>& candidates, int target){
     sort(candidates.begin(),candidates.end());
     dfs(candidates,target,0);
-    return dfs;
+    return res;
 }
 
 /*
@@ -72,5 +72,21 @@ Worst-case time complexity: O(2^n)
 The pruning conditions (a[i]>target, skipping duplicates) reduce the actual runtime, but worst-case remains exponential.
 
 Total Time Complexity: O(n log n + 2^n) == O(2^n)
+
+
+Space Complexity:
+1. Recursion Stack + path
+- Maximum depth of recursion = n
+- path can hold up to n elements
+--> O(n)
+
+2. Result Storage (res)
+- In the worst case, number of valid combinations can be exponential
+- Each combination can be of size up to n
+--> O(2^n.n) (output dependent)
+
+Total Space Complexity:
+- Auxiliary (excluding output): O(n)
+- Including output: O(2^n.n)
 
 */
