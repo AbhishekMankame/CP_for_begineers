@@ -69,3 +69,28 @@ vector<int> searchRange(vector<int>& nums, int target{
 
     return {first,last};
 }
+
+/*
+Complexity:
+
+Time Complexity:
+1. firstPos Method:
+- Purpose: Find the first occurrence of the target in the nums array.
+- Approach: It uses binary search to find the first occurrence of the target. The binary search continues as long as the left pointer is less than or equal to the right pointer.
+When the target is found, it updates ans and moves the right pointer to mid-1 to continue searching in the left half of the array (which ensures it's first occurrence).
+- Time Complexity: Since it performs a binary search over the array, it runs in O(log n) time, where n is the size of the nums array.
+
+2. lastPos Method:
+- Purpose: Finds the last occurrence of the target in the nums array.
+- Approach: Similar to firstPos, this method performs binary search but instead of moving the right pointer to mid-1, it moves the left pointer to mid+1 when the target is foud. This ensures it looks for the last occurrence in the right half of the array.
+- Time Complexity: Like firstPos, it also uses binary search, so it runs in O(log n)
+
+3. searchRange MethodL
+- Purpose: Calls both firstPos and lastPos to find the range (first and last position) of the target in the nums array.
+- Time Complexity: Since both firstPos and lastPos each run in O(log n) time, the overall time complexity of the searchRange method is O(log n)
+
+Overall Time Complexity:
+- The total time complexity for the searchRange method is O(log n) because it calls two binary search methods (firstPos and lastPos), each of which runs in O(log n) time.
+Thus, the overall time complexity of this code is O(log n)
+
+*/
