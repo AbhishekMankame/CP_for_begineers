@@ -93,4 +93,8 @@ Overall Time Complexity:
 - The total time complexity for the searchRange method is O(log n) because it calls two binary search methods (firstPos and lastPos), each of which runs in O(log n) time.
 Thus, the overall time complexity of this code is O(log n)
 
+Space Complexity:
+- The space complexity of this code is O(1) because the algorithm uses a constant amount of extra space. 
+The space used by the input and output(vector) is not considered part of the algorithm's space complexity.
+
 */
