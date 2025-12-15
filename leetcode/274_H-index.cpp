@@ -49,3 +49,10 @@ int hIndex(vector<int>& citations){
 
     return ans;
 }
+
+/*
+Time Complexity:
+- Sorting: O(n log n)
+- Binary search: O(log n)
+- Overall time complexity: O(n log n) (dominated by sorting)
+*/
