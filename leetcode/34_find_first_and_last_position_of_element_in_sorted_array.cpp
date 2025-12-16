@@ -3,7 +3,6 @@
 
 /*
 Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
-
 If target is not foind in the array, return [-1,-1].
 You must write an algorithm with O(log n) runtime complexity.
 
@@ -97,4 +96,6 @@ Space Complexity:
 - The space complexity of this code is O(1) because the algorithm uses a constant amount of extra space. 
 The space used by the input and output(vector) is not considered part of the algorithm's space complexity.
 
+Time Complexity: O(log n)
+Space Complexity: O(1)
 */
