@@ -50,3 +50,37 @@ vector<int> intersection(vector<int> &nums1, vector<int> &nums2){
     }
     return result;
 }
+
+/*
+Time Complexity:
+1. Building the frequency map
+for(int x:nums1)
+- Runs n times
+- Each unordered_map insert/access -> O(1) average
+---> O(n)
+
+2. Finding the intersection
+for(int x:nums2)
+- Runs m times
+- Each lookup+decrement -> O(1) average
+---> O(m)
+
+Total Time Complexity:
+O(n+m)
+
+Space Compelxity:
+1. Hashmap storage
+- Stores unique elements from nums1
+- Worst case: all elements are distinct
+--> O(n)
+
+2. Output vector
+- Stores the intersection
+- Worst case: min(n,m)
+
+--> O(min(n,m))
+
+Total Auxiliary space complexity 
+---> O(n)
+
+*/
