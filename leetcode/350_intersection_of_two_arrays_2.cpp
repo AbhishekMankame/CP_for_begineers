@@ -25,3 +25,28 @@ Follow up:
 
 Topics: Array, Hash Table, Two Pointers, Binary Search, Sorting
 */
+
+#include<iostream>
+#include<vector>
+#include<unordered_map>
+#include<algorithm>
+using namespace std;
+
+vector<int> intersection(vector<int> &nums1, vector<int> &nums2){
+    unordered_map<int,int> freq;
+    vector<int> result;
+
+    // Count frequency of nums1
+    for(int x:nums1){
+        freq[x]++;
+    }
+
+    // Find intersection with nums2
+    for(int x:nums2){
+        if(freq[x]>0){
+            result.push_back(x);
+            freq[x]--;
+        }
+    }
+    return result;
+}
