@@ -72,3 +72,12 @@ int countTriplets(vector<int>& nums){
     }
     return result;
 }
+
+/*
+Time Complexity:
+O(n^2 + n*2^16) ---> O(n^2)
+
+Space Complexity: 
+O(2^16) ---> O(1) // Constant extra space
+
+*/
