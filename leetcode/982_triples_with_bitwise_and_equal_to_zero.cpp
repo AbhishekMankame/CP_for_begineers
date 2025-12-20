@@ -36,3 +36,39 @@ Constraints:
 
 Topics: Array, Hash Table, Bit Manipulation
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int countTriplets(vector<int>& nums){
+    // Maximu possible value for 16-bit numbers
+    // 2^16 = 65536
+    const int MAX = 1<<16;
+
+    // freq[mask] stores how many times (nums[i]&nums[j])==mask occurs
+    vector<int> freq(MAX,0);
+
+    /*
+    Step 1: Compute bitwise AND for all pairs (i, j) and count their frequencies.
+    */
+    for(int i=0;i<nums.size();i++){
+        for(int j=0;j<nums.size();j++){
+            int andValue = nums[i]&nums[j];
+            freq[andValue]++;
+        }
+    }
+
+    int result=0;
+
+    // Step 2: For each nums[k], check all previously computer AND results.
+    // If (mask & nums[k])==0 then (nums[i]&nums[j]&nums[k])==0
+
+    for(int k=0;k<nums.size();k++){
+        for(int mask=0;mask<MAX;mask++){
+            if((mask&nums[k]])==0) result+=freq[mask];
+        }
+    }
+    return result;
+}
