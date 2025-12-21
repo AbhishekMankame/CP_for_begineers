@@ -76,4 +76,13 @@ Even though we use a loop, this is not O(n) because:
 - The bit width (32) is fixed
 This is a common interview trick
 
+Space Complexity: O(1)
+Why?
+- We only use:
+    - one integer result
+    - a loop counter
+- No extra arrays, vectors, or recursion
+- No memory grows with input size
+So memory usage is constant.
+
 */
