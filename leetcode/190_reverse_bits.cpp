@@ -44,8 +44,30 @@ using namespace std;
 int reverseBits(int n){
     int result=0;
     for(int i=0;i<32;i++){
+        // Shift result to make space and then OR add the last bit of n
         result=(result<<1)|(n&1);
+        // Move to the next bit
         n>>=1;
     }
     return result;
 }
+
+/*
+Time Complexity: O(1)
+Why???
+- The loop always runs exactly 32 times
+- 32 is a constant, not dependent on input size
+- Each iteration does constant-time operations:
+    - bitwise AND (&)
+    - bitwise OR (|)
+    - bit shifts (<<, >>)
+
+Mathematical Explanation: T(n) = 32*O(1) = O(1)
+Even if the input value changes:
+- Small number
+- Large number
+- All bits zero
+- All bits one
+--> Execution time stays same.
+
+*/
