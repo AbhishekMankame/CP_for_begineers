@@ -70,4 +70,10 @@ Even if the input value changes:
 - All bits one
 --> Execution time stays same.
 
+Important Interview Note!!!:
+Even though we use a loop, this is not O(n) because:
+- n is not input size
+- The bit width (32) is fixed
+This is a common interview trick
+
 */
