@@ -27,3 +27,24 @@ Constraints:
 
 Topics: Array, Binary Search
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int findPeakElement(vector<int>& nums){
+    int n = nums.size();
+    if(n==1) return 0; // If array size is 1, then return the index 0 as it has only one element which will bydefault be peak element
+    if(nums[0]>nums[1]) return 0;   // Let's check if the first element is the peak, here we only need to compare with element on the right
+    if(nums[n-1]>nums[n-2]) return n-1; // Checking if the last element is the peak element, we will compare it with second last element
+    int low=1,high=n-2;
+    while(low<=high){
+        int mid = low + (high-low)/2;
+        if(nums[mid]>nums[mid+1] && nums[mid]>nums[mid-1]) return mid;
+        else if(nums[mid]>nums[mid-1]) low=mid+1;
+        else high=mid-1;
+    }
+
+    return -1;
+}
