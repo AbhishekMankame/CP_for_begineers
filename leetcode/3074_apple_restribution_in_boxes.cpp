@@ -31,3 +31,21 @@ Constraints:
 Topics: Array, Greedy, Sorting
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int minimumBoxes(vector<int>& apple, vector<int>& capacity){
+    sort(capacity.begin(),capacity.end());
+    int sum=0;
+    for(int i:apple) sum+=i;
+    int pref=0,count=0;
+    for(int i=capacity.size()-1;i>=0;i--){
+        pref+=capacity[i];
+        count++;
+        if(pref>=sum) return count;
+    }
+    return -1;
+}
