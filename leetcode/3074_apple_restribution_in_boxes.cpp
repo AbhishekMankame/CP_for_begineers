@@ -49,3 +49,6 @@ int minimumBoxes(vector<int>& apple, vector<int>& capacity){
     }
     return -1;
 }
+
+// Time Complexity: O(N log N) as we have sorted the capacity array
+// Space Complexity: O(1)
