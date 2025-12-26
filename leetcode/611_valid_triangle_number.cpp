@@ -50,5 +50,20 @@ int traingleNumber(vector<int>& nums){
     return count;
 }
 
-// Time Complexity: O(N^2)
+/*
+Overall Time Complexity: O(N^2)
+Sorting: O(n log n)
+Two-pointer loop: O(n^2)
+*/
+
 // Space Complexity: O(1)
+
+/*
+
+Most important note: Here we have count+=(mid-left) because
+For a sorted array, if nums[left] + nums[mid] > nums[right], then all indices between left and mid - 1 also form valid triangles with mid and right.
+
+Edge cases are handled implicitly:
+- Arrays with size < 3 --> return 0
+- Zeroes are safe (triangle inequality fails naturally)
+*/
