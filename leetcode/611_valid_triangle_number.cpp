@@ -26,3 +26,26 @@ Binary Search
 Greedy
 Sorting
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int traingleNumber(vector<int>& nums){
+    sort(nums.begin(),nums.end());
+    int n = nums.size();
+    int count=0;
+
+    for(int right=n-1;right>=2;right--){
+        int left=0,mid=right-1;
+        while(left<mid){
+            if(nums[left]+nums[mid]>nums[right]){
+                count+=(mid-left);
+                mid--;
+            }
+            else left++;
+        }
+    }
+    return count;
+}
