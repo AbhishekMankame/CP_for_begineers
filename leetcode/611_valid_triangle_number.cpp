@@ -66,4 +66,20 @@ For a sorted array, if nums[left] + nums[mid] > nums[right], then all indices be
 Edge cases are handled implicitly:
 - Arrays with size < 3 --> return 0
 - Zeroes are safe (triangle inequality fails naturally)
+
+*/
+
+/*
+Some interview explanation got from GPT
+
+1. One-Line High-Level Answer (30 seconds)
+Use this if the interviewer just says "Explain you approach"
+"I sort the array and fix the largest side of the triangle. Then I use a two-pointer technique to count how many pairs of smaller sides satisfy the triangle inequality in O(n^2) time"
+
+2. Key Insight (This Impresses Interviewers ⭐)
+
+Say this explicitly — it shows algorithmic thinking.
+
+“The key insight is that after sorting, when the smallest and middle values form a valid triangle with the largest value, all values in between will also work.
+That’s why we can count multiple triangles at once instead of checking each one individually.
 */
