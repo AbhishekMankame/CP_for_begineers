@@ -98,4 +98,13 @@ Q: Why not brute force?
 Q: Why start from the largest side?
 
 “It simplifies the triangle inequality and lets us count multiple valid pairs at once.”
+
+5. Step-by-Step Explanation (1-2 minutes)
+This is the default explanation.
+"First, I sort the array so the sides are in non-decreasing order. Then iterate from the end, fixing the largest side 'nums[right]'
+For the remaining elements, I use two pointers: 'left' at the start and 'mid' just before right.
+If 'nums[left] + nums[mid] > nums[right]', then all values between 'left' and 'mid' will also satisfy the condition, so I add 'mid - left' to count and move mid left.
+Otherwise, I move 'left' right to increase the sum.
+This avoids checking all triplets and gives an O(n^2) solution"
+"
 */
