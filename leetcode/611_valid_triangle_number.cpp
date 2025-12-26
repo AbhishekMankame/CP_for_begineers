@@ -82,4 +82,20 @@ Say this explicitly — it shows algorithmic thinking.
 
 “The key insight is that after sorting, when the smallest and middle values form a valid triangle with the largest value, all values in between will also work.
 That’s why we can count multiple triangles at once instead of checking each one individually.
+
+3. If Asked: “Can You Do Better Than O(n²)?”
+
+Best possible answer:
+
+“No — this problem requires checking pairs for each element, and O(n²) is optimal given the constraints.”
+
+4. Common Interview Follow-Up Questions & Answers
+
+Q: Why not brute force?
+
+“Brute force would be O(n³), which is too slow for large inputs.”
+
+Q: Why start from the largest side?
+
+“It simplifies the triangle inequality and lets us count multiple valid pairs at once.”
 */
