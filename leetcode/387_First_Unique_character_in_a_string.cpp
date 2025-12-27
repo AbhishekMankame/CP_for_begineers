@@ -34,3 +34,6 @@ int firstUniqueChar(string s){
     }
     return -1;
 }
+
+// Time Complexity: O(N)
+// Space Complexity: O(1) --> Even though we have used extra unordered map, but the size of the map will be constant 26, hence space complexity will be O(1)
