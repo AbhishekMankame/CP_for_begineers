@@ -63,3 +63,12 @@ Time Complexity: O(m+n)
 Space Complexity: O(1)
 
 */
+
+
+/*
+Using binary search approach
+- Binary Search per Row
+- For each row, binary search the first negative number
+- Time Complexity: O(m log n)
+- Space Complexity: O(1)
+*/
