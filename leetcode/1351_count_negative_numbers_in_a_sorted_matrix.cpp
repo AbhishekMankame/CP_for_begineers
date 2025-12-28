@@ -48,3 +48,18 @@ int countNegative(vector<vector<int>> &grid){
 
     return count;
 }
+
+/*
+The above one is Optimal Approach (O(m+n))
+Start from the top-right corner and move:
+- Left if the number is negative (all below are also negative)
+- Down if the number is non-negative
+
+Why this works:
+Because rows and columns are sorted:
+- If grid[r][c]<0, then all elements below it in that column are also negative.
+
+Time Complexity: O(m+n)
+Space Complexity: O(1)
+
+*/
