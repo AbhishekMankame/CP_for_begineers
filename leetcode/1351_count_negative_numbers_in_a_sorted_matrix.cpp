@@ -24,3 +24,27 @@ Follow up: Could you find an O(n+m) solution?
 Topics: Array, Binary Search, Matrix
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int countNegative(vector<vector<int>> &grid){
+    int m=grid.size();
+    int n=grid[0].size();
+    
+    int row=0,col=n-1;
+    int count=0;
+
+    while(row < m && col >= 0){
+        if(grid[row][col]<0){
+            // All elements below grid[row][col] are negative
+            count+=(m-row);
+            col--;
+        }
+        else row++;
+    }
+
+    return count;
+}
