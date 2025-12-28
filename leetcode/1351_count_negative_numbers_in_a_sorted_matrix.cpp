@@ -72,3 +72,17 @@ Using binary search approach
 - Time Complexity: O(m log n)
 - Space Complexity: O(1)
 */
+
+int countNegative2(vector<vector<int>> &grid){
+    int count=0;
+    for(auto& row:grid){
+        int left=0,right=row.size()-1;
+        while(left<=right){
+            int mid = left + (right-left)/2;
+            if(row[mid]<0) right=mid-1;
+            else left=mid+1;
+        }
+        count+=row.size()-left;
+    }
+    return count;
+}
