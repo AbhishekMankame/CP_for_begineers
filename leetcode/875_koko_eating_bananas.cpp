@@ -29,3 +29,39 @@ Constraints:
 
 Topics: Array, Binary Search
 */
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+int maxElement(vector<int>& v){
+    int maxE=INT_MIN;
+    for(int i=0;i<v.size();i++){
+        maxE = max(maxE,v[i]);
+    }
+
+    return maxE;
+}
+
+long long int timeS(vector<int>& piles, int hour){
+    long long int time=0;
+    for(int i=0;i<piles.size();i++){
+        time+=(piles[i]+hour-1)/hour;
+    }
+    return time;
+}
+
+int minEatingSpeed(vector<int>& piles, int h){
+    int low=1,high=maxElement(piles),ans=high;
+    while(low<=high){
+        int mid = low + (high - low)/2;
+        long long int reqTime=timeS(piles,mid);
+        if(reqTime<=h){
+            ans=mid;
+            high=mid-1;
+        }
+        else low=mid+1;
+    }
+    return ans;
+}
