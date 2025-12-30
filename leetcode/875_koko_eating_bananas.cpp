@@ -65,3 +65,6 @@ int minEatingSpeed(vector<int>& piles, int h){
     }
     return ans;
 }
+
+// Time Complexity: O(n*log(maxElement))
+// Space Complexity: O(1)
