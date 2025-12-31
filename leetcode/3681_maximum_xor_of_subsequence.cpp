@@ -39,3 +39,25 @@ Constraints:
 Topics: Array, Math, Greedy, Bit Manipulation
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int maxXorSubsequences(vector<int>& nums){
+    vector<int> arr;
+    for(int i:nums){
+        for(int j:arr){
+            i=min(i,i^j);
+        }
+        if(i>0) arr.push_back(i);
+    }
+
+    int maxi=0;
+    for(int i:arr){
+        maxi=max(maxi,max^i);
+    }
+
+    return maxi;
+}
