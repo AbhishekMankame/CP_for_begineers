@@ -61,3 +61,15 @@ int maxXorSubsequences(vector<int>& nums){
 
     return maxi;
 }
+
+/*
+Explanation (Intution):
+We keep a vector 'arr' which stores the XOR basis elements. For each number 'i' in the input nums, we try to reduce it as much as possible by XORing it wieth elements already in 'arr'.
+This ensures that every new element we add is linearly independent (brings a new unique contribution to possible XOR values). If, after this reduction, the number 'i' still greater than zero, we add it to 'arr'.
+
+After building this basis, we try to find the maximum 'XOR' we can get. Starting with 'maxi=0', we check each element in the basis 'arr' and greedily update 'maxi' as 'max(maxi,maxi^i). This way, we always pick the best combination to maximize the 'XOR' value.
+Finally, the function returns this 'maximum XOR'.
+
+Time Complexity: O(N*M + M)
+Space Complexity: O(M)
+*/
