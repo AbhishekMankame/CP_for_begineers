@@ -77,3 +77,10 @@ int minDays(vector<int>& bloomDay, long long int m, long long int k){
 
     return ans;
 }
+
+/*
+Time Complexity: O(N*log(max-min+1))
+Where N is for the possibility check and (max-min+1) is for space length from min to max
+
+Space Complexity: O(1) as we are not using any extra space
+*/
