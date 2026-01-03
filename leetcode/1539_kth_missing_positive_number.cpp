@@ -40,3 +40,6 @@ int findKthPositive(vector<int>& arr,int k){
     }
     return k;
 }
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
