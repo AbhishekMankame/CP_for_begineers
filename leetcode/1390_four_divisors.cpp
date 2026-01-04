@@ -97,4 +97,13 @@ Time per element: O(n) + O(n) = O(n)
 
 Total Time Complexity: O(m*n) or more precisely: O(m*N)
 
+Overall Complexity: 
+Time Complexity: O(m*N)
+m = number of elements in nums
+N = maximum value in nums
+
+Space Complexity: O(1)
+(No extra memory proportional to input size)
+
+
 */
