@@ -57,3 +57,44 @@ int sumFourDivisors(vector<int>& nums){
     }
     return sum;
 }
+
+/*Complexity Analysis:
+Let us consider::
+m = nums.size() (number of elements in the array)
+n = value of an element in nums
+N = max(nums[i])
+
+1. divisors(int n)
+for(int i=1;i<=n;i++)
+- The loop runs from 1 to n
+- Each iteration does a constant-time modulo check
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+(only a counter variable)
+
+2. sumOfDiv(int n)
+for(int i=1;i<=n;i++)
+- Same structure as divisors
+- Iterates through all numbers from 1 to n
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+3. sumFourDivisors(vectore<int> &nums)
+
+for(int i=0;i<nums.size();i++){
+    if(divisors(nums[i])==4) sum+=sumOfDiv(nums[i]);
+}
+
+For each element in nums:
+- divisors(nums[i]) --> O(n)
+- sumOfDiv(nums[i]) --> O(n) (only if the divisor count is 4)
+
+Worst case:
+Assume every number has exactly 4 divisors.
+Time per element: O(n) + O(n) = O(n)
+
+Total Time Complexity: O(m*n) or more precisely: O(m*N)
+
+*/
