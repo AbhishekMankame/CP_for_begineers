@@ -163,4 +163,25 @@ Space Complexity is O(1)
 - Expected answer: "If the array contains negative numbers, the window sum is no longer monotonic, so fixed or variable sliding window may fail."
 - Bonus point: "In that case, we usually switch to prefix sum + hashmap"
 
+7. How would you return the actual subarray, not just the sum?
+Correct idea:
+- Track startIndex when maxSum updates
+
+int bestStart=0;
+if(windowSum>maxSum){
+    maxSum=windowSum;
+    bestStart=i-k+1;
+}
+
+Then subarray: [bestStart ... bestStart + k - 1]
+
+8. How does this compare to brute force?
+Say: "Brute force enumerates all O(n^2) subarrays and compute sums, leading to O(n^3) or O(n^2) time. Sliding window avoids recomputation and achieves O(n)"
+
+9. Can you generalize this pattern?
+Say: "Yes. This is fixed-size sliding window. There's also variable-size sliding window used when window size is not fixed and depends on a condition."
+
+10. Can this be parallelized?
+Advanced but impressive answer: "Not easily, because sliding window depends on sequential state. Prefix sums are more parallel-friendly."
+
 */
