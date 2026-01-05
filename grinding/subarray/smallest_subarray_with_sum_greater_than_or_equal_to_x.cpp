@@ -16,4 +16,14 @@ This single fact tells you:
 - O(n) time, O(1) space
 If negative were allowed --> this approach FAILS
 
+Idea in one line: Expand the window until sum >= X, then shrink it from the left to make it as small as possible.
+
+Step by step logic:
+1. Start with: left = 0, sum = 0, minLen = Infinite
+2. Move right from 0 to n-1: Add arr[right] to sum
+3. While sum>=X:
+- Update answer
+- Remove arr[left]
+- Move left forward
+
 */
