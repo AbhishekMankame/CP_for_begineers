@@ -136,3 +136,31 @@ Think: "I've used the window, now remove the oldest element and move forward."
 
 // Time Complexity: O(n)
 // Space Complexity: O(1)
+
+/*
+If interviewer asks: "Why is this O(n)?"
+Say: "Because the window slides linearly, and each element is added and removed at most once, giving linear time complexity."
+
+2. What if k is very large?
+Ans: If k > n, no valid subarray exists. We should handle this as an edge case.
+
+3. What edge cases did you consider?
+Say at least 3 of these:
+- k == 0
+- k > n
+- array size = 0
+- all negative numbers (if allowed)
+- large values (overflow concerns)
+
+4. Can we optimize space further?
+Ans: Space is already O(1). Further optimization is not possible.
+
+5. What is the complexity and why?
+Time Complexity is O(n) because each element enters and leaves the window once.
+Space Complexity is O(1)
+
+6. When would this approach fail?
+- Expected answer: "If the array contains negative numbers, the window sum is no longer monotonic, so fixed or variable sliding window may fail."
+- Bonus point: "In that case, we usually switch to prefix sum + hashmap"
+
+*/
