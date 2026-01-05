@@ -184,4 +184,16 @@ Say: "Yes. This is fixed-size sliding window. There's also variable-size sliding
 10. Can this be parallelized?
 Advanced but impressive answer: "Not easily, because sliding window depends on sequential state. Prefix sums are more parallel-friendly."
 
+11. Google-specific curveball questions
+They might ask:
+- "What if input is a stream?"
+- "What if array is too large to fit in memory?"
+- "What if numbers arrive one by one?"
+
+Correct direction: "Sliding window is ideal for streaming data because we only keep a constant state."
+
+12. Behavioral-style technical question
+"What was the hardest part of this problem?"
+Best answer: "Identifying that recomputation of subarray sums was unnecessary and that a sliding window could maintain state efficiently."
+
 */
