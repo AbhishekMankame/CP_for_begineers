@@ -33,9 +33,11 @@ int main() {
 
     for(int start=0;start<n;start++){
         for(int end=start;end<n;end++){
-            cout << arr[i] << " ";
+            for(int i=start;i<=end;i++){
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
         }
-        cout<<endl;
     }
 }
 
@@ -44,3 +46,30 @@ Important:
 - This is not useless
 - Every optimized solution starts frrom THIS thinking
 */
+
+/*
+Sliding Window (MOST IMPORTANT)
+Used when:
+- Subarray is continuous
+- Usually involves sum, length, or condition
+- Mostly works when numbers are positive
+
+Example 1:
+Maximum sum subarray of size k
+Array: [2,1,5,1,3,2], k=3
+Answer:: 9 ([5,1,3])
+*/
+
+int maxSubarraySum(vector<int> &arr, int k){
+    int windowSum=0,maxSum=0;
+    for(int i=0;i<arr.size();i++){
+        windowSum+=arr[i];
+        if(i>=k-1){
+            maxSum = max(maxSum, windowSum);
+            windowSum -= arr[i-(k-1)];
+        }
+    }
+    return maxSum;
+}
+
+// Brain Shift: "I am not recalculating the sum, I am updating it."
