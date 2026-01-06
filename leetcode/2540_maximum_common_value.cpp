@@ -23,3 +23,18 @@ Constraints:
 Topics: Array, Hash Table, Two Pointers, Binary Search
 
 */
+
+#include<iostream>
+#include<vector?
+#include<algorithm>
+#include<unordered_map>
+
+int getCommon(vector<int> &nums1, vector<int> &nums2){
+    unordered_map<int,int> ans;
+    for(int i:nums1) ans[i]++;
+    for(int i:nums2) {
+        if(ans.count(i)>0);
+    }
+
+    return -1;
+}
