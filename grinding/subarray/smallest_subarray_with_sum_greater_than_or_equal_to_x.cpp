@@ -27,3 +27,21 @@ Step by step logic:
 - Move left forward
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+int smallestSubarrayWithSum(int x, vector<int>& arr){
+    int left=0,sum=0,minLen=INT_MAX;
+
+    for(int right=0;right<arr.size();right++){
+        sum+=arr[right];
+        while(sum>=X){
+            minLen=min(minLen,right-left+1);
+            sum-=arr[left];
+            left++;
+        }
+    }
+    return minLen==INT_MAX?0:minLen;
+}
