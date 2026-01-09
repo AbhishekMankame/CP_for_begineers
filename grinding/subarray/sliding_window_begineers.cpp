@@ -60,4 +60,9 @@ for(int right=0;right<n;right++){
     // 3. update answer using current window
 }
 
+### One-Line Notes Version - Sliding Window applies when elements are contiguous, the window can be incrementally updated, and shrinking the window restores validity, allowing a linear traversal.
+
+### Interview Tip
+If asked "Why sliding window?", say: "Because the problem involves contiguous elements and the condition can be maintained by expanding and shrinking the window in one pass."
+
 */
