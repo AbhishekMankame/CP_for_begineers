@@ -21,4 +21,18 @@ Instead of recalculating values for every position:
 - Update the answer using the current window
 This reuse of previous computation makes it efficient.
 
+### Types of Sliding Window
+1. Fixed Size Sliding Window
+- Window size is constant (k)
+- Used when the problem explicitly mentions size 'k'
+Example problems:
+- Maximum sum of subarray of size 'k'
+- Average of subarrays of size 'k'
+
+Key operation:
+add right element
+remove left element
+
+
+
 */
