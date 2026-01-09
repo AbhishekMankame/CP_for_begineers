@@ -45,4 +45,19 @@ Key Operation:
 expand window until condition breaks
 shrink window until condition is satisfied
 
+
+### General Sliding Window Template
+
+left = 0;
+
+for(int right=0;right<n;right++){
+    // 1. include right element in the window
+
+    while(window condition is broken){
+        // 2. remove left element from the window
+        left++;
+    }      
+    // 3. update answer using current window
+}
+
 */
