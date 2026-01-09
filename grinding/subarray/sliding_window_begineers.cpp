@@ -33,6 +33,16 @@ Key operation:
 add right element
 remove left element
 
+2. Variable Size Sliding Window
+- Window size changes dynamically
+- Used when conditions must be satisified
+Example:
+- Longest substring without repeating characters
+- Longest substring with at most K distinct characters
+- Minimum size subarray sum
 
+Key Operation:
+expand window until condition breaks
+shrink window until condition is satisfied
 
 */
