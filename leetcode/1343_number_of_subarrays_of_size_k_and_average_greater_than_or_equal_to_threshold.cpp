@@ -41,3 +41,6 @@ int numOfSubarray(vector<int>& nums, int k, int threshold){
     }
     return count;
 }
+
+// Time Complexity: O(n) --> Single pass
+// Space Complexity: O(1) --> Constant extra space
