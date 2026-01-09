@@ -22,3 +22,22 @@ Constraints:
 
 Topics: Array, Sliding Window
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int numOfSubarray(vector<int>& nums, int k, int threshold){
+    int n=arr.size();
+    int windowSum=0;
+    int count=0;
+    for(int i:nums) windowSum+=i;
+    if(windowSum>=threshold*k) count++;
+    for(int i=k;i<n;i++){
+        windowSum+=arr[i];
+        windowSum-=arr[i-k];
+        if(windowSum>=threshold*k) count++;
+    }
+    return count;
+}
