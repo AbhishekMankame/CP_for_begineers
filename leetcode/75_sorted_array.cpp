@@ -38,3 +38,6 @@ bool searchMatrix(vector<vector<int>>& matrix, int target){
     }
     return false;
 }
+
+// Time Complexity: O(m+n) == O(n) --> Linear
+// Space Complexity: O(1) --> Constant
