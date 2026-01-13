@@ -19,6 +19,21 @@ Syntax: pair<dataType1, dataType2> pairName;
 #include<utility>
 using namespace std;
 
+// Pairs
+void explainPair() {
+    pair<int,int> p = {1,3};
+    cout << p.first << " " << p.second << endl;
+
+    // Nested pairs
+    pair<int,pair<int,int>> p2 = {1,{3,4}};
+    cout << p.first << " " << p.second.second << " " << p.second.first; // Output: 1 4 3
+    
+    pair<int,int> arr[] = {{1,2},{2,5},{5,1}};
+
+    cout << arr[1].second;
+
+}
+
 int main() {
     pair<int,string> p1(1,"Apple");
     cout << p1.first << endl; // Output: 1
