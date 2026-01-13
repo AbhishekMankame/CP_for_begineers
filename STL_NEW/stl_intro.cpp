@@ -20,6 +20,7 @@ Syntax: pair<dataType1, dataType2> pairName;
 using namespace std;
 
 // Pairs
+// Note: Pair generally lies in the utility library
 void explainPair() {
     pair<int,int> p = {1,3};
     cout << p.first << " " << p.second << endl;
@@ -32,6 +33,21 @@ void explainPair() {
 
     cout << arr[1].second;
 
+}
+
+// Vectors
+void explainVector() {
+    vector<int> v;
+    v.push_back(1);
+    v.emplace_back(2);
+
+    vector<pair<int,int>> vec;
+    vec.push_back({1,2});
+    vec.emplace_back(1,2);
+
+    vector<int> v3(5,100);
+
+    vector<int> v4(5);
 }
 
 int main() {
