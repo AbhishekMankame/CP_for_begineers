@@ -39,15 +39,19 @@ void explainPair() {
 void explainVector() {
     vector<int> v;
     v.push_back(1);
-    v.emplace_back(2);
+    v.emplace_back(2);  // emplace_back() is similar to push_back(): It dynamically increases the size and all the element
+    // emplace_back() is faster than push_back() generally
 
-    vector<pair<int,int>> vec;
+    vector<pair<int,int>> vec; // vector of a pair datatype
     vec.push_back({1,2});
-    vec.emplace_back(1,2);
+    vec.emplace_back(1,2); // Here emplace_back() automatically assumes that ki it is the pair and takes it as an input and inserts into the vector that we have defined
 
-    vector<int> v3(5,100);
+    vector<int> v3(5,100);  // Her vector containing 5 instances of 100 --> {100, 100, 100, 100, 100} is already defined
 
-    vector<int> v4(5);
+    vector<int> v4(5); // Container of size 5 with 5 instance of 0 or any garbage value is declared (it is depend on the compiler)
+
+    vector<int> vec1(5,20);
+    vector<int> vec2(vec1);
 }
 
 int main() {
