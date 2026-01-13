@@ -52,6 +52,14 @@ void explainVector() {
 
     vector<int> vec1(5,20);
     vector<int> vec2(vec1);
+
+    // Accessing element of vector
+    cout << v[0] << " " <<v.at(0);
+
+    vector<int>::iterator it = v.begin();
+    // Iterator points to the memory address, means it will point to the memory, and not to the element
+    // To access it we will write (*) --> *(v.begin())
+    // Iterator points to the memory where the element lies
 }
 
 int main() {
