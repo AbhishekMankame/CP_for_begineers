@@ -60,6 +60,13 @@ void explainVector() {
     // Iterator points to the memory address, means it will point to the memory, and not to the element
     // To access it we will write (*) --> *(v.begin())
     // Iterator points to the memory where the element lies
+
+    // Different types of iterators
+    vector<int>::iterator it=v.end();
+    vector<int>::iterator it=v.rend();
+    vector<int>::iterator it=v.rbegin();
+
+
 }
 
 int main() {
