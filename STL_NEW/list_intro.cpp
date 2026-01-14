@@ -255,4 +255,11 @@ void explainExtra() {
     sort(a, a+n, comp); // here 'comp' is a self written comparator, and this comparator is a boolean function
 
     // {4,1}, {2,1}, {1,2}
+
+
+    int num = 7;
+    int cnt = __builtin_popcount();
+
+    long long num = 16586578687;
+    int cnt = __builtin_popcountll()
 }
