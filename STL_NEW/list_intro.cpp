@@ -227,6 +227,13 @@ void explainUnorderedMap() {
     // In very very worst case (like once in a blue moon) it will go to O(N) time
 }
 
+bool comp(pair<int,int> p1, pair<int,int> p2) {
+    if(p1.second<p2.second) return true;
+    if(p1.second>p2.second) return false;
+    if(p1.first>p2.first) return true;
+    return false;
+}
+
 void explainExtra() {
     sort(a, a+n); // here 'a' points to the first position (position of the starting iterator) and 'a+n' points to the last iterator (one position after the last element)
     // Here also we will follow [start, end)
@@ -244,4 +251,8 @@ void explainExtra() {
     // sort it according to second element
     // if second element is same, then sort
     // it according to first element but in descending
+
+    sort(a, a+n, comp); // here 'comp' is a self written comparator, and this comparator is a boolean function
+
+    // {4,1}, {2,1}, {1,2}
 }
