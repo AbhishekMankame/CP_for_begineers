@@ -179,3 +179,37 @@ void exploreUnorderedSet() {
     // lower_bound() and upper_bound() function does not work
     // In the very very worst case (like 1 in a million) at that time it might go to O(N) time complexity --> constant
 }
+
+void explainMap() {
+
+    // map it works like key-value pair: here the keys will be unique but the values can be same
+    // map stores everything with respect of key and values, here the key and value can be of the any data type
+    map<int, int> mpp;
+    mpp<int, pair<int, int>> mpp1;
+    map<pair<int, int>, int> mpp2;
+
+    mpp[1] = 2; // On the key 1, we store 2 {1,2} --> It stores internally in the map
+    mpp.emplace({3,1}); // {3, 1}
+    mpp.insert({2,4}); // {2, 4}
+ 
+    mpp2[{2,3}] = 10; // {{2,3}, 10}
+
+    // Note: map stores unique keys in sorted order --> something similar to set data structure
+     for(auto it:mpp) {
+        cout << it.first << " " << it.second << endl;
+     }
+
+     cout << mpp[1]; // prints 2
+     cout << mpp[5]; // as 5 is not present in key, it will print 0 or null
+
+     auto it = mpp.find(3); 
+     cout << *(it).second << endl;
+     auto it = mpp.find(5); // points to mpp.end() means after the map
+
+     // This is the syntax
+     auto it = mpp.lower_bound(2);
+
+     auto it = mpp.upper_bound(3);
+
+     // erase, swap, size, empty, are same as above
+}
