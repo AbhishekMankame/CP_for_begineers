@@ -149,3 +149,26 @@ void exploreSet() {
 
     // Note: In Set everything happens in logarithmic complexity --> O(log n) (insert, erase etc will happen in O(log n))
 }
+
+void exploreMultiSet() {
+    // Everything is same as set
+    // only stores duplicate elements --> Multiset will obey the sorted property but not the unique, it can have multiple occurrence of same element
+
+    multiset<int> ms;
+    ms.insert(1); // {1}
+    ms.insert(1); // {1, 1}
+    ms.insert(1); // {1, 1, 1}
+
+    ms.erase(1); // all 1's erased
+    // erase will delete the all the occurrences
+
+    // {1, 1, 1, 1, 2, 3, 3, 4, 4, 4, 5, 6}
+    int cnt = ms.count(1); // prints 4 --> It count all the occurrences of 1
+
+    // to delete only one occurrence of 1
+    ms.erase(ms.find(1)); // It will delete the first occurrence of 1 --> Here the iterator points to the address of first 1 and erases that address
+
+    ms.erase(ms.find(1), ms.find(1)+2); // Here it deletes two 1s (deletes first 2 occurrence of 1)
+
+    // rest all function same as set
+}
