@@ -20,4 +20,18 @@ void vector(vector<int> v){
     // copying vector
     vector<int> copy(2,50); // {50, 50}
     v.insert(v.begin(), copy.begin(),copy.end()); // {50, 50, 300, 10, 10, 100, 100}
-}   
+
+    // {10, 20}
+    cout << v.size(); // 2 --> It will give how many elements are there in the vector
+
+    // {10, 20}
+    v.pop_back(); // {10} --> pops out the last element
+
+    // v1 --> {10, 20}
+    // v2 --> {30, 40}
+    v1.swap(v2); // v1 --> {30, 40}, v2 --> {10, 20} , here it swaps the vector
+
+    v1.clear(); // erases the entire vector
+
+    cout << v.empty(); // checks whether the vector is empty or not, here it returns the boolean value
+}    
