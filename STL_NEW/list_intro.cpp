@@ -219,3 +219,10 @@ void explainMultiMap() {
     // only mpp[key] cannot be used here
     // keys are stored in sorted order
 }
+
+void explainUnorderedMap() {
+    // same as set and unordered_set difference
+    // Here the uniqueness is preserved, but keys are not in sorted order, it will be randomized
+    // map works in O(log n), but unordered_map almost works in O(1) time.
+    // In very very worst case (like once in a blue moon) it will go to O(N) time
+}
