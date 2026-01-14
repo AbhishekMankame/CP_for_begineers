@@ -31,3 +31,24 @@ void exploreDeque(){
     // rest functions same as vector
     // begin, end, rbegin, rend, clear, insert, size, swap
 }
+
+void exploreStack() {
+    // Stack is LIFO --> Last In First Out --> The element which goes last will come out first and elemetn which goes first will come out at last
+    stack<int> st;
+    st.push(1); // {1}
+    st.push(2); // {2, 1}
+    st.push(3); // {3, 2, 1}
+    st.push(3); // {3, 3, 2, 1}
+    st.emplace(5); // {5, 3, 3, 2, 1}
+
+    cout << st.top(); // prints 5 --> s.top() prints the last element which went inside the stack, also called it as 'element on the top of the stack'
+    // In stack indexing access is not allowed --> st[2] is invalid
+
+    st.pop(); // st looks like {3, 3, 2, 1}
+
+    cout << st.top(); // 3
+    cout << st.size() // 4
+
+    stack<int> st1, st2;
+    st1.swap(st2);
+}
