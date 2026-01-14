@@ -129,4 +129,23 @@ void exploreSet() {
 
     // {1, 4, 5}
     st.erase(5); // erase 5 // takes logarithmic time
+    // Here in st.erase(5), it deleted the 5 and maintained the sorted order
+
+    int count = st.count(1); // If 1 exists then it will have only 1 occurrence, as set will only contains unique elements, if the element does not exists, it will return 0
+
+    auto it = st.find(3);
+    st.erase(it); // it takes constant time
+
+    // {1, 2, 3, 4, 5}
+    auto it1 = st.find(2);
+    auto it2 = st.find(4);
+    st.erase(it1, it2); // after erase {1, 4, 5} [first, last) --> it will delete everything between 2 and 4 including 2
+
+    // lower_bound() and upper_bound() function works in the same way as in vector does
+
+    // This is the syntax
+    auto it = st.lower_bound(2);
+    auto it = st.upper_bound(3);
+
+    // Note: In Set everything happens in logarithmic complexity --> O(log n) (insert, erase etc will happen in O(log n))
 }
