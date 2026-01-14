@@ -172,3 +172,10 @@ void exploreMultiSet() {
 
     // rest all function same as set
 }
+
+void exploreUnorderedSet() {
+    // unordered_set has almost all the properties of set like it stores the unique, but it does not follow the sorted order, it has randomized order
+    // In most of the cases the time complexity is O(1), all the operations like insert, erase
+    // lower_bound() and upper_bound() function does not work
+    // In the very very worst case (like 1 in a million) at that time it might go to O(N) time complexity --> constant
+}
