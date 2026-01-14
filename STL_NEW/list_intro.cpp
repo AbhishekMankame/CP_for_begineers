@@ -107,3 +107,26 @@ void explain PQ() {
 
     // In Priority queue, push and pop happens in O(log n) and top happens in O(1) time
 }
+
+void exploreSet() {
+
+    // set stores everything in the sorted order and stores unique
+    set<int> st;
+    st.insert(1); // {1}
+    st.emplace(2); // {1, 2}
+    st.insert(2); // {1, 2}
+    st.insert(4); // {1, 2, 4}
+    st.insert(3); // {1, 2, 3, 4}
+
+    // Functionality of insert in vector can be used also, that only increases efficiency
+    // begin(), end(), rbegin(), rend(), size(), empty() and swap() are same as those of above
+
+    // {1, 2, 3, 4, 5}
+    auto it = st.find(3); // returns an iterator which points to 3 (address)
+
+    // {1, 2, 3, 4, 5}
+    auto it = st.find(6); // If the element is not in the set, it will always return set.end(), it means the iterator which points to right after the end
+
+    // {1, 4, 5}
+    st.erase(5); // erase 5 // takes logarithmic time
+}
