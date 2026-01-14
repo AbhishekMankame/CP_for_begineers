@@ -70,6 +70,22 @@ void explainVector() {
     vector<int>::iterator it=v.rend(); // Here it will point to the one position before the first element
     vector<int>::iterator it=v.rbegin(); // Here it will point to the last element (it is a reverse iterator --> where iterator moves in the reverse way)
 
+    cout << v.back() << " "; // Points to the last element of the vector
+
+    // Printing of vector
+    for(vector<int>::iterator it=v.begin();it!=v.end();it++) {
+        cout<<*(it)<<" ";
+    }
+
+    for(auto it=v.begin();it!=v.end();it++){
+        cout<<*(it)<<" ";
+    }
+
+    // for each loop
+    for(auto it:v){
+        cout<<it<<" ";
+    }
+
 
 }
 
