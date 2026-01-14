@@ -226,3 +226,22 @@ void explainUnorderedMap() {
     // map works in O(log n), but unordered_map almost works in O(1) time.
     // In very very worst case (like once in a blue moon) it will go to O(N) time
 }
+
+void explainExtra() {
+    sort(a, a+n); // here 'a' points to the first position (position of the starting iterator) and 'a+n' points to the last iterator (one position after the last element)
+    // Here also we will follow [start, end)
+
+    // For sorting vector
+    sort(v.begin(), v.end());
+
+    sort(a+2, a+4); // Here only the portion a+2 to till (excluding) a+4 --> means a+2 and a+3 in this case will be sorted
+
+    // Sorting in descending order
+    sort(a, a+n, greater<int>); // here greater<int> is an inbuilt-comparator which automatically sorts in the descending order
+
+    pair<int,int> arr[] = {{1,2}, {2,1}, {4,1}};
+
+    // sort it according to second element
+    // if second element is same, then sort
+    // it according to first element but in descending
+}
