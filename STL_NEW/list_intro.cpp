@@ -78,6 +78,9 @@ void exploreQueue(){
 }
 
 void explain PQ() {
+    // Priority Queue - As the name recommends "Priority" the guy or element who has the largest value stays at the top
+    // Priority queue is not a linear data structure, inside of it "tree" data structure is maintained
+
     priority_queue<int> pq;
 
     pq.push(5); // {5}
@@ -101,4 +104,6 @@ void explain PQ() {
     pq.emplace(10); // {2, 5, 8, 10}
 
     cout << pq.top(); // prints 2
+
+    // In Priority queue, push and pop happens in O(log n) and top happens in O(1) time
 }
