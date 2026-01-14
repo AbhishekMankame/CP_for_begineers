@@ -213,3 +213,9 @@ void explainMap() {
 
      // erase, swap, size, empty, are same as above
 }
+
+void explainMultiMap() {
+    // everything same as map, only it can store multiple keys
+    // only mpp[key] cannot be used here
+    // keys are stored in sorted order
+}
