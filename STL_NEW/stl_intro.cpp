@@ -61,10 +61,14 @@ void explainVector() {
     // To access it we will write (*) --> *(v.begin())
     // Iterator points to the memory where the element lies
 
+    it++;
+    cout<<*(it)<<" "; // Here it will print 10 as iterator 'it' is shifted to 10 
+
+
     // Different types of iterators
-    vector<int>::iterator it=v.end();
-    vector<int>::iterator it=v.rend();
-    vector<int>::iterator it=v.rbegin();
+    vector<int>::iterator it=v.end(); // end will point to the one position after the last element (memory location after last element)
+    vector<int>::iterator it=v.rend(); // Here it will point to the one position before the first element
+    vector<int>::iterator it=v.rbegin(); // Here it will point to the last element (it is a reverse iterator --> where iterator moves in the reverse way)
 
 
 }
