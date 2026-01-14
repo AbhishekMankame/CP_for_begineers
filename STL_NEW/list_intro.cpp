@@ -47,8 +47,12 @@ void exploreStack() {
     st.pop(); // st looks like {3, 3, 2, 1}
 
     cout << st.top(); // 3
-    cout << st.size() // 4
+    cout << st.size(); // 4
+
+    cout << st.empty(); // False as the stack is not empty
 
     stack<int> st1, st2;
     st1.swap(st2);
+
+    // Complexity: In stack, push, pop and top operations all will take O(1) operations (constant time)
 }
