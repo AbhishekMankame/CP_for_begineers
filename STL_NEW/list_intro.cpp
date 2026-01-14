@@ -262,4 +262,13 @@ void explainExtra() {
 
     long long num = 16586578687;
     int cnt = __builtin_popcountll()
+
+    string s = "123";
+
+    do {
+        cout << s << endl;
+    } while(next_permutation(s.begin(),s.end()));
+
+    int maxi = *max_element(a, a+n);
+    int mini = *min_element(a, a+n);
 }
