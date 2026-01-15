@@ -21,3 +21,6 @@ int lengthOfLongestSubstring(string s){
     }
     return maxLen;
 }
+
+// TC: O(n)
+// SC: O(1) (256-sized array)
