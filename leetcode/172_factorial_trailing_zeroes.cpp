@@ -42,3 +42,14 @@ floor(n/5) + floor(n/25) + floor(n/125) + ...
 Stop when the divisor exceeds 'n'.
 
 */
+
+#include<iostream>
+using namespace std;
+
+int trailingZeros(int n){
+    int count = 0;
+    for(long long i=5;i<=n;i*=5){
+        count+=n/i;
+    }
+    return count;
+}
