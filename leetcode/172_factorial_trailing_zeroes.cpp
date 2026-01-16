@@ -53,3 +53,17 @@ int trailingZeros(int n){
     }
     return count;
 }
+
+/*
+Time Complexity:
+
+we want: 5^k <= n
+Taking log base 5: k<=1og(base5)n
+
+So the loop runs O(log5 n) times.
+Single logarithms differ only by a constant factor:
+O(log5 n) == O(log n)
+
+Final Time Complexity: O(log n)
+
+*/
