@@ -65,5 +65,18 @@ Single logarithms differ only by a constant factor:
 O(log5 n) == O(log n)
 
 Final Time Complexity: O(log n)
+This is very fast, even for large n.
 
+Space Complexity:
+Let's look at the extra memory used:
+int count;
+long long i;
+
+- No arrays
+- No recursion
+- No extra data structure
+Only a constant variables are used.
+
+Final Space Complexity: O(1)
+(constant extra space)
 */
