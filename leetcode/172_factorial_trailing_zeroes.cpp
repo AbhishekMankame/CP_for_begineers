@@ -80,3 +80,14 @@ Only a constant variables are used.
 Final Space Complexity: O(1)
 (constant extra space)
 */
+
+// code using while loop
+
+int trailing(int n){
+    int count=0;
+    while(n>0){
+        n/=5;
+        count+=n;
+    }
+    return count;
+}
