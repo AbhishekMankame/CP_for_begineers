@@ -38,3 +38,7 @@ double distance(Point a, Point b){
     double dy = a.y - b.y;
     return sqrt(dx*dx+dy*dy);
 }
+
+/*
+1.4 Vectors: The core idea of geometry  
+*/
