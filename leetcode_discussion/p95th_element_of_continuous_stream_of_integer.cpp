@@ -13,4 +13,14 @@ Key Idea: Maintain the 95th percentile dynamically using two heaps:
 
 Why this works: By keeping heap sizes in a 95:5 ratio, the boundary between them is exactly the 95th percentile.
 
+Algorithm:
+For each incoming number x:
+1. Insert into 'low' if 'x<=low.top()', else into 'high' 
+2. Rebalance heaps so: size(low) = ceil(0.95*total_elements)
+3. p95 = low.top()
+
+Time & Space
+- Insertion: O(log n)
+- Query p95: O(1)
+- Space: O(n) (optimal for exact percentile)
 */
