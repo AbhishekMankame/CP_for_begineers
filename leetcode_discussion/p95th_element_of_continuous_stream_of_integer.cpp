@@ -4,4 +4,13 @@ The 95th percentile (p95) of a dataset is the value such that 95% of the data po
 In practical terms, if you sort akk the values and look at the position corresponding to 95% of the total count, the value at that position is the p95.
 This metric is commonly used to describe the "typical worst-case" behavior of a system, because it represents how large the values are for almost all observations while ignoring rare extreme outliers.
 
+One-liner: p95 is the value below which 95% of the observed data falls.
+
+Key Idea: Maintain the 95th percentile dynamically using two heaps:
+- Max-heap (low) -> holds the smallest 95% of elements
+- Min-heap (high) -> holds the largest 5% of elements
+- The tops of low is the p95 value
+
+Why this works: By keeping heap sizes in a 95:5 ratio, the boundary between them is exactly the 95th percentile.
+
 */
