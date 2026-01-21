@@ -24,3 +24,42 @@ Time & Space
 - Query p95: O(1)
 - Space: O(n) (optimal for exact percentile)
 */
+
+#include<iostream>
+#include<queue>
+#include<cmath>
+using namespace std;
+
+class P95Stream {
+    private:
+        priority_queue<int> low; // max-heap (95%)
+        priority_queue<int, vector<int>, greater<int>> high; // min-heap (5%)
+        int count=0;
+
+        void rebalance() {
+            int targetLowSize = ceil(0.95*count);
+            while((int)low.size()>targetLowSize){
+                high.push(low.top());
+                low.pop();
+            }
+            while((int)low.size()<targetLowSize && !high.empty()){
+                low.push(high.top());
+                high.pop();
+            }
+        }
+
+        public:
+            void add(int x) {
+                count++;
+                if(low.empty() || x<=low.top())
+                    low.push(x);
+                else
+                    high.push(x);
+
+                    rebalance();
+            }
+            int p95() const {
+                if(low.empty()) throw runtime_error("No elements yet");
+                return low.top();
+            }
+}
