@@ -63,3 +63,12 @@ class P95Stream {
                 return low.top();
             }
 }
+
+int main() {
+    P95Stream stream;;
+    int x;
+    while(cin>>x){
+        stream.add(x);
+        cout<<"Current p95: "<<strea.p95()<<endl;
+    }
+}
