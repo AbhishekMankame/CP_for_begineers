@@ -23,7 +23,7 @@ void printS(int ind, vector<int> &ds, int s, int sum, int arr[], int n){
 }
 
 int main() {
-    int arr = {1, 2, 1};
+    int arr[] = {1, 2, 1};
     int n = 3, sum = 2;
     vector<int> ds;
     printS(0, ds, 0, sum, arr, n);
