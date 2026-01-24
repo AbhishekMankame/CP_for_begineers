@@ -6,6 +6,11 @@
 using namespace std;
 
 int printS(int ind, int s, int sum, int arr[], int n){
+    
+    // condition not satisfied
+    // strictly done if array contains postivies only
+    if(s>sum) return 0;
+   
     if(ind==n){
         // condition satisfied
         if(s==sum){
@@ -29,3 +34,5 @@ int main() {
     printS(0, 0, sum, arr, n);
     return 0;
 }
+
+// TC: O(2^N)
