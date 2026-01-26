@@ -27,3 +27,21 @@ Constraints:
 Topics: Array, Sorting
 
 */
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<vector<int>> minimumAbsDifference(vector<int>& arr){
+    int smallest=INT_MAX;
+    sort(arr.begin(),arr.end());
+    for(int i=1;i<arr.size();i++){
+        smallest = min(smallest, arr[i]-arr[i-1]);
+    }
+    vector<vector<int>> ans;
+    for(int i=1;i<ans.size();i++){
+        if(arr[i]-arr[i-1==smallest]) ans.push_back(arr[i-1],arr[i]);
+    }
+    return ans;
+}
