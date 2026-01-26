@@ -20,4 +20,10 @@ Example 3:
 Input: arr = [3,8,-10,23,19,-4,-14,27]
 Output: [[-14,-10],[19,23],[23,27]]
 
+Constraints:
+- 2 <= arr.length <= 10^5
+- -10^6 <= arr[i] <= 10^6
+
+Topics: Array, Sorting
+
 */
