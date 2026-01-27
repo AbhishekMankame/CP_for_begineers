@@ -45,3 +45,6 @@ vector<vector<int>> minimumAbsDifference(vector<int>& arr){
     }
     return ans;
 }
+
+// Time Complexity: O(N Log N)
+// Space Complexity: O(N)
