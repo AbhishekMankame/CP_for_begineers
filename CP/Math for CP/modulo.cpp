@@ -28,4 +28,10 @@ Example: The GCD of 8 and 12 are 4, that is, GCD(8,12) = 4
 Euclidean Algorithm: If we subtract a smaller number from a larger one (we reduce a larger number), GCD doesn't change. So if we keep subtracting repeatedly the larger of two, we end up with GCD.
 GCD(A,B) = GCD(A-B,B), assuming A>=B
 - When difference reaches 0, the solution is B.
+
+Let us prove the Euclidean Algorithm.
+If GCD(A,B)=G, this means A%G=0 and B%G=0
+Let, A=a*G and B=b*G, where 'a' and 'b' are the factors not common.
+(A-B)=(a-b)*G which is also divisible by G.
+Hence GCD(A-B,B)=G
 */
