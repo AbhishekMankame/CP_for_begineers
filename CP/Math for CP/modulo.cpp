@@ -35,3 +35,14 @@ Let, A=a*G and B=b*G, where 'a' and 'b' are the factors not common.
 (A-B)=(a-b)*G which is also divisible by G.
 Hence GCD(A-B,B)=G
 */
+
+/*
+Lowest Common Multiple (LCM)
+Lowest Common Multiple of two or more integers is the smallest positive integer that is divisible by each of the integers.
+LCM of two numbers A and B can be expressed with the following equation. (This works only for two numbers)
+
+LCM(A,B)=A*B/GCD(A,B)
+
+Note: GCD and LCM are associative in nature
+
+*/
