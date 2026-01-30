@@ -12,4 +12,11 @@ Space Complexity: O(1)
 ### Disadvantages:
 1. Requires the dataset to be sorted beforehead.
 2. More complex to implement compared to linear search.
-3. Not suitable for unsorted or dynamic datasets without additional preprocessing.
+3. Not suitable for unsorted or dynamic datasets without additional preprocessing.<br>
+
+Note: Binary Search is applicable anywhere, where the answer has a monotonic predicate nature.<br>
+Some of the monotonic functions are:
+1. Strictly Increasing Function
+2. Increasing Function
+3. Strictly Decreasing Function
+4. Decreasing Function
