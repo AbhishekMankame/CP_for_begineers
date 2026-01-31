@@ -49,3 +49,6 @@ char mextGreatestLetter(vector<int>& letters, char target){
 
     return letters[ans];
 }
+
+// TC: O(log n)
+// SC: O(1)
