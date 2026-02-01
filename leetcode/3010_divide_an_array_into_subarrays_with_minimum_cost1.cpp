@@ -45,3 +45,6 @@ int minimumCost(vector<int>& nums){
     sort(nums.begin()+1,nums.end());
     return first + nums[1] + nums[2];
 }
+
+// Time Complexity: O(N log N)
+// Space Complexity: O(1)
