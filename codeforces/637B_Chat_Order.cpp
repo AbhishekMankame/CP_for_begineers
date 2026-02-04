@@ -74,4 +74,10 @@ Outputting the list -> O(n)
 
 Overall Time Complexity: O(n) amortized
 
+Space Complexity:
+1. List chats -> stores up to n unique friends -> O(n)
+2. Map mp -> stores up to n keys + iterators -> O(n)
+
+Overall Space Complexity: O(n)
+
 */
