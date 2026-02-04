@@ -59,3 +59,19 @@ int main() {
     for (auto &c:chats) cout<<c<<endl;
     return 0;
 }
+
+/*
+Time Complexity:
+1. Reading input: cin>>name -> O(1) per input -> O(n) total
+2. Map lookup: mp.find(name) -> O(1) average (unordered_map)
+3. List erase using iterator: chats.erase(mp[name]) -> O(1)
+4. Push front in list: chats.push_front(name) -> O(1)
+5. Map insertion: mp[name]=chats.begin() -> O(1)
+
+Each iteration of the main loop is O(1) amortized
+There are n iterations -> O(n) total
+Outputting the list -> O(n)
+
+Overall Time Complexity: O(n) amortized
+
+*/
