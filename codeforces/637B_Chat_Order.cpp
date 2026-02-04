@@ -32,3 +32,30 @@ alex
 */
 
 // Problem tags: *special problem, binary search, constructive algorithm, data structure, sortings, *1200
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+
+    list<string> chats; // maintain order
+    unordered_map<string, list<string>::iterator> mp; // fast access
+
+    string name;
+    for(int i=0;i<n;i++){
+        cin>>name;
+        if(mp.find(name)!=mp.end()){
+            // already in chats, remove old position
+            chats.erase(mp[name]);
+        }
+        // insert at the top
+        chats.push_front(name);
+        mp[name]=chats.begin();
+    }
+
+    // Output
+    for (auto &c:chats) cout<<c<<endl;
+    return 0;
+}
