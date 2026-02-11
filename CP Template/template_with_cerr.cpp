@@ -14,4 +14,4 @@ template <class T, class V> void _print(pair<T,V> p) {cerr << "{"; _print(p.f); 
 template <class T> void _print(vector<T> v) {cerr << "["; for (T i : v) {_print(i); cerr<<" ";} cerr<<"]";}
 template <class T> void _print(set<T> v) {cerr << "["; for (T i : v) {_print(i); cerr<<" ";}cerr<<"]"};
 template <class T> void _print(multiset<T> v) {cerr << "["; for (T i : v) {_print(i); cerr<<" ";}cerr<<"]"};
-template <class T> void _print(map<T,V> v) {cerr << "["; for (auto i : v) {_print(i); cerr<<" ";}cerr<<"]"};
+template <class T, class V> void _print(map<T,V> v) {cerr << "["; for (auto i : v) {_print(i); cerr<<" ";}cerr<<"]"};
