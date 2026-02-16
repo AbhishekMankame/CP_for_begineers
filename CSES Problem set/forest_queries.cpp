@@ -36,3 +36,37 @@ Output:
 2
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n,q;
+    cin>>n>>q;
+    vector<string> grid(n);
+    for(int i=0;i<n;i++){
+        cin>>grid[i];
+    }
+
+    // Prefix sum array
+    vector<vector<int>> ps(n+1,vector<int>(n+1,0));
+
+    // Build 2D prefix sums
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            ps[i][j] = ps[i][j-1] + ps[i-1][j] - ps[i-1][j-1] + (grid[i-1][j-1]=='*'?1:0);
+        }
+    }
+
+    while(q--){
+        int y1,x1,y2,x2;
+        cin>>y1>>x1>>y2>>x2;
+
+        int ans = ps[y2][x2] - ps[y1-1][x2] - ps[y2][x1-1] + ps[y1-1][x1-1];
+        cout<<ans<<"\n";
+    }
+    return 0;
+}
