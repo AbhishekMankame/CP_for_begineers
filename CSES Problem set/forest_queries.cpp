@@ -70,3 +70,26 @@ int main() {
     }
     return 0;
 }
+
+/*
+Complexity details:
+
+1. Building the 2D prefix sum
+- Here we loops over every cecll in the 'n*n' grid.
+- Each cell computation is O(1)
+
+Time Complexity: O(n^2)
+Space Complexity: O(n^2)
+- We stored a 2D array 'ps' of size (n+1)*(n+1)
+
+2. Processing queries
+- For each query, we do 4 array lookups and 3 additions/subtractions -> O(1) per query
+- There are 'q' queries, so total query processing is: O(q)
+
+Time Complexity: O(q)
+
+3. Total complexity:
+Time Complexity: O(n^2 + q)
+Space Complexlty: O(n^2)
+
+*/
