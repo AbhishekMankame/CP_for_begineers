@@ -36,3 +36,17 @@ Note: For the first test case Sana can choose x=4 and the value will be (6^4)+(1
 Problem tags: bitmask, greedy, math, *800
 
 */
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int a,b;
+        cin>>a>>b;
+        cout<<(a*b)<<endl;
+    }
+    return 0;
+}
