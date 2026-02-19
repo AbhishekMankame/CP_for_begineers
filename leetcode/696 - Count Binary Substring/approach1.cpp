@@ -89,3 +89,37 @@ int countBinarySubstrings2(string s) {
 
 // TC: O(n)
 // SC: O(1)
+
+/*
+Approach 3:
+Expand around boundaries
+For each boundary where s[i]!=s[i+1], expand equally left and right.
+
+Example: "000111"
+Expand while:
+- left side all same
+- right side all same
+- count equal expansion
+
+Note: This is 2 pointer approach
+*/
+
+int countBinarySubstrings3(string s){
+    long long ans=0;
+    int n=s.size();
+    for(int i=0;i<n;i++){
+        if(s[i]!=s[i+1]){
+            int left=i;
+            int right=i+1;
+            char leftChar = s[left];
+            char rightChar = s[right];
+
+            while (left>=0 && right<n && s[left]==leftChar && s[right]=rightChar){
+                ans++;
+                left--;
+                right++;
+            }
+        }
+    }
+    return ans;
+}
