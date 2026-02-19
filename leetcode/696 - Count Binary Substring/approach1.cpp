@@ -123,3 +123,15 @@ int countBinarySubstrings3(string s){
     }
     return ans;
 }
+
+/*
+Approach 4:
+Using prefix sum (consider 0 as +1 and 1 as -1)
+S = "00110011"
+prefix_sum = [1,2,1,0,1,2,1,0]
+
+But this would not work here as we need consecutive 0's and 1's but there is no way we can check that here.
+
+So this will fail.
+
+*/
