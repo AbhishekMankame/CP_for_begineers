@@ -59,3 +59,33 @@ int countBinarySubstrings(string s) {
     }
     return ans;
 }
+
+
+/*
+Approach 2:
+Can we reduce the space complexity to O(1)?
+-> Yes we can do because at any boundary we just need only two group lengths
+We only need:
+- previous run length
+- current run length
+
+- we can use two variables to store the previous length and current length
+*/
+
+int countBinarySubstrings2(string s) {
+    long long ans=0;
+    int prev=0,curr=1;
+    for(int i=1;i<s.size();i++){
+        if(s[i]==s[i-1]) curr++;
+        else {
+            ans+=min(prev,curr);
+            prev=curr;
+            curr=1;
+        }
+    }
+    ans+=min(prev,curr);
+    return ans;
+}
+
+// TC: O(n)
+// SC: O(1)
