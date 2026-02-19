@@ -23,3 +23,39 @@ Constraints:
 
 Topics: Two Pointers, String
 */
+
+/*
+Approach 1:
+Idea is to convert string into consecutive group sizes.
+Example: "001110011" -> [2,3,2,1]
+
+Answer = summation (min(group[i],group[i+1]))
+
+*/
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+int countBinarySubstrings(string s) {
+    vector<int> groups;
+    int n=s.size();
+    int count=1;
+    for(int i=1;i<n;i++){
+        if(s[i]==s[i-1]){
+            count++;
+        }
+        else {
+            groups.push_back(count);
+            count=1;
+        }
+    }
+    groups.push_back(count);
+
+    long long ans=0;
+    for(int i=0;i<groups.size()-1;i++){
+        ans+=min(groups[i],groups[i+1]);
+    }
+    return ans;
+}
