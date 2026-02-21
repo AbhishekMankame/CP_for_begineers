@@ -21,3 +21,55 @@ Constraints:
 
 Topics: Array, Hash Table, Prefix Sum
 */
+
+/*
+Approach: We use the Prefix Sum + HashMap technique.
+
+Key Idea:
+If prefixSum[i] - prefixSum[j] = k,
+then the subarray (j+1 ... i) has sum = k
+
+Rearrange: prefixSum[j] = prefixSum[i] - k
+
+So while iterating:
+- Keep a running prefix sum
+- For each index, check if (current_sum - k) has appeared before.
+- If yes, add its frequency to the answer.
+
+*/
+
+
+#include<iostream>
+#include<vector>
+#include<unordered_map>
+using namespace std;
+
+int subarraySum(vector<int> &nums, int k){
+    // HashMap to store:
+    // prefixSum value -> how many times it has appeared
+    unordered_map<int,int> prefixCount;
+
+    // Important initialization:
+    // We set the prefix sum to 0 to have frequency 1.
+    // This handles cases where a subarray starting from index 0 has sum=k
+    prefixCount[0] = 1;
+
+    int currentSum = 0; // Running prefix sum
+    int totalSubarrays = 0; // Final answer
+
+    // Iterate through the array
+    for(int num:nums) {
+        // Update running prefix
+        currentSum += num;
+
+        // If (currentSum -k) exists in the map, it means there is a previous prefix sum
+        // that forms a subarray ending here with sum=k
+        if(prefixCount.find(currentSum-k)!=prefixCount.end()){
+            totalSubarrays+=prefixCount[currentSum-k];
+        }
+        // Record the current prefix sum in the map so it can be used for the future subarrays
+        prefixCount[currentSum]++;
+    }
+    return totalSubarrays;
+}
+
