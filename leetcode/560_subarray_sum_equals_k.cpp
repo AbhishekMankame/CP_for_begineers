@@ -73,3 +73,5 @@ int subarraySum(vector<int> &nums, int k){
     return totalSubarrays;
 }
 
+// TC: O(n)
+// SC: O(n)
