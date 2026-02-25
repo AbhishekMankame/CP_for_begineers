@@ -14,3 +14,17 @@ vector<int> sortByBits(vector<int>& arr){
     });
     return arr;
 }
+
+/*
+Complexity details:
+Timt complexity:
+1. Sorting dominates: O(n log n)
+2. Cost of comparator: __builtin_popcount(n) works in O(1) time
+3. Total comparisons is sort: O(n log n)
+TC --> O(n log n)
+
+Space complexity:
+- std::sort is in-place (introsort)
+- uses recursion stack of depth: O(log n)
+SC --> O(log n)
+*/
