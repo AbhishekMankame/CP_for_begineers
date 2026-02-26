@@ -29,4 +29,18 @@ That's it...
 This guarantees:
     - Atmost one ugly index remains (usually at position n)
     - And that's optimal
+
+## Why does this work?
+After swapping:
+- 'n' is at position 1
+- So for every i<n, the prefix maximum is already 'n'
+- So it can never equal 'i'
+- So no ugly index before 'n'
+Only possible index 'n' can remain ugly - which is unavoidable.
+
+## Complexity:
+For each test case:
+- Find 'n' -> O(n)
+- One swap -> O(1)
+Total: O(n) per test case with n<=500, this is trivial
 */
