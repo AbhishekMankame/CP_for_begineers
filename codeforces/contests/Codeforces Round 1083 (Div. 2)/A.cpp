@@ -43,4 +43,43 @@ For each test case:
 - Find 'n' -> O(n)
 - One swap -> O(1)
 Total: O(n) per test case with n<=500, this is trivial
+
+SC: O(n) because of the vector p(n)
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        vector<int> p(n);
+        for(int i=0;i<n;i++){
+            cin>>p[i];
+        }
+        if(n>1){
+            // Find index of 'n'
+            int pos=0;
+            for(int i=0;i<n;i++){
+                if(p[i]==n){
+                    pos=i;
+                    break;
+                }
+            }
+            // Swap first element with 'n'
+            swap(p[0],p[pos]);
+        }
+        // Output result
+        for(int i=0;i<n;i++){
+            cout<<p[i]<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
