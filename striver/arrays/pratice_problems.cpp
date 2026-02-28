@@ -45,3 +45,27 @@ int secondLargestBrute(vector<int>& arr){
 
 // TC: O(b log n + n) == O(n log n)
 // SC: O(1)
+
+/*
+Better approach:
+- First pass and we will find the largest element
+- We will keep largest as arr[0] ==> largest = arr[0]
+- And we will keep second_largest as -1
+- It will check the elements and make sure it is less than the largest
+
+*/
+
+int secondLargestBetter(vector<int> &arr){
+    int n=arr.size();
+    int largest=arr[0],second_largest=-1;
+    for(int i=1;i<n;i++){
+         if(arr[i]>largest) largest=arr[i];
+    }
+    for(int i=0;i<n;i++){
+        if(arr[i]>second_largest && arr[i]!=largest) second_largest=arr[i];
+    }
+    cout<<second_largest<<endl;
+}
+
+// TC: O(N) + O(N) == O(2N) ==> O(N)
+// SC: O(1)
