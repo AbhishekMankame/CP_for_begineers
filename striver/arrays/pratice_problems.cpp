@@ -104,3 +104,25 @@ SC: O(1)
 
 */
 
+/*
+Check if the given array is sorted?
+arr [] = [1,2,2,3,3,4]
+- Just start from index and check with the previous
+
+*/
+
+bool isSorted(vector<int> &arr){
+    int n=arr.size();
+    for(int i=1;i<n;i++){
+        if(arr[i]>=arr[i-1]);
+        {
+            // do nothing
+        }
+        else return false;
+    }
+    return true;
+}
+
+// TC: O(N)
+// SC: O(1)
+
