@@ -22,3 +22,23 @@ struct Student {
 }
 
 // Now 'Student' is a new data type.
+
+Student s1;
+s1.rollNo=101;
+s1.name="Rahul";
+s1.marks=87.5;
+
+// Structure Intialization
+// Method 1: After Declaration
+
+SStudent s1;
+s1.rollNo = 101;
+s1.name = "Rahul";
+s1.marks = 87.5;
+
+// Method 2: During Declaration
+Student s1 = {101,"Rahul",87.5};
+
+// Accessing Structure Members
+// Use the dot (.) operator:
+cout<<s1.name;
