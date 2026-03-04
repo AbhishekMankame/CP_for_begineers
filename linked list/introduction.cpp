@@ -64,3 +64,16 @@ Let's break the above example to understand how it works:
 - A new keyword is used to dynamically allocate memory to a node with data as arr[0].
 
 */
+
+/*
+Understanding Pointers:
+A pointer is a variable that stores the memory address of another variable. In simpler terms, it "points" to the location in memory where data is stored.
+This allows you to indirectly access and manipulate data by referring to its memory address.  
+
+Java does not explicitly use pointers to take the address of variables as we do in C++. Instead, Java have referenced variables.
+These reference variables do not directly contain memory addresses like pointers in languages such as C or C++.
+Instead, they hold references to objects in memory.
+
+Understanding the difference between Node and Node*: A node refers to he structure that contains data and the pointer to the next node. In contrast, Node* (Node pointer) specifically denotes a pointer variable that stores the address of the Node it is pointing to.
+
+*/
