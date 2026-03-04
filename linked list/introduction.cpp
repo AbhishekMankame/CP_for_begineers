@@ -14,3 +14,53 @@ A linked list is a data structure containing two crucial pieces of information, 
 The 'head' is the first node, and the 'tail' is the last node in a linked list.
 
 */
+
+/*
+Creating a Linked List:
+These are two information sets to store at every node, thus there is need to create a self-defined data types to handle them. Therefore, we will use the help of structs and classes.
+
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// Node class represents a node in the linked list
+class Node {
+public:
+    int data;   // Data value
+    Node *next; // Pointer to the next node
+
+    // Constructor with data and next
+    Node(int data1, Node* next1){
+        data=data1;
+        next=next1;
+    }
+
+    // Constuctor with only data
+    Node(int data1) {
+        data=data1;
+        next=nullptr;
+    }
+};
+
+int main() {
+    // Create an array
+    vector<int> arr = {2,5,8,7};
+
+    // Create first node
+    Node* y = new Node(arr[0]);
+    cout<<y<<'\n';
+
+    // Print data stored in node
+    cout<<y->data <<'\n';
+
+    return 0;
+}
+
+/*
+Let's break the above example to understand how it works:
+- The class has two types: data which contains the value of the node and a pointer next, which points to the next node in the list.
+- There is a constructor which assigns the value to a new node.
+- A new keyword is used to dynamically allocate memory to a node with data as arr[0].
+
+*/
