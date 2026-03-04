@@ -95,3 +95,18 @@ Let's talk about assuming the data stored in integer. Another main difference be
 Therefore, in the case of 64 Bit system, it occupies or consumes more space than a 32 Bit system.
 
 */
+
+/*
+Applications of Linked List:
+- Creating Data Structures: Linked lists serve as the foundation for building other dynamic data structures, such as stacks and queues.
+- Dynamic Memory Allocation: Dynamic memory allocation relies on linked lists to manage and allocate memory blocks efficienty.
+- Web Browser is one important application of Linked List.
+*/
+
+/*
+Types of Linked List:
+- Singly Linked List: In a singly linked list, each node points to the next node in the sequence. Traversal is straightforward but limited to moving in one direction, from the head to the tail.
+- Doubly Linked List: In this each node points to both the next node and the previous node, thus allowing it for bidirectional connectivity.
+- Circular Linked List: In a circular linked list, the last node points back to the head node, forming a close loop.
+
+*/
