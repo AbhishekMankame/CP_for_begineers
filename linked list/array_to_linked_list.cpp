@@ -31,10 +31,20 @@ Node* convertArr2LL(vector<int> &arr){ // Node* --> Pointer to the head, we will
     return head;
 }
 
+int lengthOfLL(Node* head){
+    int cnt=0;
+    Node* temp = head;
+    while(temp){
+        temp=temp->next;
+        cnt++;
+    }
+    return cnt;
+}
+
 int main() {
     vector<int> arr = {2,5,8,7};
     Node* head = convertArr2LL(arr);
-    cout<<head->data;
+    cout<<head->data<<endl;
 
     // Traversing Linked List
     Node* temp = head;
@@ -42,6 +52,8 @@ int main() {
         cout<<temp->data<<" ";
         temp=temp->next;
     }
+    cout<<endl;
+    cout<<"Length of Linked List: "<<lengthOfLL(head)<<endl;
 }
 
 // Time Complexity: O(N) --> As we traversed through all the element
