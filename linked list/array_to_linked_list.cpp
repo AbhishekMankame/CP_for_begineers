@@ -41,6 +41,16 @@ int lengthOfLL(Node* head){
     return cnt;
 }
 
+// Search for an element in Linked List
+int checkIfPresent(Node* head, int val)
+{
+    Node* temp=head;
+    while(temp!=nullptr){
+        if(temp->data==val) return 1;
+        temp=temp->next;
+    }
+    return 0;
+}
 int main() {
     vector<int> arr = {2,5,8,7};
     Node* head = convertArr2LL(arr);
@@ -54,6 +64,13 @@ int main() {
     }
     cout<<endl;
     cout<<"Length of Linked List: "<<lengthOfLL(head)<<endl;
+    cout<<checkIfPresent(head,8)<<endl;
 }
 
 // Time Complexity: O(N) --> As we traversed through all the element
+
+// Traversal in LL --> O(N)
+// Length of LL --> O(N)
+// Search an element in LL --> O(N) in worst case incase if element is not found, 
+// and in the best case O(1) if head is the element
+// in the average case O(N/2)
