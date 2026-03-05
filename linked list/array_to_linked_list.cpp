@@ -23,7 +23,7 @@ Node* convertArr2LL(vector<int> &arr){ // Node* --> Pointer to the head, we will
     Node* head = new Node(arr[0]); // As we have multi constructor, need not to pass nullptr
     Node* mover = head;
     for(int i=1;i<arr.size();i++){
-        Node* temp = new Node(arr[i]);
+        Node* temp = new Node(arr[i]); 
         mover->next = temp;
         // We need to know that mover has to go front (or to the next)
         mover=temp; // or mover=mover.next
