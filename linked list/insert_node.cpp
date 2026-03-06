@@ -23,7 +23,7 @@ Node* convertArr2LL(vector<int>& arr){
 
     Node* head = new Node(arr[0]);
     Node* mover = head;
-    for(int i=1;i<arr.size()){
+    for(int i=1;i<arr.size();i++){
         Node* temp = new Node(arr[i]);
         mover->next=temp;
         mover=temp;
@@ -38,4 +38,16 @@ void print(Node* head){
         temp=temp->next;
     }
     cout<<endl;
+}
+
+Node* insertHead(Node* head, int val){
+    Node* temp=new Node(val,head);
+    return temp;
+}
+
+int main() {
+    vector<int> arr = {12,5,8,7};
+    Node* head = convertArr2LL(arr);
+    head = insertHead(head,100);
+    print(head);
 }
