@@ -53,3 +53,32 @@ int main() {
 }
 
 // TC: O(t*n)
+
+// Another (Easy) approach
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        vector<long long> a(n);
+        for(auto &x:a) cin>>x;
+
+        // Start trying k=2,4,8,16,... until we find exactly 2 remainders
+        for(long long k=2;;k*=2) {
+            set<long long> remainders;
+
+            for(auto x:a) remainders.insert(x%k);
+            if(remainders.size()=2) {
+                cout<< k << "\n"; // Found the answer
+                break;
+            }
+        }
+    }
+}
+
+// TC: O(t.nlogn.logA)
