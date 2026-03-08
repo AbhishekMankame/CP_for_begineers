@@ -45,6 +45,19 @@ Node* insertHead(Node* head, int val){
     return temp;
 }
 
+/*
+Can also be written as 
+
+Node* insertHead(Node* head, int val){
+    return new Node(head,val);
+}
+
+*/
+
+// TC: O(1)
+
+
+
 int main() {
     vector<int> arr = {12,5,8,7};
     Node* head = convertArr2LL(arr);
