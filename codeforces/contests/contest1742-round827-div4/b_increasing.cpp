@@ -20,3 +20,6 @@ int main() {
     }
     return 0;
 }
+
+// TC: O(t.nlogn)
+// SC: O(n)
