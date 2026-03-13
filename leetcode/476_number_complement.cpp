@@ -17,3 +17,6 @@ class Solution {
         return mask^n;
     }
 }
+
+// TC: O(log n)
+// SC: O(1)
