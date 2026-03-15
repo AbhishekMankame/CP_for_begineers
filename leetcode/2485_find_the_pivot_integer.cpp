@@ -52,3 +52,47 @@ Time: O(n)
 Space: O(1)
 
 */
+
+/*
+Optimal approach - For large constraints (n<=10^9)
+
+Here the pivot problem usually means:
+Find an integer 'x' such that the sum of numbers from 1 to x equals the sum of numbers from x to n.
+
+Mathematically: 1 + 2 + 3 + .... + x = x + (x+1) + .... + n
+
+Total sum from 1 to n: S = n*(n+1)/2
+
+If x is pivot: 1 + 2 + 3 + ... + x = x*(x+1)/2
+And: x*(x+1)/2 = S - x*(x-1)/2;
+
+This simplifies to: S = x^2
+
+So x = sqrt(S) and it must be an integer
+
+*/
+
+int pivotInteger3(int n){
+    int total = n*(n-1)/2;
+    int x = sqrt(total);
+    if(x*x==total) return x;
+
+    return -1;
+}
+
+/*
+Complexity details:
+
+1. Time Complexity
+- n*(n+1)/2 -> O(1) (arithmetic operation)
+- sqrt(total) -> O(1) in most practical implementations (hardware instruction or fast library function)
+- x*x == total -> O(1)
+
+Total: O(1)
+Even if 'n' is very large (up to 10^9 or 10^12), this is still constant time.
+
+2. Space Complexity:
+- Only a few variables (total, x) are used
+Total: O(1)
+
+*/
