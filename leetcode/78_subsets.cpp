@@ -45,4 +45,15 @@ public:
         return result;
 
     }
-}
+};
+
+/*
+Time complexity: O(n * 2^n)
+- There are 2^n possible subsets.
+- For each subset we check 'n' bits to determine which elements to include.
+
+Space Complexity: O(n * 2^n)
+- We store all subsets in the result.
+- The total number of stored elements across all subsets is proportional to n * 2^n.
+
+*/
