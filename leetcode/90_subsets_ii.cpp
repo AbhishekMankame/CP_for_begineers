@@ -52,3 +52,53 @@ class Solution {
 
     }
 };
+
+/*
+Example
+Input: nums = [1,2,2]
+Sorted: [1,2,2]
+
+Generated masks:
+Mask Binary Subset
+0 000 []
+1 001 [1]
+2 010 [2]
+3 011 [1,2]
+4 100 [2]
+5 101 [1,2]
+6 110 [2,2]
+7 111 [1,2,2]
+
+Duplicates appear: [2], [1,2]
+The set removes duplicates automatically.
+
+Final result:
+[]
+[1]
+[2]
+[1,2]
+[2,2]
+[1,2,2]
+
+Time Complexity:
+Let 'n' be the number of elements.
+
+Subset generation: 2^n masks
+
+Each mask checks 'n' bits:
+O(n*2^n)
+
+Set insertion cost
+Each insertion costs roughly:
+O(log(2^n)) = O(n)
+
+So total: O(n*2^n)
+
+Space Complexity: O(n * 2^n)
+because we store all subsets.
+
+Important Note (Interview Insight):
+While bitmasking works, the most optimal and commonly expected solution for Subsets II is backtracking with duplicate skipping,
+because it avoids generating duplicates in the first place.
+
+*/
