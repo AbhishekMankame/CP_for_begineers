@@ -37,4 +37,37 @@ private:
             heapifyDown(largest);
         }
     }
-}
+
+public:
+    PriorityQueue() {}
+
+    // Insert element
+    void push(int val){
+        heap.push_back(val);
+        heapifyUp(heap.size()-1);
+    }
+
+    // Remove top element
+    void pop(){
+        if(heap.empty()) return;
+        heap[0]=heap.back();
+        heap.pop_back();
+        heapifyDown(0);
+    }
+
+    // Get the top element
+    int top(){
+        if(!heap.empty()) return heap[0];
+        throw runtime_error("Heap is empty");
+    }
+
+    // Check if empty
+    bool empty(){
+        return heap.empty();
+    }
+
+    // Heap size
+    int size(){
+        return heap.size();
+    }
+};
