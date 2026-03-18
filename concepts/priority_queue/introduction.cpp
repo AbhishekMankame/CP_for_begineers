@@ -71,3 +71,53 @@ public:
         return heap.size();
     }
 };
+
+// Demo
+int main() {
+    PriorityQueue pq;
+
+    pq.push(10);
+    pq.push(30);
+    pq.push(20);
+    pq.push(5);
+
+    cout << "Top: " << pq.top() << endl; // 30
+
+    pq.pop();
+    cout << "Top after pop: " << pq.top() << endl; // 20
+
+    return 0;
+}
+
+/*
+Complexity details:
+Time complexity:
+1. Push Operation (push):
+- heap.push_back(val) -> O(1) amortized
+- heapifyUp -> in worst case, elements travels from left to root
+Heap height = log n (because it's a complete binary tree)
+Time Complexity: O(log n)
+
+2. Pop Operation (pop):
+- Replace root with last element -> O(1)
+- heapify down -> element may move from root to leaf
+Heap height = log n
+Time Complexity: O(log n)
+Space Complexity: O(1)
+
+3. Top Operation (top):
+- Just returns the root element
+Time Complexity: O(1)
+Space Complexity: O(1)
+
+4. Empty/Size:
+- Simple vector operations
+Time Complexity: O(1)
+Space Complexity: O(1)
+
+5. Overall Space Complexity
+- Uses vector<int> heap to store all elements
+- For n elements -> O(n) space
+
+
+*/
