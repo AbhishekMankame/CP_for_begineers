@@ -13,7 +13,7 @@ void solve(){
 
     // NSL -> Next Smaller Element on Left side
     for(int i=0;i<n;i++){
-        // rempving all the useless elements
+        // remo ving all the useless elements
         while(!s.empty()&&s.top()>=v[i]){
             s.pop(); // popping the element from the stack
         }
@@ -43,3 +43,5 @@ int main() {
 
     return 0;
 }
+
+// TC: O(N) for precomputing the vector for next smaller element towards the left.
