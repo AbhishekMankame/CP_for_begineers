@@ -45,3 +45,14 @@ int main() {
 }
 
 // TC: O(N) for precomputing the vector for next smaller element towards the left.
+
+/*
+## Variations:
+
+- For next greater element towards left: while(!s.empty() && s.top<=v[i])
+- For next greater than or equal to element towards left: while(!s.empty() && s.top<v[i])
+- For next smaller than or equal to element towards left: while(!s.empty() && s.top>v[i])
+
+- For next smaller element towards right: We need to store the elements from right in the stack. So we need to traverse the vector from right to left
+for(int i=n-1;i>=0;i--)
+*/
