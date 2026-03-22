@@ -22,3 +22,34 @@ public:
 
     int getMin() return st.empty()?-1:st.top();
 }
+
+/*
+Complexity Analysis:
+
+Time Complexity:
+Each operation runs in O(1) time:
+- push(val) -> O(1)
+    - One push to 's'
+    - At most one push to 'st'
+
+- pop() -> O(1)
+    - One pop from 's'
+    - Possibly one pop from 'st'
+
+- top() -> O(1)
+    - Just returns top of stack
+
+- getMin() -> O(1)
+    - Returns top of min stack
+
+Overall: All operations are constant time -> O(1)
+
+Space Complexity:
+- We are using two stacks
+    - 's' -> stores all elements -> O(n)
+    - 'st' -> stores minimum elements -> worst case also O(n)
+    (eg: strictly decreasing sequence like 5,4,3,2,1)
+
+Overall space: O(n)
+
+*/
