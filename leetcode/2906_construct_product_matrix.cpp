@@ -51,3 +51,15 @@ class Solution {
         return ans;
     }
 }
+
+/*
+Quick Recap
+- Flatten 2D grid -> treat as 1D array
+- Prefix pass -> store "left product"
+- Suffix pass -> multiply "right product"
+- Avoid division (handles zero safely)
+- Use 1LL during multiplication to prevent integer overflow
+- Take modulo (12345) at every step
+- Reshape 1D result back to 2D grid
+
+*/
