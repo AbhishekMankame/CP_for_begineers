@@ -63,3 +63,28 @@ Quick Recap
 - Reshape 1D result back to 2D grid
 
 */
+
+/*
+Complexity details:
+
+Time Complexity:
+Let m = number of rows, n = number of columns
+- Total elements = k = m*n
+
+Breakdown:
+- Flatten grid -> O(m*n)
+- Prefix pass -> O(m*n)
+- Suffix pass -> O(m*n)
+- Reconstruction grid -> O(m*n)
+
+Final Time Complexity = O(m*n)
+
+Space Complexity:
+Extra space used:
+- arr (flattened array) -> O(m*n)
+- res (result array) -> O(m*n)
+- ans (output matrix) -> O(m*n)
+
+Final Space Complexity = O(m*n)
+
+*/
