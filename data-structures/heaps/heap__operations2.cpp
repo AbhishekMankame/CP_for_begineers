@@ -33,4 +33,20 @@ class Max_Heap {
             heapify_up(parent);
         }
     }
+
+    public:
+    Max_Heap(vector<int>arr){
+        heap = arr;
+    }
+    void build(){
+        int n = heap.size();
+        for(int i=n/2-1;i>=0;i--){
+            heapify_down(i);
+        }
+    }
+
+    int get_max(){
+        if(heap.size()==0) return -1;
+        else return heap[0];
+    }
 }
