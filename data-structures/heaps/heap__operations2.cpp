@@ -64,3 +64,41 @@ class Max_Heap {
     }
 
 };
+
+void fastio(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+}
+
+void solve(){
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    Max_Heap pq(arr);
+    pq.build();
+    cout<<pq.get_max()<<endl;
+    pq.remove();
+    cout<<pq.get_max()<<endl;
+    pq.insert(40);
+    cout<<pq.get_max()<<endl;
+
+}
+
+int main(){
+#ifndef ONLINE_JUDGE
+    freopen("Error.txt","w",stderr);
+#endif
+    fastio();
+
+    int t=1;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+
+    return 0;
+}
