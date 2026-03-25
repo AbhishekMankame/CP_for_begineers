@@ -24,4 +24,13 @@ class Max_Heap {
         swap(heap[ind],heap[largest]);
         heapify_down(largest);
     }
+
+    void heapify_up(int ind){
+        if(ind==0) return;
+        int parent = (ind-1)/2;
+        if(heap[ind]>heap[parent]){
+            swap(heap[ind],heap[parent]);
+            heapify_up(parent);
+        }
+    }
 }
