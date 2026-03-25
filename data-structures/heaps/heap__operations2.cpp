@@ -49,4 +49,18 @@ class Max_Heap {
         if(heap.size()==0) return -1;
         else return heap[0];
     }
-}
+
+    void insert(int val) {
+        heap.push_back(val);
+        heapify_up(heap.size()-1);
+    }
+
+    void remove(){
+        int n=heap.size();
+        swap(heap[0],heap[n-1]);
+        heap.pop_back();
+        if(heap.size()==0) return;
+        heapify_down(0);
+    }
+
+};
