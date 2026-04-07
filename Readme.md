@@ -43,4 +43,4 @@ Competitive Programming involves solving algorithmic problems under constraints,
 - Div 4 <= 1400
 
 ## Some important/essential topics required for CP
-Bit Manipulation, Number Theory, Combinatorics, Advanced Mathematics, Greedy Algorithms, Searching Techniques, Must know Data Structures, Pre-Computation, Graph Algorithms, Tree Algorithms, DP, Range Queries, String Algorithms, Game Theory
+Bit Manipulation, Number Theory, Combinatorics, Advanced Mathematics, Greedy Algorithms, Searching Techniques, Must know Data Structures, Pre-Computation, Graph Algorithms, Tree Algorithms, DP, Range Queries, String Algorithms, Game Theory, Prefix & Suffix
