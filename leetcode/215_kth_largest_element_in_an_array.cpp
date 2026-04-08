@@ -33,3 +33,13 @@ int findKthLargest3(vector<int>& nums, int k) {
     sort(nums.begin(),nums.end(),greater<int>());
     return nums[k-1];
 }
+
+// Using max heap
+int findKthLargest4(vector<int>& nums, int k){
+    priority_queue<int> pq(nums.begin(),nums.end());
+    while(k!=1){
+        pq.pop();
+        k--;
+    }
+    return pq.top();
+}
