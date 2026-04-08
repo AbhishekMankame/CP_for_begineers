@@ -27,3 +27,9 @@ int findKthLargest2(vector<int>& nums, int k){
     }
     return pq.top();
 }
+
+// Approach using sorting
+int findKthLargest3(vector<int>& nums, int k) {
+    sort(nums.begin(),nums.end(),greater<int>());
+    return nums[k-1];
+}
