@@ -63,5 +63,26 @@ int* point_var = &var;
 Here, '5' is assigned to the variable 'var'. And the address of 'var' is assigned to the 'point_var' pointer with the code 'point_var = &var'.
 
 Note: It is a good practice to initialize pointers as soon as they are declared.
+
+
+## Get the value for the Address Using Pointers
+To get the value pointed by a pointer, we use the '*' operator.
+For example,
+
+int var = 5;
+
+// assign address of var to point_var
+int* point_var = &var;
+
+// access value pointed by point_var
+cout << *point_var << endl; // Output: 5
+
+
+In the above code, the address of var is assigned to 'point_var'. We have used the '*point_var' to get the value stored in that address.
+
+When '*' is used with pointers, it's called the dereference operator. It operates on a pointer and gives the value pointed by the address stored in the pointer.
+That is, '*point_var = var'.
+
+Note: In C++, 'point_var' and '*point_var' are completely different. We cannot do something like '*point_var = &var;'. Here, 'point_var' is a pointer that stores the address of variable it points to while '*point_var' returns the value stored at the address pointed by 'point_var'.
 */
 
