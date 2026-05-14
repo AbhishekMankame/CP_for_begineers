@@ -38,5 +38,30 @@ Here, '0x' at the beginning represents the address in the hexadecimal form.
 Notice that first address differs from the second by 4 bytes, and the second address differs from the third by 4 bytes.
 The difference is because the sizae of an 'int' is 4 bytes in a 64-bit system
 
+Note: You may not get the same results when you run the program. This is because the address depends on the environment in which the program runs.
+
+*/
+
+/*
+### C++ Pointers
+
+Here is how we declare pointers:
+int *point_var;
+
+Here, we have declared a variable 'point_var' which is a pointer to an 'int'.
+
+We can also declare pointers in the following way:
+int* point_var; // preferred syntax
+
+### Assigning Addresses to Pointers
+
+Here is how we can assign addresses to pointers:
+
+int var = 5;
+int* point_var = &var;
+
+Here, '5' is assigned to the variable 'var'. And the address of 'var' is assigned to the 'point_var' pointer with the code 'point_var = &var'.
+
+Note: It is a good practice to initialize pointers as soon as they are declared.
 */
 
