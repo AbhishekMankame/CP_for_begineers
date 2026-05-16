@@ -62,3 +62,32 @@ Note: The address between 'ptr' and 'ptr + 1' differs by 4 bytes. It is because 
 Similarly, if pointer 'ptr' is pointing to 'char' type data, then the address between 'ptr' and 'ptr+1' is 1 byte. It is because the size of a character is 1 byte.
 
 */
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    float arr[3];
+
+    // declare pointer variable
+    float *ptr;
+
+    cout << "Displaying address using arrays: " << endl;
+
+    // use for loop to print addresses of all array elements
+    for(int i=0;i<3;i++){
+        cout << "&arr["<<i<<"] = " << &arr[i]<<endl;
+    }
+
+    // ptr = &arr[0]
+    ptr = arr;
+
+    cout << "\nDisplaying address using pointers: " << endl;
+
+    // use for loop to print addresses of all array elements using pointer notation
+    for(int i=0;i<3;i++){
+        cout << "ptr + "<< i << " = " << ptr+i << endl;
+    }
+
+    return 0;
+}
