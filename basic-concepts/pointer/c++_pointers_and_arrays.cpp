@@ -91,3 +91,10 @@ int main() {
 
     return 0;
 }
+
+/*
+In the above program, we first simply printed the addresses of the array elements without using the pointer variable 'ptr'.
+
+Then, we used the pointer 'ptr' to point to the address of 'a[0]', 'ptr+1' to point to the address of 'a[1]', and so on.
+
+*/
