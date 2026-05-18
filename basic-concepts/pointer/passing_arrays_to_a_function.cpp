@@ -40,3 +40,23 @@ int main(){
 
     return 0;
 }
+
+/*
+Output:
+Displaying marks:
+Student 1: 88
+Student 2: 76
+Student 3: 90
+Student 4: 61
+Student 5: 69
+
+Here,
+1. When we call a function by passing an array as the argument, only the name of the array is used.
+display(marks);
+Here, the argument 'marks' represent the memory address of the first element of array 'marks[5]'
+
+2. However, notice the parameter of the 'display()' function.
+void display(int m[])
+Here, we are just expecting an array of integers. C++ handles passing an array to a function in this way to save memory and time.
+
+*/
