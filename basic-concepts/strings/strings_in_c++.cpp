@@ -23,4 +23,26 @@ int main(){
         cout << str[i];
     }
     cout << endl;
+
+    // Traversing using range-based for loop
+    cout << "Using range-based for loop: ";
+    for(char ch:str){
+        cout << ch;
+    }
+    cout << endl;
+
+    // Traversing using iterator
+    cout << "Using iterator: ";
+    for(auto it = str.begin();it!=str.end();it++){
+        cout << *it;
+    }
+    cout << endl;
+
+    return 0;
 }
+
+/*
+Using index: Hello Geeks
+Using range-based for loop: Hello Geeks
+Using iterator: Hello Geeks
+*/
