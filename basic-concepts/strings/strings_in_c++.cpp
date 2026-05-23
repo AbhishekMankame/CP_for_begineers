@@ -188,4 +188,9 @@ push_back() --> This function is used to push the passed character at the end of
 pop_back() --> This function is used to pop the last character from the string
 clear() --> This function is used to remove all the elements of the string
 find() --> This function is used to search for a certain substring inside a string and returns the position of the first character of the substring.
+replace() --> Replaces a portion of the string with another string
+substr() --> This function is used to create a substring from a given string
+compare() --> This function is used to compare two strings and returns the result in the form of an integer.
+erase() --> This function is used to remove a certain part of a string
+rfind() --> This function is used to find the string's last occurrence.
 */
