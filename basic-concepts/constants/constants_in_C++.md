@@ -61,3 +61,45 @@ double area = 3.14159 * radius * radius;
 cout << MEX;  // Error, but compiler won’t warn “did you mean MAX?”
 </pre>
 5. Convention: write #define constants in UPPERCASE (e.g., MAX, PI, SIZE).
+
+### 5. Example with Multiple Constants
+
+<pre>
+#include<iostream>
+using namespace std;
+
+#define MAX_STUDENTS 50
+#define PASS_MARKS 33
+#define SCHOOL_NAME "ABC International School"
+
+int main() {
+    cout << "School: " << SCHOOL_NAME << endl;
+    cout << "Maximum Students Allowed: " << MAX_STUDENTS << endl;
+    cout << "Passing Marks: " << PASS_MARKS << endl;
+    return 0;
+}
+</pre>
+
+<pre>
+Output:
+School: ABC International School
+Maximum Students Allowed: 50
+Passing Marks: 33
+
+</pre>
+
+### 6. Why use #define for Constants?
+- Historically used in C language (before `const` keyword was added in C++).
+- Still used for:
+    - Global constants (like PI, MAX_SIZE).
+    - Conditional compilation (#ifdef, #ifndef).
+- But in modern C++, `const`, `constexpr` and `enum` are preferred because they are type-safe.
+
+
+### Summary
+- `#define` is preprocessor directive used to create constants by text replacement.
+- Syntax: #define NAME value
+- Example: #define PI 3.14159
+- Fast and memory efficient (no storage required).
+- Not type-safe, no error checking if mistyped.
+- Common in C programs and older C++ code, but modern style prefers `const` or `constexpr`.
