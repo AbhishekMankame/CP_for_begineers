@@ -48,6 +48,62 @@ Using range-based for loop: Hello Geeks
 Using iterator: Hello Geeks
 */
 
+/*
+### Syntax:
+The string container is defined as std::string class inside the <string> header file.
+string str;
+where,
+- string: Class provided by STL to handle sequence of characters.
+- str: Name assigned to the string object.
+
+### Basic Operations in String
+Basic operations on Strings are shown below:
+
+Initializing a String
+- Initialization of a string assigns characters to the string at the time of creation.
+- A string can be initialized directly using = or constructor syntax with text inside quotes.
+
+*/
+
+int basic(){
+    // Initializing a string directly
+    string str = "Hello Geeks";
+
+    // Printing the string
+    cout << str << endl;
+
+    return 0;
+}
+
+// Output: Hello Geeks
+
+/*
+### Accessing Characters
+- Characters of a string can be accessed using the [] operator or the .at() funtion.
+- Time Complexity for accessing characters is O(1).
+
+*/
+
+int basic2() {
+    string str = "Hello Geeks";
+
+    // Access using index operator []
+    cout << "First character: " << str[0] << endl;
+    cout << "Fifth character: " << str[4] << endl;
+
+    // Access using at()
+    cout << "Character at index 6: " << str.at(6) << endl;
+
+    return 0;
+}
+
+/*
+Output:
+First character: H
+Fifth character: o
+Character at index 6: G
+*/
+
 
 /*
 ### String Length
