@@ -56,7 +56,7 @@ Using iterator: Hello Geeks
 
 */
 
-int main2(){
+int size(){
     string str = "Hello Geeks";
 
     // Using size()
@@ -134,3 +134,43 @@ After pop_back: Hello Geeks
 After insert: Hello C++ Geeks
 After erase: Hello Geeks
 */
+
+
+int substring_extraction() {
+    string str = "Hello Geeks";
+
+    // Extract "Hello"
+    string sub1 = str.substr(0, 5);
+    cout << "Substring 1: " << sub1 << endl;
+
+    // Extract "Geeks"
+    string sub2 = str.substr(6,5);
+    cout << "Substring 2: " << sub2 << endl;
+
+    return 0;
+}
+
+/*
+Output:
+Substring 1: Hello
+Substring 2: Geeks
+*/
+
+/*
+### Searching in a String
+- The find() function is used to search for a substring inside a string. If found(), it returns the index(position) where the substring starts; if not, it returns a special value (npos).
+- Time Complexity to search is O(m*n), where n is the length of the string and m is the substring length.
+*/
+
+int search() {
+    string str = "Hello Geeks";
+    size_t pos = str.find("Geeks");
+
+    if(pos < str.size()) {
+        cout << "\"Geeks\" found at index: "; << pos << endl;
+    }
+
+    return 0;
+}
+
+// Output: "Geeks" found at index: 6
