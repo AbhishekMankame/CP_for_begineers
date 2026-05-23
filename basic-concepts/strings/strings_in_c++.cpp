@@ -46,3 +46,52 @@ Using index: Hello Geeks
 Using range-based for loop: Hello Geeks
 Using iterator: Hello Geeks
 */
+
+
+/*
+### String Length
+- The number of characters in a string can be found using size() or length().
+- Time Complexity to find string length is O(1).
+
+*/
+
+int main2(){
+    string str = "Hello Geeks";
+
+    // Using size()
+    cout << "Length using size(): " << str.size() << endl;
+    
+    // Using length()
+    cout << "Length using length(): " << str.length() << endl;
+
+    return 0;
+}
+
+
+/*
+### Concatenation of Strings
+- Strings can be joined using the + operator or the append() function.
+- The + operator creates a new string, while append() modifies the existing string in place.
+- Time Complexity for the concatenation is O(m+n), where n is the size of string and m is the size of the string to be concatenated.
+*/
+
+int concatenate(){
+    string str1 = "Hello";
+    string str2 = " Geeks";
+
+    // Using + operator
+    string result1 = str1 + str2;
+    cout << "Concatenation using + : " << result1 << endl;
+
+    // Using append() function
+    string result2 = str1;
+    result2.append(str2);
+    cout << "Concatenation using append(): " << result2 << endl;
+
+    return 0;
+}
+
+/*
+Concatenation using + : Hello Geeks
+Concatenation using append(): Hello Geeks
+*/
