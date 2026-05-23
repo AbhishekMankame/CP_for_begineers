@@ -42,3 +42,22 @@ int main(){
 }
 
 </pre>
+
+#### How it works internally?
+- Before compilation, the preprocessor replaces every `PI` with `3.14159`.
+- So the compiler actually sees:
+<pre>
+double area = 3.14159 * radius * radius;
+</pre>
+
+### 4. Key Points about #define Constants
+1. No memory is allocated for the constant - it's just text replacement.
+2. Constants are global by default (accessible anywhere after definition).
+3. They don't have a type (compiler just replaces text).
+    - Example: #define VALUE 10.5 --> This could behave like float or double depending on usage.
+4. If you make a typo, compiler won't catch it easily.
+<pre>
+#define MAX 100
+cout << MEX;  // Error, but compiler won’t warn “did you mean MAX?”
+</pre>
+5. Convention: write #define constants in UPPERCASE (e.g., MAX, PI, SIZE).
