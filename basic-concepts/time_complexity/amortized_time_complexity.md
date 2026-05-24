@@ -17,3 +17,9 @@ There arise two cases for insertion in the dynamic array:
 2. When there is no space, a new array is to be created of size double the original array, the elements in the original array are to be copied, and the new element is inserted.<br>
 Time complexity here is: Creation of a new array of double the original size + Copying the elements of the original array + Insertion of the new element<br>
 ==> O(2N) + O(N) + O(1) = O(3N+1) where N is the size of the original array.
+
+### Analysing the worst-case time complexity:
+Suppose that we are doing an insertion operation on the array for N times where N is the size of the array. In the worst case, each operation takes O(3N) time complexity.<br>
+Time complexity for overall operation is N*O(3N) = O(3N^2)<br>
+Ignoring constant,<br>
+The worst-case time complexity for N insertions is O(N^2)
