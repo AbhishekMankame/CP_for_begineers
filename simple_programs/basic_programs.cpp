@@ -75,3 +75,34 @@ int maxPairSum() {
     cout << max_sum << endl;
     return 0;
 }
+
+
+/*
+5. Number of prime numbers within a range:
+
+Example: Number of prime numbers within a range 1 to 11
+The numbers between 1 and 11 are: 1 2 3 4 5 6 7 8 9 10 11
+
+-> To traverse from starting to end run a 'for' loop
+-> The outer loop will be used to traverse
+-> The inner loop will be used to check a particular element (number) is a prime number or not
+-> Inside the loop we will track divisibility count
+-> Inner loop will start from 1 and will go till the number itself
+
+*/
+
+int primeNumbers(){
+    int s = 1;
+    int e = 11;
+    int count_prime = 0;
+
+    for(int i=s;i<=e;i++){
+        int count = 0;
+        for(int j=1;j<=i;j++){
+            if(j%i==0) count++;
+        }
+        if(count == 2) count_prime++;
+    }
+    cout << count_prime << endl;
+    return 0;
+}
