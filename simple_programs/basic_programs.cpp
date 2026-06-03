@@ -136,3 +136,29 @@ int revSum() {
     cout << rev_sum << endl;
     return 0;
 }
+
+
+/*
+7. Triplet Sum
+-> The first condition is to have atleast 3 elements
+-> In triplet sum, we have to fix atleast 2 elements, then we have to make a pair with the rest of the elements.
+-> There will be 3 pointers i, j and k.
+-> Triplet sum = arr[i] + arr[j] + arr[k]
+-> We will fix i and j, and k will move. Once k reached at the end, we will change only j.
+-> Once j reach the end, we will change i.
+
+*/
+
+int tripletSum() {
+    int arr[] = {1,2,3,4,5,6};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    for(int i=0;i<n-2;i++){
+        for(int j=i+1;j<n-1;j++){
+            for(int k=j+1;k<n;k++){
+                int sum = arr[i] + arr[j] + arr[k];
+                cout << sum << " ";
+            }
+        }
+    }
+}
