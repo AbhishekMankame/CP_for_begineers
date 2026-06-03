@@ -106,3 +106,33 @@ int primeNumbers(){
     cout << count_prime << endl;
     return 0;
 }
+
+
+/*
+6. Reverse number summation between the range:
+
+Note: To get the last digit, we need do modulo 10
+23 % 10 = 3
+46 % 10 = 6
+*/
+
+int revSum() {
+    int s = 21;
+    int e = 25;
+
+    int rev_sum = 0;
+
+    for(int i=s;i<=e;i++){
+        int num = i; // we don't want to lose thge actual data
+        int rev = 0;
+
+        while(num > 0){
+            int rem = num%10;
+            rev = rev*10 + rem;
+            num = num/10;
+        }
+        rev_sum+=sum;
+    }
+    cout << rev_sum << endl;
+    return 0;
+}
