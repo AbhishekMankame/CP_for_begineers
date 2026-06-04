@@ -162,3 +162,5 @@ int tripletSum() {
         }
     }
 }
+
+// 8 - First and last index of an element in the sorted array
