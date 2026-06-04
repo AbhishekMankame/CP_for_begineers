@@ -164,3 +164,19 @@ int tripletSum() {
 }
 
 // 8 - First and last index of an element in the sorted array
+
+int firstAndLastIndex() {
+    int arr = {1,2,3,3,3,4,6,7,8,9};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int target = 3;
+    int first = -1;
+    int last = -1;
+    for(int i=0;i<n;i++){
+        if(arr[i] == target) first = arr[i];
+    }
+    for(int i=n-1;i>=0;i--){
+        if(arr[i] == target) last = arr[i];
+    }
+    cout << first << " " << last << endl;
+    return 0;
+}
