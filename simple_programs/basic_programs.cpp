@@ -146,7 +146,6 @@ int revSum() {
 -> Triplet sum = arr[i] + arr[j] + arr[k]
 -> We will fix i and j, and k will move. Once k reached at the end, we will change only j.
 -> Once j reach the end, we will change i.
-
 */
 
 int tripletSum() {
@@ -162,6 +161,7 @@ int tripletSum() {
         }
     }
 }
+
 
 // 8 - First and last index of an element in the sorted array
 
@@ -180,6 +180,7 @@ int firstAndLastIndex() {
     cout << first << " " << last << endl;
     return 0;
 }
+
 
 // 9 -  Count of frequency of each element in the array
 
