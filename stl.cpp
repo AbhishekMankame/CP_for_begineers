@@ -89,3 +89,20 @@ resize(): Resize the string to the new length which can be less than or greater 
 size(): Returns the length of the string. Its complexity is O(1).
 substr(): Returns a string which is the copy of the substring. Its time complexity is O(N) where N is the size of the substring.
 */
+
+int main() {
+    string s, s1;
+    s = "HELLO";
+    s1 = "HELLO";
+    if(s.compare(s1)==0) {
+        cout << s << " is equal to " << s1 << endl;
+    }
+    else cout << s << " is not equal to " << s2 << endl;
+    s.append(" WORLD! ");
+    cout << s << endl;
+    printf("%s\n",s.c_str());
+    if(s.compare(s1) == 0) cout << s << " is equal to " << s1 << endl;
+    else cout << s << " is not equal to " << s1 << endl;
+
+    return 0;
+}
