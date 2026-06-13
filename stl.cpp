@@ -51,3 +51,19 @@ For Vector: vector<int>::iterator it;
 For List: list<int>::iterator it;
 
 */
+
+
+/*
+## String
+C++ provides a powerful alternative for the char*. It is not a built-in data type, but is a container class in the STL. 
+String class provides different string manipulation functions like concatenation, find, replace etc.
+
+*/
+
+string s0;  // s0 = ""
+string s1("Hello"); // s1 = "Hello"
+string s2(s1);  // s2 = "Hello"
+string s3 (s1, 1, 2); // s3 = "el"
+string s4 ("Hello World");  // s4 = "Hello"
+string s5 (5, '*'); // s5 = "*****"
+string s6 (s1.begin(), s1.begin()+3);   // s6 = "Hel"
