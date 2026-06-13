@@ -39,3 +39,15 @@ int main() {
 
 // After creating the generic function, compiler will automatically generate correct code for the type of data used while executing the function.
 // C++ STL also has some containers (pre-build data structures) like vectors, iterators, pairs etc. These are all generic class which can be used to represent collection of any data type.a
+
+/*
+## Iterator
+An iterator is any object that, points to some element in a range of elements (such as an array or a container) and has the ability to iterate throughg those elements using a set of operators (with atleast the increment(++) and dereference(*) operators).
+
+A pointer is a form of an iterator. A pointer can point to elements in an array, and can interate over them using the increment operator(++). There can be other types of iterators as well. For each container class, we can define iterator which can be used to iterate through all the elements of that container.
+
+For Vector: vector<int>::iterator it;
+
+For List: list<int>::iterator it;
+
+*/
