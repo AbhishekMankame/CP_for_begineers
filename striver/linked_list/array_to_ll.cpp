@@ -33,4 +33,11 @@ int main() {
     vector<int> arr = {2, 5, 8, 7};
     Node* head = convertArr2LL(arr);
     cout << head->data;
+    while(temp) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
 }
+
+
+// Note: VV IMP: Never ever tamper the head .....
