@@ -32,3 +32,36 @@ Imp: A linked list is a data structure containing two crucial pieces of informat
 
 
 */
+
+/*
+## Understanding Pointers
+A pointer is a variable that stores the memory address of another variable. In simpler terms, it "points" to the location in memory where data is stored.
+This allows you to indirectly access and manipulate data by referring to its memory address.
+
+Java does not explicitly use pointers or take the address of variables as you do in C++. Instead, we hjave reference variables. These reference variables do not directly contain memory addresses like pointers in languages such as C or C++. Instead, they hold references to objects in memory.
+
+Understanding the difference between Node and Node*: A node refers to the structure that contains data and the pointer to the next node.
+In contrast, Node* (Node Pointer) specifically denotes a pointer variable that stored the address of the Node it is pointing to.
+
+*/
+
+/*
+## Memory Space:
+Let's talk about assuming the data stored is integer. Another main difference between an array and a linked list is the memory used.
+In the case of an array, we are storing integers that consume 4 Bytes for every int, whereas in a linked list, we are storing data and a pointer at every node, so the memory used up will depend on the configuration of the system.
+
+32 Bit System --> Int - 4 Bytes | Pointer - 4 Bytes | Overall - 8 Bytes
+64 Bit System --> Int - 4 Bytes | Pointer - 8 Bytes | Overall - 12 Bytes
+
+Therefore, in the case of a 64 Bit system, it occupies or consumes more space than a 32 Bit system.
+
+
+*/
+
+/*
+## Applications of Linked List:
+- Creating Data Structures: Linked lists serve as the foundation for building other dynamic data structures, such as stacks and queues.
+- Dynamic Memory Allocation: Dynamic memory allocation relies on linked lists to manage and allocate memory blocks efficiently.
+- Web Browser is one important application of Linked List.
+
+*/
