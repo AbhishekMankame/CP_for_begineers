@@ -65,3 +65,12 @@ Therefore, in the case of a 64 Bit system, it occupies or consumes more space th
 - Web Browser is one important application of Linked List.
 
 */
+
+
+/*
+## Types of Linked List:
+- Singly Linked Lists: In a singly linked list, each node points to the next node in the sequence. Traversal is straightforward but limited to moving in one direction, from the head to the tail.
+- Doubly Linked Lists: In this each node points to the next node and the previous node, thus allowing it for bidirectional connectivity.
+- Circular Linked Lists: In a circular linked list, the last node points back to the head node, forming a closed loop.
+
+*/
