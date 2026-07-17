@@ -95,3 +95,20 @@ void levelOrder(Node* root){
         }
     }
 }
+
+/*
+Time complexity details:
+
+Preorder: TC: O(n) Auxiliary Space: O(h) (recursion stack)
+Inorder: TC: O(n) Auxiliary Space: O(h)
+Postorder: TC: O(n) Auxiliary Space: O(h)
+Level Order: TC: O(n) Auxiliary Space: O(n) (queue in the worst case)
+
+Where:
+n = number of nodes
+h = height of the tree
+
+Summary: All four traversal techniques visit every node exactly once, so they all have O(n) time complexity.
+The main difference is the order in which nodes are visited and the data strucuture used (recursion stack for DFS, queue for BFS).
+
+*/
