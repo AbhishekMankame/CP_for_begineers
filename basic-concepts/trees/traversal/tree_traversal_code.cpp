@@ -85,3 +85,22 @@ int main() {
 
     return 0;
 }
+
+/*
+Output:
+Preorder: 1 2 4 5 3 6
+Inorder: 4 2 5 1 3 6
+Postorder: 4 5 2 6 3 1
+Level Order: 1 2 3 4 5 6
+
+Summary Table:
+| Operation     | Time Complexity | Auxiliary Space     |
+| ------------- | --------------- | ------------------- |
+| Tree Creation | O(n)            | O(n) (tree storage) |
+| Preorder      | O(n)            | O(h)                |
+| Inorder       | O(n)            | O(h)                |
+| Postorder     | O(n)            | O(h)                |
+| Level Order   | O(n)            | O(n)                |
+
+
+*/
