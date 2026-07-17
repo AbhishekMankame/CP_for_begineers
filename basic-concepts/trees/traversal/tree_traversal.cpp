@@ -1,6 +1,3 @@
-#include<iostream>
-#include<queue>
-
 /*
 Tree Traversal:
 Tree traversal is the proecss of visiting every node in a tree exactly once in a specified order.
@@ -28,3 +25,73 @@ Order: Left --> Right --> Root
 Nodes are visited level from left to right using a queue.
 
 */
+
+#include<iostream>
+#include<queue>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int value) {
+        data = value;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+
+// Preorder Traversal (Root -> Left -> Right)
+void preorder(Node* root){
+    if(root==nullptr)
+        return;
+
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+
+// Inorder Traversal (Left -> Root -> Right)
+void inorder(Node* root){
+    if(root==nullptr)
+        return;
+
+    inorder(root->left);
+    cout<< root->data << " ";
+    inorder(root->right);
+}
+
+// Postorder Traversal (Left -> Right -> Root)
+void postorder(Node* root){
+    if(root==nullptr)
+        return;
+
+    postorder(root->left);
+    postorder(root->right);
+    cout << root->data << " ";
+}
+
+// Level Order Traversal (Breadth-First Traversal)
+void levelOrder(Node* root){
+    if(root==nullptr)
+        return;
+
+    queue<Node*> q;
+    q.push(root);
+
+    while(!q.empty) {
+        Node* current = q.front();
+        q.pop();
+
+        cout << current->data << " ";
+
+        if(current->left!=nullptr){
+            q.push(current->left);
+        }
+
+        if(current->right!=nullptr){
+            q.push(current->right);
+        }
+    }
+}
