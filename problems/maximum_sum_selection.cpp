@@ -38,5 +38,50 @@ There are only 'B+1' possibilities.
     - Add one element from the right end.
     - Update the maximum sum.
 
+Example:
+A = [5, -2, 3, 1, 2], B = 3
 
+Initial:
+Left picks = [5, -2, 3]
+Sum = 6
+
+Replace from left with right:
+Take 2 from right instead of 3
+Sum = 6 - 3 + 2 = 5
+Take 1 from right instead of -2
+Sum = 5 - (-2) + 1 = 8
+Take 3 from right instead of 5
+Sum = 8 - 5 + 3 = 6
+
+Maximum = 8
+
+*/
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int solve(vector<int> &A, int B) {
+    int n = A.size();
+    int currSum = 0;
+
+    // Take first B elements from left
+    for(int i=0;i<B;i++){
+        currSum += A[i];
+    }
+    int ans = currSum;
+
+    // Gradually replace left elements with right elements
+    for(int i=1;i<=B;i++){
+        currSum -= A[B-i]; // Remove from left
+        currSum += A[n-i]; // Add from right
+        ans = max(ans, currSum);
+    }
+    return ans;
+}
+
+/*
+Time Complexity: O(B)
+Space Complexity: O(1)
+Since 'B<=N<=10^5, this easily fits within the constraints.
 */
