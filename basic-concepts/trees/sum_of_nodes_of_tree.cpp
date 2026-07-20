@@ -33,3 +33,39 @@ Space Complexity:
     - Balanced tree: O(log n)
 
 */
+
+#include<iostream>
+using namespace std;
+
+// Node structure
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val){
+        data = value;
+        left = right = NULL;
+    }
+};
+
+// Function to calculate sum of all nodes
+int sumOfNodes(Node* root){
+    if(root==NULL) return 0;
+
+    return root->data + sumOfNodes(root->left) + sumOfNodes(root->right);
+}
+
+int main() {
+    // Creating the tree
+    Node *root = new Node(10);
+    root->left = new Node(20);
+    root->right = new Node(30);
+    root->left->left = new Node(40);
+    root->left->right = new Node(50);
+    root->right->left = new Node(60);
+
+    cout << "Sum of all nodes = " << sumOfNodes(root);
+
+    return 0;
+}
