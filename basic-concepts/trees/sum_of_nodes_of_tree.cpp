@@ -69,3 +69,21 @@ int main() {
 
     return 0;
 }
+
+/*
+Explanation:
+
+The recursive calls work as follows:
+sum(10) = 10 + sum(20) + sum(30)
+
+sum(20) = 20 + sum(40) + sum(50)
+        = 20 + 40 + 50
+        = 110
+    
+sum(30) = 30 + sum(NULL) + sum(60)
+        = 30 + 0 + 60
+        = 90
+
+sum(10) = 10 + 110 + 90
+        = 210
+*/
