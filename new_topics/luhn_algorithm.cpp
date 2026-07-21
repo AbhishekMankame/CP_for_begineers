@@ -89,3 +89,23 @@ int main() {
 
     return 0;
 }
+
+// Method 2: Using an integer (only if the number fits in long long)
+
+bool isValidLuhn2(long long number){
+    int sum = 0;
+    bool shouldDouble = false;
+
+    while(number > 0) {
+        int digit = number % 10;
+        number /= 10;
+
+        if(shouldDouble){
+            digit *= 2;
+            if(digit > 9) digit -= 9;
+        }
+        sum += digit;
+        shouldDouble = !shouldDouble;
+    }
+    return sum%10 == 0;
+}
