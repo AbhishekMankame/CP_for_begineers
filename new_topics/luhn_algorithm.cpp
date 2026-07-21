@@ -46,4 +46,46 @@ for each digit from right to left:
 
 return (sum%10==0)
 
+Time Complexity:
+Time: O(n)
+Space: O(1)
+
+Limitations: The Luhn algorithm is not a security mechanism. It only checks whether a number is structurally valid. A number that passes the Luhn check may still be fake, expired, or otherwise invalid.
+It is designed to catch data-entry errors, not to prevent fraud.
+
 */
+
+// Method 1: Input as a string (Recommended)
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool isValidLuhn(string number){
+    int sum = 0;
+    bool shouldDouble = false;
+
+    // Traverse from right to left
+    for(int i = number.length()-1;i>=0;i--){
+        int digit = number[i] - '0';
+        if(shouldDouble){
+            digit*=2;
+            if(digit>9) digit -= 9;
+        }
+        sum+=digit;
+        shouldDouble = !shouldDouble;
+    }
+    return (sum%10==0);
+}
+
+int main() {
+    string number;
+    cin >> number;
+
+    if(isValidLuhn(number)){
+        cout << "Valid";
+    }
+    else cout << "Invalid";
+
+    return 0;
+}
