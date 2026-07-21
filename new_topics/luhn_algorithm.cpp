@@ -109,3 +109,12 @@ bool isValidLuhn2(long long number){
     }
     return sum%10 == 0;
 }
+
+/*
+Why use 'string' instead of 'long long'?
+Using a 'string' is preferred because:
+- Credit card numbers are typically 16 digits, and some IDs (e.g., IMEIs) can be 15-19 digits.
+- Leading zeros, if present, are preserved.
+- You avoid integer overflow for longer numbers.
+
+*/
