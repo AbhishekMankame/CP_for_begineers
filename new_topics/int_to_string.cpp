@@ -14,3 +14,24 @@ int main() {
 }
 
 // Method 2: Write your own conversion
+string convertToString(long long num){
+    if(num == 0) return "0";
+
+    bool negative = false;
+    if(num<0){
+        negative = true;
+        num = -num;
+    }
+    string s;
+
+    while(num>0) {
+        s += char('0'+(num&10));
+        num /= 10;
+    }
+
+    if(negative) s+='-';
+
+    reverse(s.begin(),s.end());
+
+    return s;
+}
