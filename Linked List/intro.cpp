@@ -1,0 +1,70 @@
+/* Linked List --> Linked List is a dynamic data structure made up of nodes, where each node contains:
+- Some data
+- A pointer to the next node
+*/
+
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int val)
+    {
+        data = val;
+        next = NULL;
+    }
+};
+
+class List
+{
+    Node *head;
+    Node *tail;
+
+public:
+    List()
+    {
+        head = tail = NULL;
+    }
+    void push_front(int val)
+    {
+        Node *newNode = new Node(val); // New node create ho jaaygegi
+        // Node newNode(val);             // Alternate syntax --> Static object create karega
+        if (head == NULL)
+        {
+            head = tail = newNode;
+            return;
+        }
+        else
+        {
+            newNode->next = head;
+            head = newNode;
+        }
+    }
+
+    void printLL()
+    {
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
+};
+
+int main()
+{
+    List ll;
+
+    ll.push_front(1);
+    ll.push_front(2);
+    ll.push_front(3);
+    ll.printLL();
+
+    return 0;
+}

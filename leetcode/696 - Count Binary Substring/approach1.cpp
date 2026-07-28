@@ -1,0 +1,137 @@
+// Leetcode 696 - Count Binary Substring
+// Difficulty - Easy
+// https://leetcode.com/problems/count-binary-substrings
+
+/*
+Given a binary string 's', return the number of non-empty substrings that have the same number of 0's and 1's, and all the 0's and all the 1's in these substrings are grouped consecutively.
+Substrings that occur multiple times are counted the number of times they occur.
+
+Example 1:
+Input: s = "00110011"
+Output: 6
+Explanation: There are 6 substrings that have equal number of consecutive 1's and 0's: "0011", "01", "1100", "10", "0011" and "01".
+Notice that some of these substrings repeat and are counted the number of times they occur. Also, "00110011" is not a valid substring because all the 0's (and 1's) are not grouped together.
+
+Example 2:
+Input: s = "10101"
+Output: 4
+Explanation: There are 4 substrings: "10", "01", "10", "01" that have equal number of consecutive 1's and 0's.
+
+Constraints:
+- 1<=s.length<=10^5
+- s[i] is either '0' or '1'.
+
+Topics: Two Pointers, String
+*/
+
+/*
+Approach 1:
+Idea is to convert string into consecutive group sizes.
+Example: "001110011" -> [2,3,2,1]
+
+Answer = summation (min(group[i],group[i+1]))
+
+*/
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+
+int countBinarySubstrings(string s) {
+    vector<int> groups;
+    int n=s.size();
+    int count=1;
+    for(int i=1;i<n;i++){
+        if(s[i]==s[i-1]){
+            count++;
+        }
+        else {
+            groups.push_back(count);
+            count=1;
+        }
+    }
+    groups.push_back(count);
+
+    long long ans=0;
+    for(int i=0;i<groups.size()-1;i++){
+        ans+=min(groups[i],groups[i+1]);
+    }
+    return ans;
+}
+
+
+/*
+Approach 2:
+Can we reduce the space complexity to O(1)?
+-> Yes we can do because at any boundary we just need only two group lengths
+We only need:
+- previous run length
+- current run length
+
+- we can use two variables to store the previous length and current length
+*/
+
+int countBinarySubstrings2(string s) {
+    long long ans=0;
+    int prev=0,curr=1;
+    for(int i=1;i<s.size();i++){
+        if(s[i]==s[i-1]) curr++;
+        else {
+            ans+=min(prev,curr);
+            prev=curr;
+            curr=1;
+        }
+    }
+    ans+=min(prev,curr);
+    return ans;
+}
+
+// TC: O(n)
+// SC: O(1)
+
+/*
+Approach 3:
+Expand around boundaries
+For each boundary where s[i]!=s[i+1], expand equally left and right.
+
+Example: "000111"
+Expand while:
+- left side all same
+- right side all same
+- count equal expansion
+
+Note: This is 2 pointer approach
+*/
+
+int countBinarySubstrings3(string s){
+    long long ans=0;
+    int n=s.size();
+    for(int i=0;i<n;i++){
+        if(s[i]!=s[i+1]){
+            int left=i;
+            int right=i+1;
+            char leftChar = s[left];
+            char rightChar = s[right];
+
+            while (left>=0 && right<n && s[left]==leftChar && s[right]=rightChar){
+                ans++;
+                left--;
+                right++;
+            }
+        }
+    }
+    return ans;
+}
+
+/*
+Approach 4:
+Using prefix sum (consider 0 as +1 and 1 as -1)
+S = "00110011"
+prefix_sum = [1,2,1,0,1,2,1,0]
+
+But this would not work here as we need consecutive 0's and 1's but there is no way we can check that here.
+
+So this will fail.
+
+*/

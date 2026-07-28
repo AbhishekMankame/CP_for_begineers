@@ -1,0 +1,118 @@
+// Leetcode 2125 - Number of Laser Beams in a Bank
+// Medium
+
+/*
+Anti-theft security devices are activated inside a bank. You are given a 0-indexed binary string array 'bank' representing the floor plan of the bank, which is an m*n 2D matrix. 'bank[i]' representing the ith row, considering '0's and '1's. '0' means the cell is empty, while '1' means the cell has a security device.
+
+There is one laser beam between any two security devices if both conditions are met:
+- The two devices are located on two different rows: r1 and r2, where r1<r2
+- For each row i where r1, there are no security devices in the ith row
+
+Laser beams are independent, i.e., one beam does not interfere nor join with another.
+
+Return the total number of laser beams in the bank.
+
+Example:
+Input: bank = ["011001","000000","010100","001000"]
+Output: 8
+Explanation: Between each of the following devices pairs, there are 8 beams:
+ * bank[0][1] -- bank[2][1]
+ * bank[0][1] -- bank[2][3]
+ * bank[0][2] -- bank[2][1]
+ * bank[0][2] -- bank[2][3]
+ * bank[0][5] -- bank[2][1]
+ * bank[0][5] -- bank[2][3]
+ * bank[2][1] -- bank[3][2]
+ * bank[2][3] -- bank[3][2]
+
+ Note that there is no beam between any device on the 0th row with any on the 3rd row.
+ This is because the 2nd row contains security devices, which breaks the second condition.
+
+ Example 2:
+ Input: ["000","111","000"]
+ Output: 0
+ Explanation: There does not exist two devices located on two different rows.
+
+ Constraints:
+ m == bank.length
+ n == bank[i].length
+ 1 <= m, n <= 500
+ bank[i][j] is either '0' or '1'
+
+ Topics: Array, Math, String, Matrix
+
+*/
+
+/*
+Explanation:
+A laser beam can be formed between two rows if both rows have atleast one security device.
+
+The number of beams between two rows = (number of devices in row1)*(number of devices in row2)
+
+*/
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+class Solution {
+public:
+    int numberOfBeams(vector<string>& bank){
+        int prev=0; // devices in the previous non-empty row
+        int ans=0; // total number of beams
+
+        for(string &row:bank){
+            int count=countDevices(row);
+            if(count>0){
+                ans += prev * count; // add beams between prev and current
+                prev = count;
+            }
+        }
+        return ans;
+    }
+
+    private:
+    // Helper function to count '1's in a row
+    int countDevices(const string &row){
+        return count(row.begin(), row.end(), '1');
+    }
+};
+
+// Time Complexity: O(n * m) --> where n = number of rows, m = number of colums
+// Space Complexity: O(1) --> no need for 2D operations
+
+/*
+Key Takeaways:
+- Skip rows with 0 devices.
+- Multiply consecutive non-empty row device counts.
+- Use simple integer tracking - no need for 2D operations.
+
+*/
+
+// One more code
+
+int numberOfBeams1(vector<string>& bank){
+    int prev=0,ans=0;
+    for(string &row:bank){
+        int count=0;
+        for(char c:row){
+            if(c=='1') count++;
+        }
+        if(count>0){
+            ans += prev*count;
+            prev=count
+        }
+    }
+
+    return ans;
+}
+
+/*Verdict
+Time Complexity: O(n*m) --> Can't be improved
+Space Complexity: O(1) --> Minimal
+Readability: High --> Simple and clean
+Performance: Optimal --> As fast as possible in C++
+
+
+*/

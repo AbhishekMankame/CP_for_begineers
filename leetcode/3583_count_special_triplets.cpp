@@ -1,0 +1,99 @@
+// Leetcode 3583 - Count Special Triplets
+// Medium
+
+/*
+You are given an integer array nums.
+
+A special triplet is defined as a triplet of indices (i,j,k) such that:
+- 0 <= i < j < k < n, where n == nums.length
+- nums[i] == nums[j]*2
+- nums[k] == nums[j]*2
+
+Return the total number of special triplets in the array.
+Since the answer may be large, return it modulo 10^9+7.
+
+Example:
+Input: nums = [6,3,6]
+Output: 1
+Explanation:
+The only special triplets is (i,j,k) = (0,1,2).
+where;
+- nums[0] = 6, nums[1] = 3, nums[2] = 6
+- nums[0] = nums[1] * 2 = 3*2 = 6
+- nums[2] = nums[1]*2 = 3*2
+
+Example 2:
+Input: nums = [0,1,0,0]
+Output: 1
+Explanation:
+The only special triplet is (i, j, k) = (0, 2, 3), where:
+nums[0] = 0, nums[2] = 0, nums[3] = 0
+nums[0] = nums[2] * 2 = 0 * 2 = 0
+nums[3] = nums[2] * 2 = 0 * 2 = 0
+
+Example 3:
+Input: nums = [8,4,2,8,4]
+Output: 2
+Explanation:
+There are exactly two special triplets:
+
+(i, j, k) = (0, 1, 3)
+nums[0] = 8, nums[1] = 4, nums[3] = 8
+nums[0] = nums[1] * 2 = 4 * 2 = 8
+nums[3] = nums[1] * 2 = 4 * 2 = 8
+(i, j, k) = (1, 2, 4)
+nums[1] = 4, nums[2] = 2, nums[4] = 4
+nums[1] = nums[2] * 2 = 2 * 2 = 4
+nums[4] = nums[2] * 2 = 2 * 2 = 4
+
+Constraint:
+- 3<=n==nums.length<=10^5
+- 0<=nums[i]<=10^5
+
+Topics: Array, Hash Table, Counting
+
+*/
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int specialTripletsBruteForce(vector<int>& nums){
+    int count=0;
+    int mod = 1e9+7;
+    for(int i=0;i<nums.size();i++){
+        for(int j=i+1;j<nums.size();j++){
+            for(int k=j+1;j<nums.size();k++){
+                if((nums[i]==nums[j]*2)&&(nums[k]==nums[j]*2)) count++;
+            }
+        }
+    }
+
+    return count%mod;
+}
+
+// Time Complexity: O(n^3)
+// Space Complexity: O(1)
+
+
+/*Second approach*/
+
+int specialTriplets2(vector<int>&nums){
+    const int mod = 1e9+7;
+    int n=nums.size();
+    int ans=0;
+    for(int j=0;j<n;j++){
+        int Lcount=0;
+        for(int i=0;i<j;i++){
+            if(nums[i]==nums[j]*2) Lcount++;
+        }
+        int Rcount=0;
+        for(int k=j+1;k<n;k++){
+            if(nums[k]==nums[j]*2) Rcount++;
+        }
+        ans+=(long long)Lcount*Rcount;
+    }
+
+    return ans;
+}
