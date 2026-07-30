@@ -28,4 +28,8 @@ class Solution {
             return 1 + max(leftDepth, rightDepth); // Return the depth of the current node
         }
     }
-}
+};
+
+// TC: O(n), where n is the number of nodes in the binary tree. We visit each node once.
+// SC: O(h), where h is the height of the binary tree. In the worst case, the recursion stack will contain all the nodes along a path from the root to a leaf node.
+// A balanced binary tree has a height of log(n), leading to O(log(n)) space complexity, while a skewed tree has a height of n, leading to O(n) space complexity.
