@@ -51,3 +51,4 @@ class Solution {
 
 // TC: O(n), where 'n' is the number of nodes in the binary trees. We visit each node once.
 // SC: O(h), where 'h' is the height of the binary trees. In the worst case, the stack will contain all the nodes along a path from the root to a leaf node.
+// Balanced binary trees have a height of log(n), leading to O(log(n)) space complexity, while skewed trees have a height of n, leading to O(n) space complexity.
