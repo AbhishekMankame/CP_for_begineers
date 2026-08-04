@@ -23,3 +23,59 @@ Target = 20
 Output = -1 (20 is not present in the array)
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    // Normal binary search function
+    int binarySearch(vector<int> &arr, int low, int high, int key) {
+        while(low <= high) {
+            int mid = low + (high - low) / 2;
+            if(arr[mid] == key) {
+            return mid;
+        }
+            else if(arr[mid] < key) {
+            low = mid + 1;
+        }
+        else {
+            high = mid - 1;
+        }       
+    }
+    return -1; 
+    }
+
+
+    // Search in Infinite Array
+    int searchInfiniteArray(vector<int> &arr, int key) {
+        int low = 0;
+        int high = 1;
+
+        // Find the search range
+        while(high < arr.size() && arr[high] < key) {
+            low = high + 1;
+            high = high * 2;
+        }
+
+        // If high crosses the array boundary
+        high = min(high, (int)arr.size()-1);
+
+        // Apply Binary Search
+        return binarySearch(arr, low, high, key);
+    }
+};
+
+int main() {
+    vector<int> arr = {2,4,6,8,10,12,14,16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40};
+    int target = 26;
+
+    Solution obj;
+    int result = obj.searchInfiniteArray(arr, target);
+    if(result!=-1)
+        cout << "Element found at index: " << result << endl;
+    else cout << "Element not found"
+ << endl;
+
+ return 0;
+}
