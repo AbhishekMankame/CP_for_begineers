@@ -79,3 +79,100 @@ int main() {
 
  return 0;
 }
+
+/*
+Complexity Details:
+
+## Time Complexity:
+We have two phases:
+1. Finding the search range (expanding window)
+2. Performing binary search inside that range
+
+1. Finding the search range (Exponential Expansion)
+
+Code:
+int low = 0;
+int high = 1;
+
+while(arr[high] < target) {
+    low = high + 1;
+    high = high * 2;
+}
+
+Here 'high' grows like: 1 2 4 8 16 32 64 .....
+
+Suppose the target is present at index 'p'
+
+Example: Target is at index 1000
+
+The expansion happens:
+1
+2
+4
+8
+16
+32
+64
+128
+256
+512
+1024 <-- reached target range
+
+How many times did we double?
+Mathematically: 2^k >= p
+Taking log: k >= log(p)
+
+So the range expression takes: O(log p)
+where p = position/index of the target.
+
+2. Binary Search Complexity:
+After expansion, we have a range:
+low ------------- high
+Example: 512 ----------- 1024
+
+The formula to find the number of elements in a range is: 
+Number of elements = high - low + 1
+
+This is because both 'low' and 'high' are included in the range.
+
+Size of this range is approximately: O(p)
+
+Now we apply normal binary search:
+
+while(low <= high) {
+    mid = low + (high-low)/2;
+}
+
+Each iteration cuts the search space in half:
+1024
+512
+256
+128
+64
+32
+16
+8
+4
+2
+1
+
+Therefore: Binary Search = O(log p)
+
+Total Time Complexity:
+We add both phases:
+
+Finding range = O(log p)
+Binary Search = O(log p)
+Total = O(log p) + O(log p) = O(log p)
+
+Therefore, Time Complexity ==> O(log p)
+Where 'p' is the index of the target.
+*/
+
+/*
+Most important note:
+The formula to find the number of elements in a range is: 
+Number of elements = high - low + 1
+
+This is because both 'low' and 'high' are included in the range.
+*/
