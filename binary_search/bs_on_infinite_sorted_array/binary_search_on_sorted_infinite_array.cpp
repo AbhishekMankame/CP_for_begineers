@@ -167,6 +167,18 @@ Total = O(log p) + O(log p) = O(log p)
 
 Therefore, Time Complexity ==> O(log p)
 Where 'p' is the index of the target.
+
+
+## Space Complexity:
+Here we only use variables:
+int low;
+int high;
+int mid;
+
+No extra data structures are created.
+No recursion is used.
+
+Therefore, Space Complexity ==> O(1)
 */
 
 /*
