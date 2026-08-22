@@ -31,3 +31,6 @@ void solve() {
     }
     cout << endl;
 }
+
+// TC: O(n+q)
+// SC: O(n)
