@@ -32,3 +32,5 @@ void solve() {
     }
     cout << endl;
 }
+
+// Time Complexity: O(n + q)
