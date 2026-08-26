@@ -21,6 +21,7 @@ Simple Definition to remember: Coordinate compression converts large values into
 using namespace std;
 
 int main() {
+    
     vector<int> arr = {100, 5000, 20, 5000, 999999};
 
     // Step 1: Copy the array
@@ -41,6 +42,7 @@ int main() {
     for(int x : arr) {
         cout << x << " ";
     }
+    cout << endl;
 
     return 0;
 }
