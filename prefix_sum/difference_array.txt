@@ -1,0 +1,6 @@
+## Difference Arrays
+
+- A difference array can be used to perform multiple range update where we need to find the final state of the arrays only after performing all the queries.
+- Difference array helps us achieve the above in O(N) time total time and space.
+- We can process every range update in O(1).
+- When we need to print our final answer we perform an O(N) computation.
