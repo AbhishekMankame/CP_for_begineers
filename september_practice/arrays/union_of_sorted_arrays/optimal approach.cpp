@@ -42,6 +42,16 @@ vector<int> sortedArray(vector<int> &a, vector<int> &b) {
     return unionArr;
 }
 
+int main() {
+    vector<int> a = {1, 1, 2, 3, 4, 5, 7};
+    vector<int> b = {2, 3, 4, 5, 6};
+    vector<int> result = sortedArray(a, b);
+    for(int i : result) {
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
 /*
 TC: O(n1 + n2) --> Here we will be visiting all the elements exactly once.
 
