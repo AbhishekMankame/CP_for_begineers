@@ -56,4 +56,5 @@ int main() {
 TC: O(n1 + n2) --> Here we will be visiting all the elements exactly once.
 
 SC: O(n1 + n2) --> In the worst case, if all the elements are unique.
+Note: Here this too O(n1 + n2) space is taken to return the answer, not to solve the answer. Explicitly mention this point to the interviewer.
 */
