@@ -2,6 +2,7 @@
 
 // 1190: Reverse Substrings Between Each Pair of Parentheses
 
+// Brute Force Approach
 #include<bits/stdc++.h>
 using namespace std;
 
