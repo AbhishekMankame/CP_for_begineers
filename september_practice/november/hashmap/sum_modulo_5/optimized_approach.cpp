@@ -7,14 +7,14 @@ int moduloFive(vector<int> &arr) {
     unordered_map<int, int> mp;
     for(int i = 0; i < n; i++) {
         int rem = arr[i] % 5;
-        int complement = (5 - arr[i]) % 5;
-        if(mp.count(rem)) {
-            count += mp[rem];
+        int complement = (5 - rem) % 5;
+        if(mp.count(complement)) {
+            count += mp[complement];
         }
-        mp[arr[i]]++;
+        mp[rem]++;
     }
     return count;
 }
 
-// TC: O(N)
-// SC: O(1)
+// TC: O(N) average.
+// SC: O(1), since at most 5 distinct remainder can be stored.
