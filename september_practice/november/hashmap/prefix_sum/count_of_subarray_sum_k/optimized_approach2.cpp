@@ -11,15 +11,19 @@ int main() {
     int sum = 0;
     int count = 0;
 
+    // Initialize prefix sum 0 with frequency 1 to handle subarrays starting from index 0
     mp[0] = 1;
 
     for(int i = 0; i < n; i++) {
         sum += arr[i];
         int rem = sum - k;
 
+        // Find the required previous prefix sum (sum - K) and its frequency to the answer
         if(mp.find(rem) != mp.end()) {
             count += mp[rem];
         }
+
+        // Store the current prefix sum for future subarrays
         mp[sum]++;
     }
     cout << count << endl;
