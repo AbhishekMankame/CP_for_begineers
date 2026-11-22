@@ -31,20 +31,6 @@ Middle loop (j): Runs up to n times for each i.
 Inner loop (k): Calculates the subarray sum and runs up to n times.
 
 Therefore:
-
-T
-(
-n
-)
-=
-O
-(
-n
-×
-n
-×
-n
-)
 T(n)=O(n×n×n)
 Time Complexity: O(n³)
 Space Complexity Analysis
